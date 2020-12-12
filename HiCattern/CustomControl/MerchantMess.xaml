@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="OwnControl.MerchantMess"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OwnControl"
+             mc:Ignorable="d" Height="61" Width="639">
+    <Grid HorizontalAlignment="Left" Width="636">
+        <Image HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="64" Name="MerchantImage" Source="小厨.png"/>
+        <Label Content="商家名称" HorizontalAlignment="Left" Margin="69,0,0,0" VerticalAlignment="Top" FontWeight="Black" Name="MerchantNameLabel"/>
+        <Label Content="祝您用餐愉快！*(^-^)*" HorizontalAlignment="Left" Margin="69,30,0,0" VerticalAlignment="Top" Width="493"/>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="HiCattern.Customer.TakeOutOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Customer"
+       
+        mc:Ignorable="d"
+        Title="外卖跑腿订单页面" Height="527" Width="542">
+    <Grid Margin="0,0,-5.668,-5.333" Width="541">
+        <Grid.Background>
+            <ImageBrush ImageSource="菜单2.jpeg"/>
+        </Grid.Background>
+        <GroupBox Header="尊敬的客户，您的订单明细如下：" HorizontalAlignment="Left" Height="320.77" Margin="42.3,65.057,0,0" VerticalAlignment="Top" Width="427.858" FontSize="14" FontWeight="Bold" Foreground="#FFE9D3D3">
+            <ListView HorizontalAlignment="Left" Height="297" VerticalAlignment="Top" Width="418" Margin="0,0,-2,-1">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn  Header="菜品名"
+                                Width="130"
+                                DisplayMemberBinding="{Binding Path=S}" />
+                            <GridViewColumn Header="数量"
+                                Width="130"
+                                DisplayMemberBinding="{Binding Path=Topic}" />
+                            <GridViewColumn Header="单价" DisplayMemberBinding="{Binding Path=Ffile}"
+                                Width="150" />
+
+                        </GridView.Columns>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <Label Content="待支付：" HorizontalAlignment="Left" Height="33.035" Margin="42.3,390.827,0,0" VerticalAlignment="Top" Width="172.583" FontSize="14" FontWeight="Bold" Foreground="#FFFAE1E1" Background="#FF644C4C"/>
+        <Button x:Name="btn_pay" Content="付款" HorizontalAlignment="Left" Height="33.035" Margin="383.535,416.792,0,0" VerticalAlignment="Top" Width="86.623" FontSize="14" FontWeight="Bold" Click="btn_pay_Click"/>
+
+
+    </Grid>
+</Window>

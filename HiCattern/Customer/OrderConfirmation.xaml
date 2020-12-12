@@ -1,0 +1,25 @@
+﻿<Window x:Class="HiCattern.Customer.OrderConfirmation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Customer"
+        mc:Ignorable="d"
+        Title="订单确认" Height="491.333" Width="991.483">
+    <Grid Margin="0,0,-6.184,-4.333" Width="991" HorizontalAlignment="Left">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Login.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="271*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Label Content="请选择以下其中一个选项" HorizontalAlignment="Left" Height="44" Margin="494.333,166.683,0,0" VerticalAlignment="Top" Width="249.333" FontSize="20" FontWeight="Bold" Foreground="#FFE1D5D5"/>
+        <Button Content="到店自取" HorizontalAlignment="Left" Height="25.333" Margin="420,247.336,0,0" VerticalAlignment="Top" Width="165.667" FontSize="16" FontWeight="Bold" Background="#FFEDE8E8" Click="Button_Click"/>
+        <Button x:Name="btn_takeoutOrder" Content="外卖跑腿" HorizontalAlignment="Left" Height="25.333" Margin="671.999,247.336,0,0" VerticalAlignment="Top" Width="152.667" FontSize="16" FontWeight="Bold" Click="btn_takeoutOrder_Click"/>
+
+    </Grid>
+</Window>

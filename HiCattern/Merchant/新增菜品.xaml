@@ -1,0 +1,24 @@
+﻿<Window x:Class="Hi_食堂.MerchantAdmin.新增菜品"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hi_食堂.MerchantAdmin"
+        mc:Ignorable="d"
+        Title="新增菜品" Height="516" Width="586" Background="#FF58688F">
+    <Grid>
+        <GroupBox Header="新增菜品信息" HorizontalAlignment="Left" Height="362.806" VerticalAlignment="Top" Width="511.449" Margin="27.896,31.896,0,0" Background="#FF58688F" Foreground="#FFFEFEFE">
+            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="显示图片路径" VerticalAlignment="Top" Width="120" Margin="214.175,213.963,0,0"/>
+        </GroupBox>
+        <Label Content="单价" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="103.999,177.332,0,0" Foreground="#FFFCF9F9"/>
+        <Label Content="菜品图片" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94.665,256.666,0,0" RenderTransformOrigin="0.569,0.845" Foreground="#FFFCF9F9"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="247.333,120,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="247.333,181.332,0,0"/>
+        <Button Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="103.999,432.145,0,0"/>
+        <Button Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="347.667,432.145,0,0"/>
+        <Button x:Name="btn_BrowseTheFile" Content="浏览" HorizontalAlignment="Left" Height="19.24" Margin="397.894,262.666,0,0" VerticalAlignment="Top" Width="61.879" Click="btn_BrowseTheFile_Click"/>
+        <Label Content="菜品名称" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="94.665,116,0,0" Foreground="#FFFCF9F9"/>
+        <Image x:Name="img_Dishes" HorizontalAlignment="Left" Height="62.949" Margin="255.228,310,0,0" VerticalAlignment="Top" Width="98.947" Source="OIP.jpg"/>
+
+    </Grid>
+</Window>

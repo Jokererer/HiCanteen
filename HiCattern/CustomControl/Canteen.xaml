@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="OwnControl.Canteen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OwnControl"
+            
+              mc:Ignorable="d" Height="163" Width="524">
+    <Grid HorizontalAlignment="Right" Width="514">
+        <Image Margin="0,10,369,18.667" Name="CanteenImage" HorizontalAlignment="Right" Width="141"  />
+        <Label Content="食堂名称：" HorizontalAlignment="Left" Margin="146,10,0,0" VerticalAlignment="Top" FontSize="16px" Name="Label1" Foreground="White"/>
+        <Label Content="地点：" HorizontalAlignment="Left" Margin="146,40,0,0" FontSize="15" VerticalAlignment="Top" Name="Label2" Foreground="White"/>
+        <Label Content="简介：" HorizontalAlignment="Left" Margin="146,69,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="1.6,0.448" Name="Label3" Foreground="White" />
+        <Label Content="XXX" HorizontalAlignment="Left" Margin="223,10,0,0" VerticalAlignment="Top"  FontSize="16px" Name="CanteenNameLabel" Foreground="White" />
+        <Label  Content="地点设置" HorizontalAlignment="Left" Margin="194,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.423,0.4"  FontSize="15px" Name="AddressLabel" Foreground="White"/>
+        <Label  HorizontalAlignment="Left" Margin="145,100,0,0" VerticalAlignment="Top" FontSize="12px" RenderTransformOrigin="0.758,0.476"  Grid.Column="1" Height="54" Width="364">
+            <TextBlock  MaxWidth="350" TextWrapping="WrapWithOverflow" Text="简介" Height="54" Name="IntroductionLabel" Width="369"  Foreground="White"></TextBlock>
+        </Label>
+
+
+    </Grid>
+</UserControl>

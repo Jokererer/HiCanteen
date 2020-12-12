@@ -1,0 +1,21 @@
+﻿<Window x:Class="HiCattern.Rider.RiderLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Rider"
+        mc:Ignorable="d"
+        Title="骑手登录" Height="571.382" Width="585.856">
+    <Window.Background>
+        <ImageBrush ImageSource="外卖.jpg"/>
+    </Window.Background>
+    <Grid Margin="0,0,0,-3">
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="228.667,301,0,0" TextWrapping="Wrap" Text="请输入账号" VerticalAlignment="Top" Width="200" FontSize="14"/>
+        <Button Content="登录" HorizontalAlignment="Left" Height="29" Margin="207.523,460,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="14"/>
+        <Image HorizontalAlignment="Left" Height="35" Margin="162.667,301,0,0" VerticalAlignment="Top" Width="31" Source="管理员账号.png" RenderTransformOrigin="0.645,0.114"/>
+        <Image Height="35" Margin="36.667,380,256.666,0" VerticalAlignment="Top" Source="管理员密码.png" RenderTransformOrigin="0.645,0.114"/>
+        <Image Height="35" Margin="242.667,420,50.666,0" VerticalAlignment="Top" Source="忘记密码.png" RenderTransformOrigin="0.645,0.114"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="228.667,380,0,0" TextWrapping="Wrap" Text="请输入密码" VerticalAlignment="Top" Width="200" FontSize="14"/>
+
+    </Grid>
+</Window>

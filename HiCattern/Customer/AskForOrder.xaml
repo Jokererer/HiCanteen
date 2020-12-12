@@ -1,0 +1,38 @@
+﻿<Window x:Class="HiCattern.Customer.AskForOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Customer"
+        mc:Ignorable="d"
+        Title="到店自取订单页面" Height="527.814" Width="541.599">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="菜单2.jpeg"/>
+        </Grid.Background>
+        <GroupBox Header="尊敬的客户，您的订单明细如下：" HorizontalAlignment="Left" Height="320.77" Margin="42.3,32.022,0,0" VerticalAlignment="Top" Width="427.858" FontSize="14" FontWeight="Bold" Foreground="#FFF1E4E4">
+            <ListView HorizontalAlignment="Left" Height="296" Margin="0,0,-2,0" VerticalAlignment="Top" Width="418">
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns>
+                            <GridViewColumn  Header="菜品名"
+                                Width="130"
+                                />
+                            <GridViewColumn Header="数量"
+                                Width="130"
+                                 />
+                            <GridViewColumn Header="单价"
+                                Width="150" />
+                           
+                        </GridView.Columns>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+        <Label Content="自取时间：" HorizontalAlignment="Left" Height="31.567" Margin="42.3,357.792,0,0" VerticalAlignment="Top" Width="211.583" FontSize="14" FontWeight="Bold" Foreground="#FFF1E4E4" Background="#FF644C4C"/>
+        <Label Content="待支付：" HorizontalAlignment="Left" Height="33.035" Margin="306.575,356.324,0,0" VerticalAlignment="Top" Width="163.583" FontSize="14" FontWeight="Bold" Foreground="#FFE9E1E1" Background="#FF644C4C"/>
+        <Button x:Name="button_pay" Content="付款" HorizontalAlignment="Left" Height="33.036" Margin="364.449,408.892,0,0" VerticalAlignment="Top" Width="86.623" FontSize="14" FontWeight="Bold" Click="button_pay_Click"/>
+
+    </Grid>
+</Window>

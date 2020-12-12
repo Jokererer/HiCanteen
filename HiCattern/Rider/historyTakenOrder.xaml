@@ -1,0 +1,38 @@
+﻿<Window x:Class="HiCattern.Rider.historyTakenOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Rider"
+        mc:Ignorable="d"
+        Title="历史接单" Height="571.382" Width="585.856" Background="#FFFBF4F4">
+    <Grid Margin="0,0,-6.667,-3">
+        <Grid.Background>
+            <ImageBrush ImageSource="外卖.jpg"></ImageBrush>
+        </Grid.Background>
+        <Label Content="历史接单" HorizontalAlignment="Left" Height="29" Margin="236.167,240.5,0,0" VerticalAlignment="Top" Width="104" Background="{x:Null}" Foreground="#FFF6E9E9" FontSize="16"/>
+        <Label Content="月总接单量" HorizontalAlignment="Left" Height="28.5" Margin="110,462.5,0,0" VerticalAlignment="Top" Width="145.167" Foreground="#FFFBF5F5" FontSize="14"/>
+        <Button x:Name="btn_ranking" Content="排行榜" HorizontalAlignment="Left" Height="28.5" Margin="415.167,462.5,0,0" VerticalAlignment="Top" Width="66.022" Foreground="#FFF7F4F4" Background="#FF2D167C" FontSize="14" Click="btn_ranking_Click"/>
+        <ListView HorizontalAlignment="Left" Height="188" Margin="93,270,0,0" VerticalAlignment="Top" Width="388">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn  Header="订单编号"
+                                Width="130"
+                                />
+                        <GridViewColumn Header="电话号码"
+                                Width="130"
+                                />
+
+
+                        <GridViewColumn Header="订单状态" Width="150" >
+                            
+                        </GridViewColumn>
+                    </GridView.Columns>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

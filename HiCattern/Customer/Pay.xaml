@@ -1,0 +1,19 @@
+﻿<Window x:Class="HiCattern.Customer.Pay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Customer"
+        mc:Ignorable="d"
+        Title="Pay" Height="544.878" Width="808.711" Background="#FFF8F8F8">
+    <Grid Margin="0,0,-6.667,-2.333">
+        <Grid.Background>
+            <ImageBrush ImageSource="poster.png"/>
+        </Grid.Background>
+        <Label Content="微信" HorizontalAlignment="Left" Height="70.5" Margin="150.667,55,0,0" VerticalAlignment="Top" Width="293" Foreground="#FFFCF2F2" FontSize="22"/>
+        <Label Content="支付宝" HorizontalAlignment="Left" Height="70.5" Margin="519.667,55,-13.956,0" VerticalAlignment="Top" Width="293" Foreground="#FFFCF2F2" FontSize="22"/>
+        <Image HorizontalAlignment="Left" Height="818.703" Margin="-10,110.5,0,-411.325" VerticalAlignment="Top" Width="818.711" Source="pay.png"/>
+        <Label Content="请选择以下一种支付方式：" HorizontalAlignment="Left" Height="70.5" Margin="254.667,0,0,0" VerticalAlignment="Top" Width="293" Foreground="#FFFCF2F2" FontSize="22"/>
+
+    </Grid>
+</Window>
