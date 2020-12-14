@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-E:\大三上\windows编程\hi食堂github\HiCattern\obj\Debug\
+E:\大三上\windows编程\hi食堂github\HiCattern\obj\Release\
 HiCattern
 none
 false
-DEBUG;TRACE
+TRACE
 E:\大三上\windows编程\hi食堂github\HiCattern\App.xaml
 36274010270
 
