@@ -12,7 +12,7 @@
         </GroupBox>
         <Label Content="所属食堂" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,236,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
         <Label Content="联系电话" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,185,0,0" RenderTransformOrigin="0.569,0.845" Foreground="#FFFCF9F9" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="112" Margin="279,77,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="279,77,0,0"/>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="112" Margin="279,188,0,0"/>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="112" Margin="279,239,0,0"/>
         <Button Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Margin="136,348,0,0" Height="25"/>
