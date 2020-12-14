@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:OwnControl"
              mc:Ignorable="d" Height="61" Width="639">
     <Grid HorizontalAlignment="Left" Width="636">
-        <Image HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="64" Name="MerchantImage" Source="小厨.png"/>
+        <Image HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="64" Name="MerchantImage" Source="t018871a5ae807eea94.jpg"/>
         <Label Content="商家名称" HorizontalAlignment="Left" Margin="69,0,0,0" VerticalAlignment="Top" FontWeight="Black" Name="MerchantNameLabel"/>
         <Label Content="祝您用餐愉快！*(^-^)*" HorizontalAlignment="Left" Margin="69,30,0,0" VerticalAlignment="Top" Width="493"/>
     </Grid>

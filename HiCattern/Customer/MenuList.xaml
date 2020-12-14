@@ -17,7 +17,6 @@
             </InlineUIContainer></TextBlock>
 
         <TextBox HorizontalAlignment="Left" Height="27" Margin="0,-1,0,0" TextWrapping="Wrap" Text="请输入菜名" VerticalAlignment="Top" Width="145" Foreground="#FFFAF2F2" Background="#FF4D4B4B" FontSize="16" BorderBrush="#FFF7F7F6"/>
-        <Button x:Name="btn_ok" Content="选好了" HorizontalAlignment="Left" Height="38" Margin="85,397,0,0" VerticalAlignment="Top" Width="94" FontSize="18" FontWeight="Bold" Background="#FFFAEFEF" Click="btn_ok_Click"/>
         <Label Content="总价：" HorizontalAlignment="Left" Height="38" Margin="267,397,0,0" VerticalAlignment="Top" Width="176" FontSize="18" FontWeight="Bold" Background="#FFF8F3F3"/>
         <Button x:Name="btn_shoppingCart" Content="购物车" HorizontalAlignment="Left" Height="38" Margin="743,397,0,0" VerticalAlignment="Top" Width="121" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" Click="btn_shoppingCart_Click" RenderTransformOrigin="0.164,0.833"/>
         <Grid HorizontalAlignment="Left" Height="53" Margin="38,430,-200.333,0" VerticalAlignment="Top" Width="1087">
@@ -41,7 +40,7 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
 
-                                <Button Width="150" Content="选课" Click="bt1_Click"  Height="60"></Button>
+                                <Button Width="150" Content="快乐铁板" Click="bt1_Click"  Height="60"></Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

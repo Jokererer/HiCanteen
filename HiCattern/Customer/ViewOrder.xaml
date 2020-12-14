@@ -16,23 +16,6 @@
         <Button Content="返回登录" HorizontalAlignment="Left" Height="30" Margin="71,398,0,0" VerticalAlignment="Top" Width="114" FontSize="18" FontWeight="Bold"/>
         <Button Content="返回首页" HorizontalAlignment="Left" Height="29" Margin="287,399,0,0" VerticalAlignment="Top" Width="116" FontSize="18" FontWeight="Bold"/>
         <Label Content="历史订单" HorizontalAlignment="Left" Height="32" Margin="186,10,0,0" VerticalAlignment="Top" Width="111" Foreground="#FFDDD8D8" FontSize="18"/>
-        <ListView HorizontalAlignment="Left" Height="313" Margin="46,61,0,0" VerticalAlignment="Top" Width="385">
-            <ListView.View>
-                <GridView>
-                    <GridView.Columns>
-                        <GridViewColumn  Header="菜品名"
-                                Width="130"
-                                />
-                        <GridViewColumn Header="数量"
-                                Width="130"
-                                />
-                        <GridViewColumn Header="单价" 
-                                Width="150" />
-
-                    </GridView.Columns>
-
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <DataGrid HorizontalAlignment="Left" Height="322" Margin="54,47,0,0" VerticalAlignment="Top" Width="373"/>
     </Grid>
 </Window>

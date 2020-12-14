@@ -11,7 +11,7 @@
     </Window.Background>
     <Grid Margin="0,0,0.333,-7">
         <TextBox HorizontalAlignment="Left" Height="35" Margin="229,348,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>
-        <Button Content="注册" HorizontalAlignment="Left" Height="29" Margin="203,483,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="18" Click="Button_Click"/>
+        <Button  Style="{StaticResource MyButton}" Content="注册" HorizontalAlignment="Left" Height="29" Margin="203,483,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="18" Click="Button_Click"/>
         <Image HorizontalAlignment="Left" Height="35" Margin="160,348,0,0" VerticalAlignment="Top" Width="31" Source="管理员账号.png" RenderTransformOrigin="0.645,0.114"/>
         <Image Height="35" Margin="33,408,260.333,0" VerticalAlignment="Top" Source="管理员密码.png" RenderTransformOrigin="0.645,0.114"/>
         <TextBox HorizontalAlignment="Left" Height="35" Margin="229,408,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>

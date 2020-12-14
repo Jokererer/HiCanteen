@@ -15,7 +15,7 @@
         <TextBox HorizontalAlignment="Left" Height="30" Margin="174.167,334.813,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224.173"/>
         <Label Content="请输入新密码：" HorizontalAlignment="Left" Height="36.269" Margin="174.167,369.813,0,0" VerticalAlignment="Top" Width="128" Foreground="#FFFBF5F5" FontSize="14"/>
         <TextBox HorizontalAlignment="Left" Height="30" Margin="174.167,411.082,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224.173"/>
-        <Button Content="修改" HorizontalAlignment="Left" Height="26" Margin="209.225,479,0,0" VerticalAlignment="Top" Width="111.115" Foreground="#FFF8F9FE" Background="#FF190E79" FontSize="14"/>
+        <Button  Style="{StaticResource MyButton}" Content="修改" HorizontalAlignment="Left" Height="26" Margin="209.225,479,0,0" VerticalAlignment="Top" Width="111.115" Foreground="#FFF8F9FE" Background="#FF190E79" FontSize="14"/>
 
     </Grid>
 </Window>

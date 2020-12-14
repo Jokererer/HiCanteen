@@ -26,6 +26,10 @@ namespace HiCattern.Customer
             
         }
 
-        
+        private void btn_pay_Click(object sender, RoutedEventArgs e)
+        {
+            OrderConfirmation orderConfirmation = new OrderConfirmation();
+            orderConfirmation.Show();
+        }
     }
 }

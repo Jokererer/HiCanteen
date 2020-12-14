@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hi_食堂.SuperAdmin"
         mc:Ignorable="d"
-        Title="系统管理" Height="332.802" Width="653.788" Background="#FF58688F">
-    <Grid Background="#FF58688F">
-        <TabControl HorizontalAlignment="Left" Height="286" VerticalAlignment="Top" Width="634" Margin="6,7,0,0">
-            <TabItem Header="商家管理" Margin="98,0,-129,0.333">
+        Title="系统管理" Height="415.723" Width="762.714" Background="#FF58688F">
+    <Grid Background="#FF58688F" Margin="0,0,0,7.667">
+        <TabControl HorizontalAlignment="Left" Height="364" VerticalAlignment="Top" Width="740" Margin="6,7,0,0">
+            <TabItem Header="商家管理" Margin="117,0,-165,0.333">
                 <Grid Background="#FF58688F" Margin="0,0,0,-1.515">
                     <Canvas HorizontalAlignment="Left" Height="38.636" VerticalAlignment="Top" Width="618.091">
-                        <Label Content="商家信息查询" Canvas.Left="93.635" Canvas.Top="11" Foreground="#FFFCF9F9"/>
-                        <TextBox Height="23" TextWrapping="Wrap" Text="输入商家名称查询" Width="139.333" Canvas.Left="254.909" Canvas.Top="13"/>
-                        <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="450.788" Canvas.Top="13.76"/>
-                        <DataGrid Height="170.818" Width="586.94" Canvas.Left="17.545" Canvas.Top="52.515"/>
-                        <Image Height="23.876" Canvas.Left="48" Canvas.Top="13.76" Width="32.666" Source="商家.png"/>
+                        <Label Content="商家信息查询" Canvas.Left="136" Canvas.Top="11" Foreground="#FFFCF9F9"/>
+                        <TextBox Height="23" TextWrapping="Wrap" Text="输入商家名称查询" Width="139" Canvas.Left="298" Canvas.Top="13"/>
+                        <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="494" Canvas.Top="14"/>
+                        <DataGrid Height="266" Width="700" Canvas.Left="17" Canvas.Top="53"/>
+                        <Image Height="24" Canvas.Left="91" Canvas.Top="14" Width="34" Source="商家.png"/>
                     </Canvas>
                 </Grid>
             </TabItem>
-            <TabItem Header="查看顾客信息" Margin="128,0,-170,0.333">
+            <TabItem Header="查看顾客信息" Margin="163,0,-229,0.333">
                 <Grid Background="#FF58688F">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="172*"/>
@@ -27,53 +27,53 @@
                         <ColumnDefinition Width="439*"/>
                     </Grid.ColumnDefinitions>
                     <Grid HorizontalAlignment="Left" Height="46.97" VerticalAlignment="Top" Width="618.091" Grid.ColumnSpan="3">
-                        <Label Content="顾客信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="65.151,9,0,0" Foreground="#FFFCF9F9"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="输入顾客信息查询" VerticalAlignment="Top" Width="120" Margin="189.182,12,0,0"/>
-                        <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="408.879,13,0,0"/>
-                        <Image HorizontalAlignment="Left" Height="20.24" Margin="35,13,0,0" VerticalAlignment="Top" Width="25.484" Source="顾客管理.png"/>
+                        <Label Content="顾客信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,9,0,0" Foreground="#FFFCF9F9"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="输入顾客信息查询" VerticalAlignment="Top" Width="120" Margin="252,12,0,0"/>
+                        <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="472,13,0,0"/>
+                        <Image HorizontalAlignment="Left" Height="20" Margin="66,13,0,0" VerticalAlignment="Top" Width="25" Source="顾客管理.png"/>
                     </Grid>
-                    <DataGrid HorizontalAlignment="Left" Height="173.366" VerticalAlignment="Top" Width="583.455" Margin="10,51.97,0,0" Grid.ColumnSpan="3"/>
+                    <DataGrid HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="696" Margin="10,52,0,0" Grid.ColumnSpan="3"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="查看订单信息" Margin="168,0,-216,0.333">
+            <TabItem Header="查看订单信息" Margin="226,0,-299,0.333">
                 <Grid Background="#FF58688F" Margin="0,0,0,-1.332">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="247*"/>
                         <ColumnDefinition Width="381*"/>
                     </Grid.ColumnDefinitions>
                     <Label Content="订单信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59.999,14,0,0" Foreground="#FFFCF9F9" Height="25.24" Width="82"/>
-                    <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="141.545" Margin="218.1,18,0,0" Height="21.24" Grid.ColumnSpan="2"/>
+                    <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="240,18,0,0" Height="21" Grid.ColumnSpan="2"/>
                     <Image HorizontalAlignment="Left" Height="23.241" Margin="24,15.999,0,0" VerticalAlignment="Top" Width="22.667" Source="订单.png"/>
-                    <DataGrid HorizontalAlignment="Left" Height="183.095" VerticalAlignment="Top" Width="583.333" Margin="24,50.24,0,0" Grid.ColumnSpan="2"/>
-                    <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="198.631,20,0,0"/>
+                    <DataGrid HorizontalAlignment="Left" Height="277" VerticalAlignment="Top" Width="699" Margin="24,50,0,0" Grid.ColumnSpan="2"/>
+                    <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="225.333,20,0,0"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="查看季报信息" Margin="213.667,0,-268.667,0.333">
+            <TabItem Header="查看季报信息" Margin="296,0,-377,0.333">
                 <Grid Background="#FF58688F" Margin="0,0,0,-1.333">
-                    <DataGrid HorizontalAlignment="Left" Height="175.636" VerticalAlignment="Top" Width="585.606" Margin="17.212,58.669,0,0"/>
+                    <DataGrid HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="706" Margin="17,59,0,0"/>
                     <Grid HorizontalAlignment="Left" Height="51.515" VerticalAlignment="Top" Width="585.606" Margin="21.212,10,0,0">
                         <Label Content="季报信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,10,0,0" Foreground="#FFFCF9F9"/>
-                        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="150.424,13,0,0"/>
-                        <Button Content="查询" Margin="461.757,13.997,48.849,18.277"/>
+                        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="177,13,0,0"/>
+                        <Button Content="查询" Margin="500,14,11.606,18.515"/>
                     </Grid>
                     <Image HorizontalAlignment="Left" Height="20.427" Margin="21.212,24,0,0" VerticalAlignment="Top" Width="21.788" Source="图表.png"/>
-                    <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="96.667" Margin="330.757,23,0,0" Height="21.427"/>
+                    <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="358,23,0,0" Height="21"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="商家管理员" Margin="-316.333,0,285.333,0.333">
-                <Grid Background="#FF58688F" Margin="0,0,0.333,-20.333">
-                    <DataGrid HorizontalAlignment="Left" Height="152.303" VerticalAlignment="Top" Width="585.606" Margin="17.212,58.669,0,0"/>
+            <TabItem Header="商家管理员" Margin="-316.667,0,266.667,0.333">
+                <Grid Background="#FF58688F" Margin="0,0,0.333,-1">
+                    <DataGrid HorizontalAlignment="Left" Height="251" VerticalAlignment="Top" Width="706" Margin="17,54,0,0"/>
                     <Grid HorizontalAlignment="Left" Height="51.515" VerticalAlignment="Top" Width="585.606" Margin="21.212,10,0,0">
                         <Label Content="商家管理员查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,8,0,0" Foreground="#FFFCF9F9"/>
-                        <Button Content="查询" Margin="469,14,42.606,18.515"/>
+                        <Button Content="查询" Margin="507,12,4.606,20.515"/>
                     </Grid>
                     <Image HorizontalAlignment="Left" Height="20" Margin="33,21,0,0" VerticalAlignment="Top" Width="22" Source="管理员.png"/>
-                    <TextBox HorizontalAlignment="Left" Height="20" Margin="218,23,0,0" TextWrapping="Wrap" Text="输入商家管理员账号" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="btn_AddMerchantAdmin" Content="增加商家管理员" HorizontalAlignment="Left" Height="21" Margin="259,224,0,0" VerticalAlignment="Top" Width="100" Click="btn_AddMerchantAdmin_Click"/>
+                    <TextBox HorizontalAlignment="Left" Height="20" Margin="263,22,0,0" TextWrapping="Wrap" Text="输入商家管理员账号" VerticalAlignment="Top" Width="138"/>
+                    <Button x:Name="btn_AddMerchantAdmin" Content="增加商家管理员" HorizontalAlignment="Left" Height="21" Margin="321,315,0,0" VerticalAlignment="Top" Width="100" Click="btn_AddMerchantAdmin_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button x:Name="btn_BackHomepage" Content="返回" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" Margin="600,0,0,0" Click="btn_BackHomepage_Click"/>
+        <Button x:Name="btn_BackHomepage" Content="返回" HorizontalAlignment="Left" VerticalAlignment="Top" Width="41" Margin="706,0,0,0" Click="btn_BackHomepage_Click"/>
 
     </Grid>
 </Window>

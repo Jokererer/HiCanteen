@@ -11,7 +11,7 @@
     </Window.Background>
     <Grid Margin="0,0,0,-3">
         <TextBox HorizontalAlignment="Left" Height="35" Margin="228.667,301,0,0" TextWrapping="Wrap" Text="请输入账号" VerticalAlignment="Top" Width="200" FontSize="14"/>
-        <Button Content="登录" HorizontalAlignment="Left" Height="29" Margin="207.523,460,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="14"/>
+        <Button Style="{StaticResource MyButton}" Content="登录" HorizontalAlignment="Left" Height="29" Margin="207.523,460,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="14"/>
         <Image HorizontalAlignment="Left" Height="35" Margin="162.667,301,0,0" VerticalAlignment="Top" Width="31" Source="管理员账号.png" RenderTransformOrigin="0.645,0.114"/>
         <Image Height="35" Margin="36.667,380,256.666,0" VerticalAlignment="Top" Source="管理员密码.png" RenderTransformOrigin="0.645,0.114"/>
         <Image Height="35" Margin="242.667,420,50.666,0" VerticalAlignment="Top" Source="忘记密码.png" RenderTransformOrigin="0.645,0.114"/>

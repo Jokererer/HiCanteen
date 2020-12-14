@@ -65,12 +65,12 @@
         <Image HorizontalAlignment="Left" Height="38.667" Margin="428.333,128.813,0,0" VerticalAlignment="Top" Width="42.834" Source="账号 (2).png" RenderTransformOrigin="0.397,-0.038"/>
         <Image HorizontalAlignment="Left" Height="38.667" Margin="428.333,202.146,0,0" VerticalAlignment="Top" Width="42.834" Source="密码2.png"/>
         <Image HorizontalAlignment="Left" Height="38.667" Margin="428.333,267.146,0,0" VerticalAlignment="Top" Width="42.834" Source="身份.png" RenderTransformOrigin="0.848,2.544"/>
-        <Button x:Name="btn_RiderRegister" Content="" HorizontalAlignment="Left" Height="47" Margin="624,313,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="btn_RiderRegister_Click">
+        <Button  Style="{StaticResource MyButton}" x:Name="btn_RiderRegister" Content="" HorizontalAlignment="Left" Height="47" Margin="624,313,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="btn_RiderRegister_Click">
             <Button.Background>
                 <ImageBrush ImageSource="骑手.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_forget" Content="" HorizontalAlignment="Left" Height="41" Margin="502,313,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="1.461,0.824" BorderBrush="{x:Null}" Click="btn_forget_Click">
+        <Button Style="{StaticResource MyButton}" x:Name="btn_forget" Content="" HorizontalAlignment="Left" Height="41" Margin="502,313,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="1.461,0.824" BorderBrush="{x:Null}" Click="btn_forget_Click">
             <Button.Background>
                 <ImageBrush ImageSource="忘记密码2.png"/>
             </Button.Background>

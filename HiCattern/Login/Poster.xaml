@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:HiCattern.Login"
         mc:Ignorable="d"
         Title="海报" Height="475" Width="836" >
+    
     <Window.Resources>
         <ControlTemplate x:Key="WindowTemplateKey" TargetType="{x:Type Window}">
             <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
@@ -51,10 +52,11 @@
         <ImageBrush ImageSource="poster.png"/>
     </Window.Background>
     <Grid>
-        <Button x:Name="bt_Login" HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="829" Click="bt_Login_Click">
+        <Button Style="{StaticResource MyButton}" x:Name="bt_Login" HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="829" Click="bt_Login_Click">
             <Button.Background>
                 <ImageBrush ImageSource="poster.png" Stretch="Fill"/>
             </Button.Background>
+            
         </Button>
         <MediaElement Source="poster.png" MediaEnded="MediaElement_MediaEnded" Margin="0,0,0,0.666"/>
 
