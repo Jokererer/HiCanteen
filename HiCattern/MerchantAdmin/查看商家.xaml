@@ -10,10 +10,10 @@
         <TabControl HorizontalAlignment="Left" Height="377.666" VerticalAlignment="Top" Width="689.166" Margin="10,10,0,0">
             <TabItem Header="查看商家" Margin="0,0,-121.111,0">
                 <Grid Background="#FF58688F" Margin="0,0,0.167,1.5">
-                    <GroupBox Header="商家信息" HorizontalAlignment="Left" Height="249" VerticalAlignment="Top" Width="627" Margin="23,15,0,0" Foreground="#FFFCF9F9">
-                        <ListBox HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="582" Margin="17,14,0,0"/>
+                    <GroupBox Header="商家信息" HorizontalAlignment="Left" Height="281" VerticalAlignment="Top" Width="627" Margin="23,15,0,0" Foreground="#FFFCF9F9">
+                        <ListBox HorizontalAlignment="Left" Height="229" VerticalAlignment="Top" Width="582" Margin="17,14,0,0"/>
                     </GroupBox>
-                    <Button x:Name="btn_AddMerchant" Content="增加商家" Margin="304,287,309.5,35.833" Click="btn_AddMerchant_Click"/>
+                    <Button x:Name="btn_AddMerchant" Content="增加商家" Margin="306,309,307.5,13.833" Click="btn_AddMerchant_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="查看菜品" Margin="121.111,0,-242.222,0">
