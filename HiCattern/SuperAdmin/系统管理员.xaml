@@ -26,11 +26,12 @@
                         <ColumnDefinition Width="17*"/>
                         <ColumnDefinition Width="439*"/>
                     </Grid.ColumnDefinitions>
-                    <Grid HorizontalAlignment="Left" Height="46.97" VerticalAlignment="Top" Width="618.091" Grid.ColumnSpan="3">
+                    <Grid HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="689" Grid.ColumnSpan="3">
                         <Label Content="顾客信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="96,9,0,0" Foreground="#FFFCF9F9"/>
                         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="输入顾客信息查询" VerticalAlignment="Top" Width="120" Margin="252,12,0,0"/>
-                        <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="472,13,0,0"/>
+                        <Button Content="按ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="451,13,0,0"/>
                         <Image HorizontalAlignment="Left" Height="20" Margin="66,13,0,0" VerticalAlignment="Top" Width="25" Source="顾客管理.png"/>
+                        <Button Content="按手机号查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Margin="567,12,0,0"/>
                     </Grid>
                     <DataGrid HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="696" Margin="10,52,0,0" Grid.ColumnSpan="3"/>
                 </Grid>
@@ -42,10 +43,12 @@
                         <ColumnDefinition Width="381*"/>
                     </Grid.ColumnDefinitions>
                     <Label Content="订单信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59.999,14,0,0" Foreground="#FFFCF9F9" Height="25.24" Width="82"/>
-                    <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="142" Margin="240,18,0,0" Height="21" Grid.ColumnSpan="2"/>
                     <Image HorizontalAlignment="Left" Height="23.241" Margin="24,15.999,0,0" VerticalAlignment="Top" Width="22.667" Source="订单.png"/>
                     <DataGrid HorizontalAlignment="Left" Height="277" VerticalAlignment="Top" Width="699" Margin="24,50,0,0" Grid.ColumnSpan="2"/>
-                    <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="225.333,20,0,0"/>
+                    <Button Content="按商家ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Grid.Column="1" Margin="183.333,16,0,0" Height="20"/>
+                    <Button Content="按顾客ID查询" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="83" Margin="65.333,0,0,300.332" Height="20" Grid.Column="1"/>
+                    <Button Content="按订单ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Grid.Column="1" Margin="298.333,15,0,0"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="输入查询ID" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Margin="190,16,0,0"/>
                 </Grid>
             </TabItem>
             <TabItem Header="查看季报信息" Margin="296,0,-377,0.333">
