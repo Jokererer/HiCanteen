@@ -1,34 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Hi食堂.entity;
 
-using HiCanteen.entity;
-
-namespace HiCanteen.dao
+namespace Hi食堂.dao
 {
     class MerchantAdmiDao
     {
-        Data data = new Data();
+        //Data data = new Data();
+        DataBase db = new DataBase();
+
+        public DataTable findMerAdmi(int id)
+        {
+            string sql = "select * from merchantAdmi where merchantAdmiID=" + id + ";";
+            DataTable r = db.QueryData(sql);
+            return r;
+        }
         /// <summary>
         /// 添加商家管理员
         /// </summary>
         /// <param name="merchantAdmi"></param>
         public bool addMerchantAdmi(MerchantAdmi merchantAdmi)
         {
-            string sql = "insert merchantadmi values(null,'" + merchantAdmi.getMerchantAdmiPasswd()
-                + "'," + merchantAdmi.getmerchantAdmiCanteen() + ");";
-            bool flag = data.UpdataData(sql);
+            string sql = "insert into merchantadmi values(null,'" + merchantAdmi.getMerchantAdmiPasswd()
+                + "','" + merchantAdmi.getmerchantAdmiCanteen() + "');";
+            bool flag = db.AddData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("添加成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("添加失败！");
-            //}
         }
         /// <summary>
         /// 删除商家管理员
@@ -37,54 +38,30 @@ namespace HiCanteen.dao
         public bool deleteMerchantAdmi(MerchantAdmi merchantAdmi)
         {
             string sql = "delete from merchantadmi where merchantAdmiID=" + merchantAdmi.getMerchantAdmiID() + ";";
-            bool flag = data.UpdataData(sql);
-            return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("删除成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("删除失败！");
-            //}
+            bool flag = db.AddData(sql);
+            return flag;       
         }
         /// <summary>
         /// 修改管理员密码
         /// </summary>
         /// <param name="merchantAdmi"></param>
-        public bool updateMerchantAdmiPasswd(MerchantAdmi merchantAdmi)
+        public bool updateMerchantAdmiPasswd(int id,string pwd)
         {
-            string sql = "update merchantadmi set merchantAdmiPasswd='" + merchantAdmi.getMerchantAdmiPasswd() + 
-                "' where merchantAdmiID="+ merchantAdmi.getMerchantAdmiID() + ";";
-            bool flag = data.UpdataData(sql);
+            string sql = "update merchantadmi set merchantAdmiPasswd='" + pwd + 
+                "' where merchantAdmiID="+ id + ";";
+            bool flag = db.DeleteData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("修改成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("修改失败！");
-            //}
         }
         /// <summary>
         /// 修改管理员所管的食堂
         /// </summary>
         /// <param name="merchantAdmi"></param>
-        public bool updateMerchantAdmiCanteen(MerchantAdmi merchantAdmi)
+        public bool updateMerchantAdmiCanteen(int id,string canteen)
         {
-            string sql = "update merchantadmi set canteenID=" + merchantAdmi.getmerchantAdmiCanteen() +
-                " where merchantAdmiID=" + merchantAdmi.getMerchantAdmiID() + ";";
-            bool flag = data.UpdataData(sql);
+            string sql = "update merchantadmi set canteenName=" + canteen +
+                " where merchantAdmiID=" + id + ";";
+            bool flag = db.UpdateData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("修改成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("修改失败！");
-            //}
         }
     }
 }

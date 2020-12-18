@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HiCanteen.entity
+namespace Hi食堂.entity
 {
     class Orders
     {

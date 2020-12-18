@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HiCanteen.entity
+namespace Hi食堂.entity
 {
     class Merchant
     {
@@ -14,7 +14,6 @@ namespace HiCanteen.entity
         private int merchantID;
         private string merchantName;
         private string merchantPasswd;
-        //private string merchantAddress;
         private string merchantPhone;
         private string canteenName;
 
@@ -55,16 +54,8 @@ namespace HiCanteen.entity
         {
             return this.merchantPasswd;
         }
-        //public void setMerchantAddress(string address)
-        //{
-        //    this.merchantAddress = address;
-        //}
-        //public string getMerchantAddress()
-        //{
-        //    return this.merchantAddress;
-        //}
         /// <summary>
-        /// 食堂编号
+        /// 所属食堂
         /// </summary>
         /// <param name="id"></param>
         public void setCanteenName(string name)

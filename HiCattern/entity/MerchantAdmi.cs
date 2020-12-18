@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HiCanteen.entity
+namespace Hi食堂.entity
 {
     class MerchantAdmi
     {
         private int merchantAdmiID;
         private string merchantAdmiPasswd;
-        private int canteenID;
+        private string canteenName;
 
         /// <summary>
-        /// 商家ID
+        /// 商家管理员ID
         /// </summary>
         /// <param name="id"></param>
         public void setMerchantAdmiID(int id)
@@ -41,13 +41,13 @@ namespace HiCanteen.entity
         /// 食堂编号
         /// </summary>
         /// <param name="id"></param>
-        public void setCanteenID(int id)
+        public void setCanteenName(string name)
         {
-            this.canteenID = id;
+            this.canteenName = name;
         }
-        public int getmerchantAdmiCanteen()
+        public string getmerchantAdmiCanteen()
         {
-            return this.canteenID;
+            return this.canteenName;
         }
     }
 }

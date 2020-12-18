@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Hi食堂.entity;
 
-using HiCanteen.entity;
-
-namespace HiCanteen.dao
+namespace Hi食堂.dao
 {
     class OrderDetailsDao
     {
-        Data data = new Data();
+        //Data data = new Data();
+        DataBase db = new DataBase();
         /// <summary>
         /// 添加订单明细
         /// </summary>
@@ -20,16 +21,15 @@ namespace HiCanteen.dao
             string sql = "insert orderdetails values(null," + orderDetails.getDishesID()
                 + "," + orderDetails.getOrderDetailNum() + "," + orderDetails.getDishesNum() + "," +
                 orderDetails.getPriceSale() + "," + orderDetails.getOrderID() +");";
-            bool flag = data.UpdataData(sql);
+            bool flag = db.AddData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("添加成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("添加失败！");
-            //}
+        }
+        public bool addOrderDetails(int dishesID,int dishesNum,float price,int orderID)
+        {
+            string sql = "insert orderdetails values(null," + dishesID
+                + "," + dishesNum + "," + price + "," + orderID + ");";
+            bool flag = db.AddData(sql);
+            return flag;
         }
         /// <summary>
         /// 删除订单明细
@@ -38,16 +38,8 @@ namespace HiCanteen.dao
         public bool deleteOrderDetails(OrderDetails orderDetails)
         {
             string sql = "delete from orderdetails where orderDetailsNum=" + orderDetails.getOrderDetailNum() + ";";
-            bool flag = data.UpdataData(sql);
+            bool flag = db.DeleteData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("删除成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("删除失败！");
-            //}
         }
 
     }

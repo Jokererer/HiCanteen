@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-using HiCanteen.entity;
-
+using System.Windows.Forms;
+using Hi食堂.entity;
 using MySql.Data.MySqlClient;
 
-namespace HiCanteen.dao
+namespace Hi食堂.dao
 {
     class DishesDao
     {
         //dishes dish = new dishes();
-        Data data = new Data();
+        DataBase db = new DataBase();
+       // Data data = new Data();
 
         /// <summary>
         /// 增加菜品
@@ -23,47 +24,32 @@ namespace HiCanteen.dao
         {
             string sql = "insert into dishes values(null,'" + dish.getDishName() + "'," +
                 dish.getMID() + "," + dish.getPrice() + "," + dish.getSales() + ",'" + dish.getTaste() + "');";
-            bool flag=data.UpdataData(sql);
+            bool flag=db.UpdateData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("添加成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("添加失败！");
-            //}
+
         }
         /// <summary>
         /// 删除菜品
         /// </summary>
         /// <param name="dish"></param>
-        public bool deleteDishes(Dishes dish)
+        public bool deleteDishes(int id)
         {
-            string sql = "delete from dishes where dishesID="+dish.getDishID()+";";
-            bool flag=data.UpdataData(sql);
+            string sql = "delete from dishes where dishesID="+id+";";
+            bool flag=db.DeleteData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("删除成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("删除失败！");
-            //}
         }
-
-        public MySqlDataReader findDishes(Dishes dishes)
+        //查找菜品
+        public DataTable findDishes(Dishes dishes)
         {
             string sql = "select * from dishes where DishesID=" + dishes.getDishID() + ";";
-            MySqlDataReader r = data.FindData(sql);
-            return r;
+            DataTable dt = db.QueryData(sql);
+            return dt;
         }
 
-        public MySqlDataReader queryD(int id)
+        public DataTable queryD(int id)
         {
             string sql = "select * from dishes where MerchantID=" + id + ";";
-            MySqlDataReader r = data.FindData(sql);
+            DataTable r = db.QueryData(sql);
             return r;
         }
         /// <summary>
@@ -72,34 +58,21 @@ namespace HiCanteen.dao
         public bool updataDishPrice(Dishes dish)
         {
             string sql = "update dishes set price="+dish.getPrice()+" where dishesID="+dish.getDishID()+";";
-            bool flag = data.UpdataData(sql);
+            bool flag = db.UpdateData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("修改成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("修改失败！");
-            //}
+     
         }
         /// <summary>
         /// 修改菜品口味
         /// </summary>
         /// <param name="dish"></param>
-        public bool updataDishTaste(Dishes dish)
+
+        public bool updataDish(Dishes dish)
         {
-            string sql = "update dishes set taste=" + dish.getTaste() + " where dishesID=" + dish.getDishID() + ";";
-            bool flag = data.UpdataData(sql);
+            string sql = "update dishes set dishesName='" + dish.getDishName() + "',price="+dish.getPrice()+" where dishesID=" + dish.getDishID() + ";";
+            bool flag = db.UpdateData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("修改成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("修改失败！");
-            //}
         }
+
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HiCanteen.entity
+namespace Hi食堂.entity
 {
     class ShoppingCart
     {
@@ -68,11 +68,11 @@ namespace HiCanteen.entity
         /// 菜品价格
         /// </summary>
         /// <param name="id"></param>
-        public void setPriceSum(float price)
+        public void setPrice(float price)
         {
             this.priceSale = price;
         }
-        public float getPriceSum()
+        public float getPrice()
         {
             return this.priceSale;
         }

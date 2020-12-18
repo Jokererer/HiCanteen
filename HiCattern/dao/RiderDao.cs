@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Hi食堂.entity;
 
-using HiCanteen.entity;
-
-namespace HiCanteen.dao
+namespace Hi食堂.dao
 {
     class RiderDao
     {
-        Data data = new Data();
+        //Data data = new Data();
+        DataBase db = new DataBase();
         /// <summary>
         /// 添加骑手
         /// </summary>
@@ -19,16 +21,8 @@ namespace HiCanteen.dao
         {
             string sql = "insert rider values(null,'" + rider.getRiderName() + "' ,'" +
                 rider.getriderPasswd()+ "' ,'" + rider.getRiderPhone() + "');";
-            bool flag = data.UpdataData(sql);
+            bool flag = db.AddData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("添加成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("添加失败！");
-            //}
         }
         /// <summary>
         /// 删除骑手信息
@@ -37,16 +31,8 @@ namespace HiCanteen.dao
         public bool deleteRider(Rider rider)
         {
             string sql = "delete from rider where riderID=" + rider.getRiderID() + ";";
-            bool flag = data.UpdataData(sql);
+            bool flag = db.DeleteData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("删除成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("删除失败！");
-            //}
         }
         /// <summary>
         /// 修改骑手密码
@@ -56,16 +42,8 @@ namespace HiCanteen.dao
         {
             string sql = "update rider set riderPasswd='" + rider.getriderPasswd() + "' where riderID="
                 + rider.getRiderID() + ";";
-            bool flag = data.UpdataData(sql);
+            bool flag = db.UpdateData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("修改成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("修改失败！");
-            //}
         }
         /// <summary>
         /// 修改骑手电话
@@ -75,16 +53,15 @@ namespace HiCanteen.dao
         {
             string sql = "update rider set riderPhone='" + rider.getRiderPhone() + "' where riderID="
                 + rider.getRiderID() + ";";
-            bool flag = data.UpdataData(sql);
+            bool flag = db.UpdateData(sql);
             return flag;
-            //if (flag)
-            //{
-            //    MessageBox.Show("修改成功！");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("修改失败！");
-            //}
+        }
+
+        public DataTable findRider(Rider rider)
+        {
+            string sql = "select * from rider where riderID=" + rider.getRiderID() + ";";
+            DataTable r = db.QueryData(sql);
+            return r;
         }
     }
 }

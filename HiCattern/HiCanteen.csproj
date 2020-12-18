@@ -146,7 +146,7 @@
     <Compile Include="dao\RiderDao.cs" />
     <Compile Include="dao\ShoppingCartDao.cs" />
     <Compile Include="dao\SystemAdmiDao.cs" />
-    <Compile Include="Data.cs" />
+    <Compile Include="DataBase.cs" />
     <Compile Include="entity\Customer.cs" />
     <Compile Include="entity\Dishes.cs" />
     <Compile Include="entity\Merchant.cs" />
@@ -208,7 +208,10 @@
       <DependentUpon>RiderRegister.xaml</DependentUpon>
     </Compile>
     <Compile Include="service\CustomsService.cs" />
+    <Compile Include="service\MerchantAdmiService.cs" />
     <Compile Include="service\MerchantService.cs" />
+    <Compile Include="service\RiderService.cs" />
+    <Compile Include="service\SysAdmiService.cs" />
     <Compile Include="SuperAdmin\增加商家管理员.xaml.cs">
       <DependentUpon>增加商家管理员.xaml</DependentUpon>
     </Compile>
