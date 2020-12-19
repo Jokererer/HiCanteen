@@ -51,10 +51,11 @@ namespace HiCattern.Customer
                 //bti.Content = "快乐铁板" + i.ToString();
                 //var btn = merchantList.Items[0] as Button;
                 Button bt = new Button();
-                bt.Width = 130;
-                bt.Height = 50;
-                
-                bt.Margin = new Thickness(5, 5, 5, 5);
+                bt.Width = 110;
+                bt.Height = 40;
+
+                bt.Margin = new Thickness(0, 0, 0, 0);
+              
                 bt.Content = dt.Rows[i][0];
                 bt.Click += new RoutedEventHandler(bt1_Click);
                 
