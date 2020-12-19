@@ -97,17 +97,18 @@ namespace Hi食堂.dao
             return r;
             //ArrayList list = r;
         }
-        //public int queryMbyMname(string mName)
-        //{
-        //    string sql = "select * from merchant where merchantName='" + mName + "';";
-        //    DataTable r = db.QueryData(sql);
-        //    int temp = 0;
-        //    while (r.R)
-        //    {
-        //        temp = int.Parse(r[0].ToString());
-        //    }
-        //    return temp;
-        //}
+        //通过商家名查找商家ID
+        public int queryMIDbyMname(string mName)
+        {
+            string sql = "select * from merchant where merchantName='" + mName + "';";
+            DataTable dt = db.QueryData(sql);
+            int temp = 0;
+            for(int i=0;i<dt.Rows.Count;i++)
+            {
+                temp = int.Parse(dt.Rows[i][0].ToString());
+            }
+            return temp;
+        }
 
     }
 }

@@ -252,7 +252,6 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\bin\Debug\System.Buffers.xml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\bin\Debug\System.Memory.xml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csprojAssemblyReference.cache
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Simple Styles.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\CustomControl\Canteen.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\CustomControl\MerchantMess.g.cs

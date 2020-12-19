@@ -56,7 +56,7 @@ namespace Hi食堂.dao
             bool flag = db.UpdateData(sql);
             return flag;
         }
-
+        //获取最后生成的订单号
         public int getLastOrderID()
         {
             string sql = "select orderID from orders;";
@@ -64,6 +64,13 @@ namespace Hi食堂.dao
             int temp = dt.Rows.Count;
             int id = int.Parse(dt.Rows[temp - 1][0].ToString());
             return id;
+        }
+        //选择配送方式
+        public bool selectPattern(int orderID,int a)
+        {
+            string sql = "update orders set riderID=" + a + " where orderID=" + orderID + ";";
+            bool f = db.UpdateData(sql);
+            return f;
         }
     }
 }

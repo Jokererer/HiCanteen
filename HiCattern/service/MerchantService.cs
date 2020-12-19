@@ -27,25 +27,25 @@ namespace Hi食堂.service
         /// <param name="id"></param>
         /// <param name="pwd"></param>
         /// <returns></returns>
-        public int login(int id,string pwd,out int merID)
+        public int login(int id,string pwd)
         {
             merchant.setMerchantID(id);
             merchant.setMerchantPasswd(pwd);
             DataTable dt = merDao.findMerchant(merchant);
             if (dt.Rows.Count == 0)  //商家不存在
             {
-                merID = 0;
+               // merID = 0;
                 return -1;
             }
             //验证密码
             else if (dt.Rows[0][2].ToString()!= pwd)//密码错误
             {
-                merID = 0;
+               // merID = 0;
                 return -2;
             }
             else   //登录成功
             {
-                merID = id;
+               // merID = id;
                 return 1;
             }
         }
@@ -142,43 +142,46 @@ namespace Hi食堂.service
             DataTable dt = db.QueryData(sql);
             return dt;
         }
+        //加载商家
+        public DataTable loadMerchant(string canteenName)
+        {
+            //ArrayList list = new ArrayList();
+            //Merchant m = new Merchant();
+            DataTable dt = merDao.queryM(canteenName);
+            //for(int i=0;i<dt.Rows.Count;i++)
+            //{
+            //    m.setMerchantID(int.Parse(dt.Rows[i][0].ToString()));
+            //    m.setMerchantName(dt.Rows[i][1].ToString());
+            //    m.setMerchantPasswd(dt.Rows[i][2].ToString());
+            //    m.setMerchantPhone(dt.Rows[i][3].ToString());
+            //    m.setCanteenName(dt.Rows[i][4].ToString());
+            //    list.Add(m);
+            //}
+            return dt;
+        }
+        //通过商家ID查找菜品
+        public DataTable loaddishes(int merID)
+        {
+            //DataTable dt = new DataTable();
+            //int temp = merDao.queryMIDbyMname(merchantName);
+            //Dishes d = new Dishes();
+            DataTable dt = dishDao.queryD(merID);
+            //for(int i=0;i<dt.Rows.Count;i++)
+            //{
+            //    d.setDishID(int.Parse(dt.Rows[i][0].ToString()));
+            //    d.setDishName(dt.Rows[i][1].ToString());
+            //    d.setMID(int.Parse(dt.Rows[i][2].ToString()));
+            //    d.setPrice(float.Parse(dt.Rows[i][3].ToString()));
+            //    d.setSales(int.Parse(dt.Rows[i][4].ToString()));
+            //    //list.Add(d);
+            //}          
+            return dt;
+        }
 
-        //        public ArrayList loadMerchant(string canteenName)
-        //        {
-        //            ArrayList list = new ArrayList();
-        //            Merchant m = new Merchant()
-        //;           MySqlDataReader r = merDao.queryM(canteenName);
-        //            while(r.Read())
-        //            {
-        //                m.setMerchantID(int.Parse(r[0].ToString()));
-        //                m.setMerchantName(r[1].ToString());
-        //                m.setMerchantPasswd(r[2].ToString());
-        //                m.setMerchantPhone(r[3].ToString());
-        //                m.setCanteenName(r[4].ToString());
-        //                list.Add(m);
-        //            }
-        //            return list;
-        //        }
-
-        //public ArrayList loaddishes(string merchantName)
-        //{
-        //    ArrayList list = new ArrayList();
-        //    int temp = merDao.queryMbyMname(merchantName);
-        //    Dishes d = new Dishes();
-        //    MySqlDataReader r = dishDao.queryD(temp);
-        //    while(r.Read())
-        //    {
-        //        d.setDishID(int.Parse(r[0].ToString()));
-        //        d.setDishName(r[1].ToString());
-        //        d.setMID(int.Parse(r[2].ToString()));
-        //        d.setPrice(float.Parse(r[3].ToString()));
-        //        d.setSales(int.Parse(r[4].ToString()));
-        //        list.Add(d);
-        //    }
-        //    return list;
-        //}
-
-        //public 
-
+        public int getMIDbyMName(string Mname)
+        {
+            int temp = merDao.queryMIDbyMname(Mname);
+            return temp;
+        }
     }
 }

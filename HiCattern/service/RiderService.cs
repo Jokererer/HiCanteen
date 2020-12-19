@@ -17,25 +17,25 @@ namespace Hi食堂.service
         RiderDao riderDao = new RiderDao();
         OrdersDao orDao = new OrdersDao();
         //public static int riState = 0;
-        public int login(int id, string pwd, out int rState)
+        public int login(int id, string pwd)
         {
             rider.setRiderID(id);
             rider.setriderPasswd(pwd);
             DataTable dt = riderDao.findRider(rider);
             if (dt.Rows.Count == 0)  //账号错误
             {
-                rState = 0;
+                //rState = 0;
                 return -1;
             }
             //验证密码
             else if (dt.Rows[0][2].ToString() != pwd)//密码错误
             {
-                rState = 0;
+                //rState = 0;
                 return -2;
             }
             else   //登录成功
             {
-                rState = id;
+                //rState = id;
                 return 1;
             }
         }

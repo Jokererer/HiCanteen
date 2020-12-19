@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using OwnControl;
+using Hi食堂.service;
+using System.Data;
 
 namespace HiCattern.Customer
 {
@@ -20,20 +22,25 @@ namespace HiCattern.Customer
     /// </summary>
     public partial class MenuList : Window
     {
-        public MenuList()
+        string canteenN;
+        int cusID;
+        public MenuList(string canteen,int customerID)
         {
             this.InitializeComponent();
-            MenuOutPut();
+            canteenN = canteen;
+            cusID = customerID;
+            MenuOutPut(canteen);
         }
         
         //菜单展示
-        private void MenuOutPut()
+        private void MenuOutPut(string canteenName)
         {
 
-
+            MerchantService merService = new MerchantService();
+            DataTable dt = merService.loadMerchant(canteenName);
             int i ;
             
-            for (i=1;i<=2;i++)
+            for (i=0;i< dt.Rows.Count; i++)
             {
                 //Button bti = new Button();
                 //bti.Name = "bt"+i;
@@ -41,7 +48,15 @@ namespace HiCattern.Customer
                 //bti.Height = 50;
                 //bti.Click += new RoutedEventHandler(bt1_Click);
                 //bti.Content = "快乐铁板" + i.ToString();
-                merchantList.Items.Add(i);
+                Button bt = new Button();
+                bt.Width = 130;
+                bt.Height = 30;
+                bt.Margin = new Thickness(5, 5, 5, 5);
+                bt.Content = dt.Rows[i][0];
+                bt.Click += new RoutedEventHandler(bt1_Click);
+                
+                merchantList.Items.Add(bt);
+
             }
             //Button bt1 = new Button();
             //bt1.Name = "bt1";
@@ -60,18 +75,12 @@ namespace HiCattern.Customer
             //merchantList.Items.Add(bt2);
 
 
-           
-            
-
-            
-
-
         }
 
-        private void dishesShow(string merchantName)
+        private void dishesShow(DataTable dt)
         {
-            int i;
-            for (i=1;i<10;i++)
+            //int i;
+            for (int i=0;i<dt.Rows.Count;i++)
             {
                 OwnControl.OrderDishes orderDishes = new OrderDishes();
                 dishes.Items.Add(orderDishes);
@@ -81,7 +90,10 @@ namespace HiCattern.Customer
         {
             var btn = sender as Button;
             var cont = btn.Content;
-            dishesShow(cont.ToString());
+            MerchantService merS = new MerchantService();
+            int id = merS.getMIDbyMName(cont.ToString());
+            DataTable dt = merS.loaddishes(id);
+            dishesShow(dt);
                
 
         }
@@ -100,7 +112,7 @@ namespace HiCattern.Customer
 
         private void bt_return_Click(object sender, RoutedEventArgs e)
         {
-            Canteen canteen = new Canteen();
+            Canteen canteen = new Canteen(cusID);
             canteen.Show();
         }
 

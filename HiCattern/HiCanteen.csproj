@@ -597,6 +597,15 @@
   <ItemGroup>
     <Resource Include="CustomControl\u=1177321287,3597718081&amp;fm=26&amp;gp=0.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SuperAdmin\返回.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SuperAdmin\返回 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SuperAdmin\返 回蓝.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

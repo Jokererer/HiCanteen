@@ -20,25 +20,25 @@ namespace Hi食堂.service
         //public static string canState = "";
 
         //登录功能
-        public int login(int id,string pwd,out string canState)
+        public int login(int id,string pwd)
         {
             merAdmi.setMerchantAdmiID(id);
             merAdmi.setMerchantAdmiPasswd(pwd);
             DataTable dt = merAdmiDao.findMerAdmi(id);
             if (dt.Rows.Count == 0)  //商家不存在
             {
-                canState = "";
+                //canState = "";
                 return -1;
             }
             //验证密码
             else if (dt.Rows[0][1].ToString() != pwd)//密码错误
             {
-                canState = "";
+                //canState = "";
                 return -2;
             }
             else   //登录成功
             {
-                canState = dt.Rows[0][2].ToString();
+                //canState = dt.Rows[0][2].ToString();
                 return 1;
             }
         }
