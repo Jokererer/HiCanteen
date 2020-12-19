@@ -140,7 +140,6 @@ E:\大三上\windows编程\hi食堂github\HiCattern\bin\Debug\System.Buffers.xml
 E:\大三上\windows编程\hi食堂github\HiCattern\bin\Debug\System.Memory.xml
 E:\大三上\windows编程\hi食堂github\HiCattern\bin\Debug\System.Numerics.Vectors.xml
 E:\大三上\windows编程\hi食堂github\HiCattern\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-E:\大三上\windows编程\hi食堂github\HiCattern\obj\Debug\HiCanteen.csprojAssemblyReference.cache
 E:\大三上\windows编程\hi食堂github\HiCattern\obj\Debug\Simple Styles.baml
 E:\大三上\windows编程\hi食堂github\HiCattern\obj\Debug\CustomControl\Canteen.g.cs
 E:\大三上\windows编程\hi食堂github\HiCattern\obj\Debug\CustomControl\MerchantMess.g.cs
@@ -332,4 +331,8 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csproj.CoreCo
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csproj.CopyComplete
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCattern.exe
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCattern.pdb
+<<<<<<< HEAD
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csprojAssemblyReference.cache
+=======
+E:\大三上\windows编程\hi食堂github\HiCattern\obj\Debug\HiCanteen.csprojAssemblyReference.cache
+>>>>>>> 651e04b789ee78897af0ac3a227fe7f7182e8d61

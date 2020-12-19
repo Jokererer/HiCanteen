@@ -14,7 +14,7 @@
             <Grid.Background>
                 <ImageBrush/>
             </Grid.Background>
-            <Button x:Name="btn_theLogin" Content="登录" Height="36" Margin="550,12,-140.667,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Background="#FFFEEFEF" Foreground="#FF141111" BorderBrush="{x:Null}" Click="Button_Click"/>
+            <Button x:Name="btn_theLogin" Content="登录" HorizontalAlignment="Left" Height="36" Margin="550,12,-140.667,0" VerticalAlignment="Top" Width="200" FontSize="16" FontWeight="Bold" Background="#FFFEEFEF" Foreground="#FF141111" BorderBrush="{x:Null}" Click="Button_Click"/>
         </Grid>
 
         <TextBox x:Name="txt_number" MaxLength="11"  HorizontalAlignment="Left" Height="38.667" Margin="503.667,128.813,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285.333" Background="#FFF7F5F5" Foreground="#FF1B0707" BorderBrush="#FFE4DAD7"  FontSize="18"  >

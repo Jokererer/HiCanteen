@@ -48,15 +48,12 @@ namespace Hi_食堂.SuperAdmin
             SysAdmiService sysService = new SysAdmiService();
             DataTable dt = sysService.showAllMerAdmi();
             dt.Columns[0].ColumnName = "账号";
+            
             dt.Columns[1].ColumnName = "密码";
             dt.Columns[2].ColumnName = "所管食堂";
             dg1.ItemsSource = dt.DefaultView;
         }
 
-        private void dg1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
 
         private void btn_queryMerAdmi_Click(object sender, RoutedEventArgs e)
         {
@@ -67,6 +64,11 @@ namespace Hi_食堂.SuperAdmin
             dt.Columns[1].ColumnName = "密码";
             dt.Columns[2].ColumnName = "所管食堂";
             dg1.ItemsSource = dt.DefaultView;
+        }
+
+        private void btn_refresh_Click(object sender, RoutedEventArgs e)
+        {
+            MerSysLoaded(sender,e);
         }
     }
 }
