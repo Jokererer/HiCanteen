@@ -163,9 +163,10 @@ namespace Hi食堂.service
 
         }
         //选择配送方式
-        public void patternSelect()
+        public void patternSelect(int a)
         {
-
+            int orID=orDao.getLastOrderID();
+            bool f = orDao.selectPattern(orID, a);//到店自取设置为-1，外卖配送设置为0
         }
     }
 }

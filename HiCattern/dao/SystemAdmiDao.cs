@@ -27,7 +27,7 @@ namespace Hi食堂.dao
 
         public DataTable findSysAdmi(SystemAdmi systemAdmi)
         {
-            string sql = "selete * from systemadmi where systemAdmiID=" + systemAdmi.getAdmiID() + ";";
+            string sql = "select * from systemadmi where systemAdmiID=" + systemAdmi.getAdmiID() + ";";
             DataTable r = db.QueryData(sql);
             return r;
         }

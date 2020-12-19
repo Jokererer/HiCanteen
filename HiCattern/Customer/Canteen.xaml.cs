@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using OwnControl;
+using Hi食堂.service;
 
 namespace HiCattern.Customer
 {
@@ -20,23 +21,26 @@ namespace HiCattern.Customer
     /// </summary>
     public partial class Canteen : Window
     {
-        public Canteen()
+        int customerID;
+        public Canteen(int customerID)
         {
             InitializeComponent();
-            outputCanteen();
+            this.customerID = customerID;
+            //outputCanteen();
         }
 
-        private void outputCanteen()
+        //private void outputCanteen()
 
-        {
+        //{
             
 
-        }
+        //}
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            HiCattern.Customer.MenuList menuList = new HiCattern.Customer.MenuList();
-            menuList.Show();
+
+            //HiCattern.Customer.MenuList menuList = new HiCattern.Customer.MenuList();
+            //menuList.Show();
         }
 
         private void btn_return_Click(object sender, RoutedEventArgs e)
@@ -70,15 +74,29 @@ namespace HiCattern.Customer
 
         private void canteen4_Click(object sender, RoutedEventArgs e)
         {
-            MenuList menuList = new MenuList();
+            //MerchantService merService = new MerchantService();
+            //merService.loadMerchant("四食堂");
+            MenuList menuList = new MenuList("四食堂",customerID);
             menuList.Show();
         }
 
         private void canteen5_Click(object sender, RoutedEventArgs e)
         {
-            MenuList menuList = new MenuList();
+            MenuList menuList = new MenuList("五食堂", customerID);
             menuList.Show();
 
+        }
+
+        private void canteen8_Click(object sender, RoutedEventArgs e)
+        {
+            MenuList menuList = new MenuList("八食堂", customerID);
+            menuList.Show();
+        }
+
+        private void canteen10_Click(object sender, RoutedEventArgs e)
+        {
+            MenuList menuList = new MenuList("十食堂", customerID);
+            menuList.Show();
         }
     }
 }
