@@ -332,3 +332,4 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csproj.CoreCo
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csproj.CopyComplete
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCattern.exe
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCattern.pdb
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csprojAssemblyReference.cache

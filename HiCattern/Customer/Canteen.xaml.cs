@@ -46,6 +46,7 @@ namespace HiCattern.Customer
         private void btn_return_Click(object sender, RoutedEventArgs e)
         {
             HiCattern.Login.TheLogin login = new HiCattern.Login.TheLogin();
+            this.Close();
             login.Show();
         }
 
@@ -77,12 +78,14 @@ namespace HiCattern.Customer
             //MerchantService merService = new MerchantService();
             //merService.loadMerchant("四食堂");
             MenuList menuList = new MenuList("四食堂",customerID);
+            this.Close();
             menuList.Show();
         }
 
         private void canteen5_Click(object sender, RoutedEventArgs e)
         {
             MenuList menuList = new MenuList("五食堂", customerID);
+            this.Close();
             menuList.Show();
 
         }
@@ -90,12 +93,14 @@ namespace HiCattern.Customer
         private void canteen8_Click(object sender, RoutedEventArgs e)
         {
             MenuList menuList = new MenuList("八食堂", customerID);
+            this.Close();
             menuList.Show();
         }
 
         private void canteen10_Click(object sender, RoutedEventArgs e)
         {
             MenuList menuList = new MenuList("十食堂", customerID);
+            this.Close();
             menuList.Show();
         }
     }
