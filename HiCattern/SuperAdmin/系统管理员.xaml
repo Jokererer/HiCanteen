@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="系统管理" Height="415.723" Width="684.047" Background="#FF58688F">
     <Grid Background="#FF58688F" Margin="0,0,11.667,7.667">
-        <TabControl HorizontalAlignment="Left" Height="364" VerticalAlignment="Top" Width="612" Margin="18,7,0,0">
+        <TabControl HorizontalAlignment="Left" Height="364" VerticalAlignment="Top" Width="612" Margin="18,7,0,0" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="商家管理员" Margin="0,0,-48,0.333">
                 <Grid Background="#FF58688F" Margin="0,0,-0.667,-1">
                     <Grid.ColumnDefinitions>

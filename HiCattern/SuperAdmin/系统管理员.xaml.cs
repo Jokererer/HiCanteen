@@ -55,6 +55,8 @@ namespace Hi_食堂.SuperAdmin
 
         private void dg1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            System.Diagnostics.Debug.Write("click \r\n");
+            e.Handled = true;
 
         }
 
@@ -67,6 +69,11 @@ namespace Hi_食堂.SuperAdmin
             dt.Columns[1].ColumnName = "密码";
             dt.Columns[2].ColumnName = "所管食堂";
             dg1.ItemsSource = dt.DefaultView;
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            System.Diagnostics.Debug.Write("selection change \r\n");
         }
     }
 }

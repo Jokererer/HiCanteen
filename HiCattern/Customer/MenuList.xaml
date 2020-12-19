@@ -35,21 +35,6 @@
             <Button x:Name="btn_viewOrder" Content="查看我的订单" HorizontalAlignment="Left" Height="43" Margin="456,10,0,0" VerticalAlignment="Top" Width="183" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" RenderTransformOrigin="0.09,0.544" Click="btn_viewOrder_Click" Grid.ColumnSpan="2"/>
             <Button x:Name="btn_customMssage" Content="消息通知" HorizontalAlignment="Left" Height="43" Margin="46.333,10,0,0" VerticalAlignment="Top" Width="182" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" RenderTransformOrigin="0.09,0.544" Click="btn_customMssage_Click" Grid.Column="1" Grid.ColumnSpan="3"/>
         </Grid>
-        <ListView x:Name="merchantList" HorizontalAlignment="Left" Height="371" Margin="0,26,0,0" VerticalAlignment="Top" Width="145">
-            <ListView.View>
-                <GridView x:Name="gv">
-                    <GridViewColumn Header="商家名" Width="150" >
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-
-                                <Button Width="130" Content="旺旺炒面" Click="bt1_Click"  Height="30"></Button>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-
-                </GridView>
-            </ListView.View>
-        </ListView>
         <ListView x:Name="dishes" HorizontalAlignment="Left" Height="371" Margin="145,26,-0.333,0" VerticalAlignment="Top" Width="780">
             <ListView.Background>
                 <ImageBrush ImageSource="amenu2.jpg"/>
@@ -60,6 +45,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <ListBox x:Name="merchantList" HorizontalAlignment="Left" Height="371" Margin="0,26,0,0" VerticalAlignment="Top" Width="145"/>
 
 
     </Grid>

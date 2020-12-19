@@ -38,6 +38,7 @@ namespace HiCattern.Customer
 
             MerchantService merService = new MerchantService();
             DataTable dt = merService.loadMerchant(canteenName);
+           
             int i ;
             
             for (i=0;i< dt.Rows.Count; i++)
@@ -48,12 +49,15 @@ namespace HiCattern.Customer
                 //bti.Height = 50;
                 //bti.Click += new RoutedEventHandler(bt1_Click);
                 //bti.Content = "快乐铁板" + i.ToString();
+                //var btn = merchantList.Items[0] as Button;
                 Button bt = new Button();
                 bt.Width = 130;
-                bt.Height = 30;
+                bt.Height = 50;
+                
                 bt.Margin = new Thickness(5, 5, 5, 5);
                 bt.Content = dt.Rows[i][0];
                 bt.Click += new RoutedEventHandler(bt1_Click);
+                
                 
                 merchantList.Items.Add(bt);
 
