@@ -26,7 +26,7 @@
                 <ColumnDefinition Width="52*"/>
                 <ColumnDefinition Width="295*"/>
             </Grid.ColumnDefinitions>
-            <Button Content="返回登录" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="182" FontSize="18" FontWeight="Bold" Background="#FFF3ECE6">
+            <Button Content="返回登录" HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="182" FontSize="18" FontWeight="Bold" Background="#FFF3ECE6" Click="Button_Click">
                 <Button.BorderBrush>
                     <ImageBrush/>
                 </Button.BorderBrush>

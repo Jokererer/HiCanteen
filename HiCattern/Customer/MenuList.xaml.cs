@@ -24,6 +24,7 @@ namespace HiCattern.Customer
     {
         string canteenN;
         int cusID;
+        int merID;
         public MenuList(string canteen,int customerID)
         {
             this.InitializeComponent();
@@ -84,10 +85,14 @@ namespace HiCattern.Customer
 
         private void dishesShow(DataTable dt)
         {
+            dishes.Items.Clear();
             //int i;
             for (int i=0;i<dt.Rows.Count;i++)
             {
                 OwnControl.OrderDishes orderDishes = new OrderDishes();
+                orderDishes.labelnametext = dt.Rows[i][1];
+                orderDishes.salevaluetext = dt.Rows[i][3];
+                orderDishes.salenumlabetext = dt.Rows[i][4];
                 dishes.Items.Add(orderDishes);
             }
         }
@@ -96,15 +101,19 @@ namespace HiCattern.Customer
             var btn = sender as Button;
             var cont = btn.Content;
             MerchantService merS = new MerchantService();
-            int id = merS.getMIDbyMName(cont.ToString());
+            int id = merS.getMIDbyMName(cont.ToString());//获取当前商家ID
+            merID = id;//设置id
             DataTable dt = merS.loaddishes(id);
             dishesShow(dt);
-               
+            
 
         }
 
         private void btn_shoppingCart_Click(object sender, RoutedEventArgs e)
         {
+            MerchantService mers = new MerchantService();
+            //mers.
+            //for(int i=0;i<)
             HiCattern.Customer.ShoppingCart shoppingCart = new ShoppingCart();
             shoppingCart.Show();
         }
@@ -118,6 +127,7 @@ namespace HiCattern.Customer
         private void bt_return_Click(object sender, RoutedEventArgs e)
         {
             Canteen canteen = new Canteen(cusID);
+            this.Close();
             canteen.Show();
         }
 
@@ -132,6 +142,13 @@ namespace HiCattern.Customer
             CustomMessage customMessage = new CustomMessage();
             customMessage.Show();
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            HiCattern.Login.TheLogin login = new HiCattern.Login.TheLogin();
+            this.Close();
+            login.Show();
         }
     }
 }

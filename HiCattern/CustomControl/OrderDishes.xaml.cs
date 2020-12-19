@@ -24,25 +24,30 @@ namespace OwnControl
         {
             InitializeComponent();
         }
-        public Object labelnametext
+        public Object labelnametext//菜名
         {
             get { return DishnameLabel.Content; }
             set { DishnameLabel.Content = value; }
         }
-        public ImageSource Dishimage
+        public ImageSource Dishimage//图片
         {
             get { return DishImage.Source; }
             set { DishImage.Source = value; }
         }
-        public Object salenumlabetext
+        public Object salenumlabetext//销量
         {
             get { return SalesNumLabel.Content; }
             set { SalesNumLabel.Content = value; }
         }
-        public Object salevaluetext
+        public Object salevaluetext//价格
         {
             get { return SalesvalueLabel.Content; }
-            set { SalesNumLabel.Content = value; }
+            set { SalesvalueLabel.Content = value; }
+        }
+        public Object Dishnum//数量
+        {
+            get { return NumLabel.Content; }
+            set { NumLabel.Content = value; }
         }
 
 
