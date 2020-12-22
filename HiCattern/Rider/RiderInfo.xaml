@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiCattern.Rider"
         mc:Ignorable="d"
-        Title="个人信息" Height="571.382" Width="585.856">
+        Title="个人信息" Height="571.382" Width="932.445">
     <Grid Margin="0,0,-6.667,-2.635" Height="544.684" VerticalAlignment="Top">
         <Grid.Background>
-            <ImageBrush ImageSource="外卖.jpg"/>
+            <ImageBrush ImageSource="riderbackground.jpg"/>
         </Grid.Background>
         <Label Content="修改密码" HorizontalAlignment="Left" Height="32.301" Margin="233.225,243.243,0,0" VerticalAlignment="Top" Width="110.115" Foreground="#FFEFE7E7" FontSize="16"/>
-        <Label Content="请输入旧密码：" HorizontalAlignment="Left" Height="36.269" Margin="174.167,293.544,0,0" VerticalAlignment="Top" Width="128" Background="{x:Null}" Foreground="#FFFEF0F0" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="174.167,334.813,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224.173"/>
-        <Label Content="请输入新密码：" HorizontalAlignment="Left" Height="36.269" Margin="174.167,369.813,0,0" VerticalAlignment="Top" Width="128" Foreground="#FFFBF5F5" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="174.167,411.082,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224.173"/>
-        <Button  Style="{StaticResource MyButton}" Content="修改" HorizontalAlignment="Left" Height="26" Margin="209.225,479,0,0" VerticalAlignment="Top" Width="111.115" Foreground="#FFF8F9FE" Background="#FF190E79" FontSize="14"/>
+        <Label Content="请输入旧密码：" HorizontalAlignment="Left" Height="36" Margin="536,145,0,0" VerticalAlignment="Top" Width="128" Background="{x:Null}" Foreground="#FF141313" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="536,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <Label Content="请输入新密码：" HorizontalAlignment="Left" Height="36" Margin="536,221,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF0A0A0A" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="536,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <Button  Style="{StaticResource MyButton}" Content="修改" HorizontalAlignment="Left" Height="26" Margin="591,355,0,0" VerticalAlignment="Top" Width="112" Foreground="#FFF8F9FE" Background="#FF190E79" FontSize="14"/>
 
     </Grid>
 </Window>

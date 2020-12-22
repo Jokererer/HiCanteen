@@ -101,7 +101,7 @@ namespace HiCattern.Login
                     int temp = riderService.login(riderID, passwd);
                     if (temp == 1)
                     {
-                        HiCattern.Rider.riderOrder1 riderOrder1 = new HiCattern.Rider.riderOrder1();
+                        HiCattern.Rider.riderOrder1 riderOrder1 = new HiCattern.Rider.riderOrder1(riderID);
                         this.Close();
                         riderOrder1.Show();
                     }

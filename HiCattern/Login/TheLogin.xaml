@@ -65,22 +65,22 @@
         <Image HorizontalAlignment="Left" Height="38.667" Margin="428.333,128.813,0,0" VerticalAlignment="Top" Width="42.834" Source="账号 (2).png" RenderTransformOrigin="0.397,-0.038"/>
         <Image HorizontalAlignment="Left" Height="38.667" Margin="428.333,202.146,0,0" VerticalAlignment="Top" Width="42.834" Source="密码2.png"/>
         <Image HorizontalAlignment="Left" Height="38.667" Margin="428.333,267.146,0,0" VerticalAlignment="Top" Width="42.834" Source="身份.png" RenderTransformOrigin="0.848,2.544"/>
-        <Button  Style="{StaticResource MyButton}" x:Name="btn_RiderRegister" Content="" HorizontalAlignment="Left" Height="47" Margin="624,313,0,0" VerticalAlignment="Top" Width="49" BorderBrush="{x:Null}" Click="btn_RiderRegister_Click">
+        <Button  Style="{StaticResource MyButton}" x:Name="btn_RiderRegister" Content="" HorizontalAlignment="Left" Height="48" Margin="748,313,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="btn_RiderRegister_Click">
             <Button.Background>
                 <ImageBrush ImageSource="骑手.png"/>
             </Button.Background>
         </Button>
-        <Button Style="{StaticResource MyButton}" x:Name="btn_forget" Content="" HorizontalAlignment="Left" Height="41" Margin="502,313,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="1.461,0.824" BorderBrush="{x:Null}" Click="btn_forget_Click">
+        <Button Style="{StaticResource MyButton}" x:Name="btn_forget" Content="" HorizontalAlignment="Left" Height="35" Margin="502,315,0,0" VerticalAlignment="Top" Width="47" RenderTransformOrigin="1.461,0.824" BorderBrush="{x:Null}" Click="btn_forget_Click">
             <Button.Background>
                 <ImageBrush ImageSource="忘记密码2.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btn_customRegister" Content="" HorizontalAlignment="Left" Height="43" Margin="742,316,0,0" VerticalAlignment="Top" Width="47" Click="btn_customRegister_Click">
+        <Button x:Name="btn_customRegister" Content="" HorizontalAlignment="Left" Height="33" Margin="627,318,0,0" VerticalAlignment="Top" Width="37" Click="btn_customRegister_Click" Background="#FFD86300">
             <Button.OpacityMask>
                 <ImageBrush ImageSource="注册.png"/>
             </Button.OpacityMask>
         </Button>
-        <ComboBox x:Name="userType" HorizontalAlignment="Left" Margin="504,267,0,0" VerticalAlignment="Top" Width="285" Height="39" SelectedIndex="0" FontSize="18">
+        <ComboBox x:Name="userType" HorizontalAlignment="Left" Margin="504,267,0,0" VerticalAlignment="Top" Width="285" Height="39" SelectedIndex="0" FontSize="18" Background="#FFF7F5F5">
             <ComboBoxItem Content="用户"/>
             <ComboBoxItem Content="商家"/>
             <ComboBoxItem Content="骑手"/>

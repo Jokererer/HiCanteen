@@ -37,7 +37,7 @@
                             </DataGrid.Columns>
                         </DataGrid>
                     </GroupBox>
-                    <Button x:Name="btn_AddMerchant" Content="增加商家" Margin="233,318,42.667,3.833" Click="btn_AddMerchant_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Button x:Name="btn_AddMerchant" Content="增加商家" Margin="233,318,23,0" Click="btn_AddMerchant_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
                     <Button x:Name="btn_refreshMer" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="226,29,0,0" VerticalAlignment="Top" Width="23" Click="btn_refreshMer_Click" Height="22">
                         <Button.Background>
                             <ImageBrush ImageSource="刷新 (2).png"/>

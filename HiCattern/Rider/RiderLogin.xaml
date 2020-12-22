@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiCattern.Rider"
         mc:Ignorable="d"
-        Title="骑手登录" Height="571.382" Width="585.856">
+        Title="骑手登录" Height="571.382" Width="996.205">
     <Window.Background>
-        <ImageBrush ImageSource="外卖.jpg"/>
+        <ImageBrush ImageSource="riderbackground.jpg"/>
     </Window.Background>
     <Grid Margin="0,0,0,-3">
-        <TextBox HorizontalAlignment="Left" Height="35" Margin="228.667,301,0,0" TextWrapping="Wrap" Text="请输入账号" VerticalAlignment="Top" Width="200" FontSize="14"/>
-        <Button Style="{StaticResource MyButton}" Content="登录" HorizontalAlignment="Left" Height="29" Margin="207.523,460,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="14"/>
-        <Image HorizontalAlignment="Left" Height="35" Margin="162.667,301,0,0" VerticalAlignment="Top" Width="31" Source="管理员账号.png" RenderTransformOrigin="0.645,0.114"/>
-        <Image Height="35" Margin="36.667,380,256.666,0" VerticalAlignment="Top" Source="管理员密码.png" RenderTransformOrigin="0.645,0.114"/>
-        <Image Height="35" Margin="242.667,420,50.666,0" VerticalAlignment="Top" Source="忘记密码.png" RenderTransformOrigin="0.645,0.114"/>
-        <TextBox HorizontalAlignment="Left" Height="35" Margin="228.667,380,0,0" TextWrapping="Wrap" Text="请输入密码" VerticalAlignment="Top" Width="200" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="616,174,0,0" TextWrapping="Wrap" Text="请输入账号" VerticalAlignment="Top" Width="200" FontSize="14"/>
+        <Button Style="{StaticResource MyButton}" Content="登录" HorizontalAlignment="Left" Height="36" Margin="583,360,0,0" VerticalAlignment="Top" Width="99" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="14"/>
+        <Image HorizontalAlignment="Left" Height="35" Margin="550,173,0,0" VerticalAlignment="Top" Width="31" Source="管理员账号.png" RenderTransformOrigin="0.645,0.114"/>
+        <Image Height="35" Margin="538,251,395.333,0" VerticalAlignment="Top" Source="管理员密码.png" RenderTransformOrigin="0.645,0.114"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="616,252,0,0" TextWrapping="Wrap" Text="请输入密码" VerticalAlignment="Top" Width="200" FontSize="14"/>
+        <Button Content="忘记密码" HorizontalAlignment="Left" Margin="733,359,0,0" VerticalAlignment="Top" Width="99" Background="#FF27307E" Foreground="#DDF7F7F7" BorderBrush="{x:Null}" Height="39" FontSize="15"/>
 
     </Grid>
 </Window>

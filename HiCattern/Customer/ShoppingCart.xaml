@@ -19,18 +19,9 @@
         <Button x:Name="btn_pay" Content="结算" HorizontalAlignment="Left" Height="33.003" Margin="540.023,23.259,0,0" VerticalAlignment="Top" Width="158.166" Background="#FFF7F3F3" BorderBrush="{x:Null}" FontSize="16" RenderTransformOrigin="0.515,1.429" Grid.Row="1" Click="btn_pay_Click"/>
         <Button Content="关闭" HorizontalAlignment="Left" Margin="93,75.667,0,10.333" Grid.Row="1" Width="179" BorderBrush="#FFF7F3F3" FontSize="16" Click="Button_Click"/>
         <Button Content="清空购物车" HorizontalAlignment="Left" Height="38" Margin="532,75.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" BorderBrush="#FFF7F0F0" FontSize="16" Click="Button_Click_1"/>
-        <ListView x:Name="messageList" HorizontalAlignment="Left" Height="458" VerticalAlignment="Top" Width="772" Grid.RowSpan="2">
-            <ListView.Background>
-                <ImageBrush ImageSource="amenu2.jpg"/>
-            </ListView.Background>
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <RadioButton Content="外卖跑腿" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="313,30.667,0,0" Grid.Row="1" Foreground="#FFF6F6F6" FontSize="16"/>
-        <RadioButton Content="到店自取" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="422,30.667,0,0" Grid.Row="1" Foreground="#FFFBF6F6" FontSize="16"/>
+        <RadioButton x:Name="radio1" Content="外卖跑腿" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="313,30.667,0,0" Grid.Row="1" Foreground="#FFF6F6F6" FontSize="16"/>
+        <RadioButton x:Name="radio2" Content="到店自取" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="422,30.667,0,0" Grid.Row="1" Foreground="#FFFBF6F6" FontSize="16"/>
+        <DataGrid x:Name="disheslist" HorizontalAlignment="Left" Height="411" VerticalAlignment="Top" Width="646" Margin="62,29,0,0" Background="#FFFAF1F1"/>
 
     </Grid>
 </Window>

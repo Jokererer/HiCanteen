@@ -190,6 +190,12 @@ namespace Hi食堂.service
 
         }
 
+        public DataTable getDishFromCart(int merchantID,int cusID)
+        {
+            return merDao.getDishFromCart(merchantID, cusID);
+
+        }
+
         public int getDishIDbyName(string dName,int merID)
         {
             return merDao.getDishIDbyName(dName, merID);

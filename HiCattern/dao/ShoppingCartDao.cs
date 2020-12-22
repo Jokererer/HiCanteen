@@ -16,7 +16,7 @@ namespace Hi食堂.dao
 
         public DataTable queryCart(int customerID,int merchantID,int dishID)
         {
-            string sql = "select * from shoppingcart where customerID=" + customerID + ",merchantID=" + merchantID + ",dishesID=" + dishID + ";";
+            string sql = "select * from shoppingcart where customerID=" + customerID + " and merchantID=" + merchantID + " and dishesID=" + dishID + ";";
             
             DataTable dt = db.QueryData(sql);
             return dt;

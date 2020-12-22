@@ -84,7 +84,6 @@ namespace Hi_食堂.MerchantAdmin
             dt.Columns[4].ColumnName = "价格";
             dt.Columns[5].ColumnName = "销量";
             dg2.ItemsSource = dt.DefaultView;
-        }
-        
+        }        
     }
 }

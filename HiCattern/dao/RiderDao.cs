@@ -17,12 +17,12 @@ namespace Hi食堂.dao
         /// 添加骑手
         /// </summary>
         /// <param name="rider"></param>
-        public bool addRider(Rider rider)
+        public int addRider(Rider rider)
         {
             string sql = "insert rider values(null,'" + rider.getRiderName() + "' ,'" +
                 rider.getriderPasswd()+ "' ,'" + rider.getRiderPhone() + "');";
-            bool flag = db.AddData(sql);
-            return flag;
+            int id = db.AddData2(sql);
+            return id;
         }
         /// <summary>
         /// 删除骑手信息

@@ -96,8 +96,12 @@ namespace HiCattern.Customer
                 orderDishes.salenumlabetext = dt.Rows[i][4];//销量
                 int did = int.Parse(dt.Rows[i][0].ToString());//获取当前菜品id
                 DataTable dt1 = ms.getDishesInfo(did, merID, cusID);
-                int temp = int.Parse(dt1.Rows[0][3].ToString());//获取数量
-                orderDishes.Dishnum = temp;//从购物车表中查询以前有没有点过改菜品，并显示数量
+                if(dt1!=null)
+                {
+                    int temp = int.Parse(dt1.Rows[0][3].ToString());//获取数量
+                    orderDishes.Dishnum = temp;//从购物车表中查询以前有没有点过该菜品，并显示数量
+                }
+                
                 dishes.Items.Add(orderDishes);
             }
         }

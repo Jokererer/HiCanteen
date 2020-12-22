@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:HiCattern.Customer"
         
         mc:Ignorable="d"
-        Title="Hi食堂" Height="522" Width="924.6">
+        Title="Hi食堂" Height="522" Width="955.267">
     <Window.Background>
         <ImageBrush ImageSource="菜单3.jpeg"/>
     </Window.Background>
     <Grid Margin="0,0,-6.667,0">
 
-        <TextBlock Foreground="#FFF6F8F8" FontWeight="Bold" Margin="145,-1,-0.333,0" Background="#FF4D4B4B" VerticalAlignment="Top" Height="27" FontSize="16" ><Run Text="通知：五食堂热销菜品，酸菜麻辣烫，烧鹅饭，快乐铁板，掉渣饼......"/><InlineUIContainer>
+        <TextBlock Foreground="#FFF6F8F8" FontWeight="Bold" Margin="152,-1,-0.666,0" Background="#FF4D4B4B" VerticalAlignment="Top" Height="27" FontSize="16" ><Run Text="通知：五食堂热销菜品，酸菜麻辣烫，烧鹅饭，快乐铁板，掉渣饼......"/><InlineUIContainer>
                
             </InlineUIContainer></TextBlock>
 
@@ -45,7 +45,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListBox x:Name="merchantList" HorizontalAlignment="Left" Height="371" Margin="0,26,0,0" VerticalAlignment="Top" Width="145"/>
+        <ListBox x:Name="merchantList" HorizontalAlignment="Left" Height="371" Margin="0,26,0,0" VerticalAlignment="Top" Width="150"/>
 
 
     </Grid>

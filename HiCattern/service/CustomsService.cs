@@ -31,21 +31,22 @@ namespace Hi食堂.service
         /// <param name="phone"></param>
         /// <param name="address"></param>
         /// <returns></returns>
-        public bool register(string name,string pwd,string phone,string address)
+        public int register(string name,string pwd,string phone,string address)
         {
             custom.setCustomerName(name);
             custom.setCustomerPasswd(pwd);
             custom.setCustomerPhone(phone);
             custom.setCustomerAddress(address);
-            bool flag=cusDao.addCustomer(custom);
-            if(flag==true)
+            int id=cusDao.addCustomer1(custom);
+            return id;
+            /*if(flag==true)
             {
                 return true;
             }
             else
             {
                 return false;
-            }
+            }*/
         }
         /// <summary>
         /// 顾客登录功能

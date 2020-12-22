@@ -123,9 +123,16 @@ namespace Hi食堂.dao
 
         public int getDishIDbyName(string dName,int merID)
         {
-            string sql = "select dishesID where dishesName=" + dName + " and merchantID=" + merID + ";";
+            string sql = "select dishesID from dishes where dishesName='" + dName + "' and merchantID=" + merID + ";";
             DataTable dt = db.QueryData(sql);
             return int.Parse(dt.Rows[0][0].ToString());
+        }
+
+        public DataTable getDishFromCart(int merchantID,int cusID)
+        {
+            string sql = "select * from shoppingcart where merchantID=" + merchantID + " and customerID=" + cusID + ";";
+            DataTable dt = db.QueryData(sql);
+            return dt;
         }
     }
 }
