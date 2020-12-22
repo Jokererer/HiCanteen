@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiCattern.Rider"
         mc:Ignorable="d"
-        Title="骑手注册" Height="571.382" Width="585.856">
+        Title="骑手注册" Height="461.382" Width="695.856">
     <Window.Background>
-        <ImageBrush ImageSource="外卖.jpg"/>
+        <ImageBrush ImageSource="riderbackground.jpg"/>
     </Window.Background>
     <Grid Margin="0,0,0.333,-7">
-        <TextBox HorizontalAlignment="Left" Height="35" Margin="229,348,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>
-        <Button  Style="{StaticResource MyButton}" Content="注册" HorizontalAlignment="Left" Height="29" Margin="203,483,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="18" Click="Button_Click"/>
-        <Image HorizontalAlignment="Left" Height="35" Margin="160,348,0,0" VerticalAlignment="Top" Width="31" Source="管理员账号.png" RenderTransformOrigin="0.645,0.114"/>
-        <Image Height="35" Margin="33,408,260.333,0" VerticalAlignment="Top" Source="管理员密码.png" RenderTransformOrigin="0.645,0.114"/>
-        <TextBox HorizontalAlignment="Left" Height="35" Margin="229,408,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>
-        <Image HorizontalAlignment="Left" Height="35" Margin="160,291,0,0" VerticalAlignment="Top" Width="31" Source="姓名aaa.png" RenderTransformOrigin="0.645,0.114"/>
-        <TextBox HorizontalAlignment="Left" Height="35" Margin="229,291,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>
-        <Button x:Name="btn_return" Content="" HorizontalAlignment="Left" Margin="495,10,0,0" VerticalAlignment="Top" Width="74" Height="55" BorderBrush="{x:Null}" Click="btn_return_Click">
+        <TextBox x:Name="txt_Name" HorizontalAlignment="Left" Height="35" Margin="431,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>
+        <Button x:Name="btnOk_register"  Style="{StaticResource MyButton}" Content="注册" HorizontalAlignment="Left" Height="29" Margin="432,294,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="18" Click="Button_Click"/>
+        <Image HorizontalAlignment="Left" Height="35" Margin="362,143,0,0" VerticalAlignment="Top" Width="31" Source="管理员账号.png" RenderTransformOrigin="0.645,0.114"/>
+        <Image Height="35" Margin="350,206,282,0" VerticalAlignment="Top" Source="管理员密码.png" RenderTransformOrigin="0.645,0.114"/>
+        <TextBox x:Name="txt_Pwd" HorizontalAlignment="Left" Height="35" Margin="431,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>
+        <Image HorizontalAlignment="Left" Height="35" Margin="362,86,0,0" VerticalAlignment="Top" Width="31" Source="姓名aaa.png" RenderTransformOrigin="0.645,0.114"/>
+        <TextBox x:Name="txt_Phone" HorizontalAlignment="Left" Height="35" Margin="431,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>
+        <Button x:Name="btn_return" Content="" HorizontalAlignment="Left" Margin="643,4,0,0" VerticalAlignment="Top" Width="41" Height="38" BorderBrush="{x:Null}" Click="btn_return_Click">
             <Button.Background>
-                <ImageBrush ImageSource="返 回红.png"/>
+                <ImageBrush ImageSource="返 回蓝.png"/>
             </Button.Background>
         </Button>
 

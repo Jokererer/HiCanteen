@@ -36,15 +36,27 @@ namespace Hi食堂.service
                 return 1;
             }
         }
-
-        public bool addMerAdmi(string pwd,string canteen) //添加商家管理员
+        //public int getMerAdmi(string pwd,string canteen)
+        //{
+        //    merAdmi.setMerchantAdmiPasswd(pwd);
+        //    merAdmi.setCanteenName(canteen);
+        //    int id = merAdmiDao.getMerchantAdmiID(merAdmi);
+        //    return id;        
+        //}
+        public bool addMerAdmi(string pwd, string canteen) //添加商家管理员
         {
             merAdmi.setMerchantAdmiPasswd(pwd);
             merAdmi.setCanteenName(canteen);
             bool flag = merAdmiDao.addMerchantAdmi(merAdmi);
-            return flag;        
+            return flag;
         }
-        public bool updateCan(int id,string canteen)  //更改商家所管食堂
+        public bool deleteMerAdmi(int id)  //删除商家管理员
+        {
+            merAdmi.setMerchantAdmiID(id);
+            bool flag = merAdmiDao.deleteMerchantAdmi(merAdmi);
+            return flag;
+        }
+        public bool updateCan(int id,string canteen)  //更改商家管理员所管食堂
         {
             merAdmi.setMerchantAdmiID(id);
             DataTable dt = merAdmiDao.findMerAdmi(id);
@@ -58,7 +70,7 @@ namespace Hi食堂.service
                 return f;
             }
         }
-
+        
         public bool updatePwd(int id,string pwd)  //更改商家管理员密码
         {
             //merAdmi.setMerchantAdmiID(id);
@@ -104,11 +116,10 @@ namespace Hi食堂.service
             return dt;
         }
         //用id来查商家信息
-        public DataTable showOneMer(int id)   
+        public DataTable showOneMerByID(int id)   
         {
             DataTable dt = showAllMer();
             DataTable res = dt.Clone();
-            //DataRow[] data = dt.Select()
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows[i][0].Equals(id))
@@ -119,6 +130,22 @@ namespace Hi食堂.service
             }
             return res;
         }
+        //通过名称查找商家信息
+        public DataTable showOneMerByName(string name)
+        {
+            DataTable dt = showAllMer();
+            DataTable res = dt.Clone();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][1].Equals(name))
+                {
+
+                    res.ImportRow(dt.Rows[i]); //将符合条件的行添加到结果表中
+                }
+            }
+            return res;
+        }
+
         
         //查看所有顾客信息
         public DataTable showAllCustoms()  
@@ -209,6 +236,15 @@ namespace Hi食堂.service
                 }
             }
             return res;
+        }
+        //删除订单
+        public bool deleteOrder(int id)
+        {
+            OrdersDao ordersDao = new OrdersDao();
+            Orders or = new Orders();
+            or.setOrderID(id);
+            bool flag = ordersDao.deleteOrders(or);
+            return flag;
         }
     }
 }

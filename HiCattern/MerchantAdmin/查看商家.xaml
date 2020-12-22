@@ -5,28 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hi_食堂.MerchantAdmin"
         mc:Ignorable="d"
-        Title="查看商家" Height="422.833" Width="715.833" Background="#FF58688F">
+        Title="查看商家" Height="427.833" Width="715.833" Background="#FF58688F">
     <Grid Margin="0,0,0,-4.166" Background="#FF58688F">
         <TabControl HorizontalAlignment="Left" Height="377.666" VerticalAlignment="Top" Width="689.166" Margin="10,10,0,0">
-            <TabItem Header="查看商家" Margin="0,0,-121.111,0">
-                <Grid Background="#FF58688F" Margin="0,0,0.167,1.5">
-                    <GroupBox Header="商家信息" HorizontalAlignment="Left" Height="281" VerticalAlignment="Top" Width="627" Margin="23,15,0,0" Foreground="#FFFCF9F9">
-                        <ListBox HorizontalAlignment="Left" Height="229" VerticalAlignment="Top" Width="582" Margin="17,14,0,0"/>
+            <TabItem Header="查看商家" Margin="0,0,-119,0.333" Loaded="showMerLoad">
+                <Grid Background="#FF58688F" Margin="0,0,0.667,-0.667">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="66*"/>
+                        <ColumnDefinition Width="301*"/>
+                        <ColumnDefinition Width="43*"/>
+                        <ColumnDefinition Width="272*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="商家信息" HorizontalAlignment="Left" Height="298" VerticalAlignment="Top" Width="647" Margin="19,14,0,0" Foreground="#FFFCF9F9" Grid.ColumnSpan="4">
+                        <DataGrid x:Name="dg1" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Height="248" VerticalAlignment="Top" Width="594" Margin="14,15,0,0">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="账号"  Binding="{Binding merchantID}" Width="*" />
+                                <DataGridTextColumn Header="商家名称"  Binding="{Binding merchantName}" Width="*" />
+                                <DataGridTextColumn Header="密码" Binding="{Binding merchantPasswd}" Width="*" />
+                                <DataGridTextColumn Header="电话号码"  Binding="{Binding merchantPhone}" Width="*" />
+                                <DataGridTextColumn Header="地址" Binding="{Binding canteenName}" Width="*" />
+                                <DataGridTemplateColumn Header="操作">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Content="编 辑"  Tag="{Binding merchantID}" Click="btn_editMer" />
+                                                <Button Content="删 除" Tag="{Binding merchantID}"  Click="btn_deleMer"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </GroupBox>
-                    <Button x:Name="btn_AddMerchant" Content="增加商家" Margin="306,309,307.5,13.833" Click="btn_AddMerchant_Click"/>
+                    <Button x:Name="btn_AddMerchant" Content="增加商家" Margin="233,318,23,0" Click="btn_AddMerchant_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Button x:Name="btn_refreshMer" Content="" Grid.Column="3" HorizontalAlignment="Left" Margin="226,29,0,0" VerticalAlignment="Top" Width="23" Click="btn_refreshMer_Click" Height="22">
+                        <Button.Background>
+                            <ImageBrush ImageSource="刷新 (2).png"/>
+                        </Button.Background>
+                    </Button>
                 </Grid>
             </TabItem>
-            <TabItem Header="查看菜品" Margin="121.111,0,-242.222,0">
+            <TabItem Header="查看菜品" Margin="117.333,0,-215.667,0.333"  Loaded="dishesLoad">
                 <Grid Background="#FF58688F" Margin="0,0,0.667,0">
-                    <GroupBox Header="菜品信息" HorizontalAlignment="Left" Height="303.426" VerticalAlignment="Top" Width="665.499" Margin="10,10,0,0" Background="#FF58688F" Foreground="#FFFCF9F9">
-                        <DataGrid Height="258.833" VerticalAlignment="Top" Margin="10,10,9.666,0"/>
+                    <GroupBox Header="菜品信息" HorizontalAlignment="Left" Height="303" VerticalAlignment="Top" Width="641" Margin="20,10,0,0" Background="#FF58688F" Foreground="#FFFCF9F9">
+                        <DataGrid x:Name="dg2" AutoGenerateColumns="True" CanUserAddRows="False" ColumnWidth="*" HorizontalAlignment="Left" Height="259" VerticalAlignment="Top" Margin="29,9,0,0"  Width="572"/>
                     </GroupBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="销量查看" Margin="242.222,0,-346.333,0">
+            <TabItem Header="销量查看" Margin="214.667,0,-325,0.333">
                 <Grid Background="#FF58688F" Margin="0,0,-0.666,0">
-                    <GroupBox Header="销量详情" HorizontalAlignment="Left" Height="298.426" VerticalAlignment="Top" Width="663.832" Margin="10,10,0,0" Background="#FF58688F" Foreground="#FFFCF9F9">
-                        <DataGrid HorizontalAlignment="Left" Height="251.667" VerticalAlignment="Top" Width="633.333" Margin="10,10,0,0"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="367*"/>
+                        <ColumnDefinition Width="24*"/>
+                        <ColumnDefinition Width="74*"/>
+                        <ColumnDefinition Width="219*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="销量详情" HorizontalAlignment="Left" Height="298" VerticalAlignment="Top" Width="664" Margin="10,10,0,0" Background="#FF58688F" Foreground="#FFFCF9F9" Grid.ColumnSpan="4">
+                        <DataGrid x:Name="dg3" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Height="251.667" VerticalAlignment="Top" Width="633.333" Margin="10,10,0,0">
+
+                        </DataGrid>
                     </GroupBox>
                 </Grid>
             </TabItem>

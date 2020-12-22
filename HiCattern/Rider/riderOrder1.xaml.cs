@@ -19,16 +19,17 @@ namespace HiCattern.Rider
     /// </summary>
     public partial class riderOrder1 : Window
     {
-        public riderOrder1()
+        int id;
+        public riderOrder1(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void btn_history_Click(object sender, RoutedEventArgs e)
         {
             historyTakenOrder historyTaken = new historyTakenOrder();
-            historyTaken.Show();
-         
+            historyTaken.Show();        
         }
 
         private void btn_changePasswd_Click(object sender, RoutedEventArgs e)

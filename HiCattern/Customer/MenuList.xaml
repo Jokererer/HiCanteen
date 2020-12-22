@@ -6,19 +6,19 @@
         xmlns:local="clr-namespace:HiCattern.Customer"
         
         mc:Ignorable="d"
-        Title="Hi食堂" Height="522" Width="924.6">
+        Title="Hi食堂" Height="522" Width="955.267">
     <Window.Background>
         <ImageBrush ImageSource="菜单3.jpeg"/>
     </Window.Background>
     <Grid Margin="0,0,-6.667,0">
 
-        <TextBlock Foreground="#FFF6F8F8" FontWeight="Bold" Margin="145,-1,-0.333,0" Background="#FF4D4B4B" VerticalAlignment="Top" Height="27" FontSize="16" ><Run Text="通知：五食堂热销菜品，酸菜麻辣烫，烧鹅饭，快乐铁板，掉渣饼......"/><InlineUIContainer>
+        <TextBlock Foreground="#FFF6F8F8" FontWeight="Bold" Margin="152,-1,-0.666,0" Background="#FF4D4B4B" VerticalAlignment="Top" Height="27" FontSize="16" ><Run Text="通知：五食堂热销菜品，酸菜麻辣烫，烧鹅饭，快乐铁板，掉渣饼......"/><InlineUIContainer>
                
             </InlineUIContainer></TextBlock>
 
         <TextBox HorizontalAlignment="Left" Height="27" Margin="0,-1,0,0" TextWrapping="Wrap" Text="请输入菜名" VerticalAlignment="Top" Width="145" Foreground="#FFFAF2F2" Background="#FF4D4B4B" FontSize="16" BorderBrush="#FFF7F7F6"/>
         <Label Content="总价：" HorizontalAlignment="Left" Height="38" Margin="267,397,0,0" VerticalAlignment="Top" Width="176" FontSize="18" FontWeight="Bold" Background="#FFF8F3F3"/>
-        <Button x:Name="btn_shoppingCart" Content="购物车" HorizontalAlignment="Left" Height="38" Margin="743,397,0,0" VerticalAlignment="Top" Width="121" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" Click="btn_shoppingCart_Click" RenderTransformOrigin="0.164,0.833"/>
+        <Button x:Name="btn_shoppingCart" Content="购物车" HorizontalAlignment="Left" Height="38" Margin="743,397,0,0" VerticalAlignment="Top" Width="121" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" Click="btn_shoppingCart_Click" RenderTransformOrigin="0.5,0.5"/>
         <Grid HorizontalAlignment="Left" Height="53" Margin="38,430,-200.333,0" VerticalAlignment="Top" Width="1087">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="629*"/>
@@ -45,7 +45,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListBox x:Name="merchantList" HorizontalAlignment="Left" Height="371" Margin="0,26,0,0" VerticalAlignment="Top" Width="145"/>
+        <ListBox x:Name="merchantList" HorizontalAlignment="Left" Height="371" Margin="0,26,0,0" VerticalAlignment="Top" Width="150"/>
 
 
     </Grid>

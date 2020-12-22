@@ -27,6 +27,15 @@ namespace Hi食堂.dao
             bool flag = db.AddData(sql);
             return flag;
         }
+        //添加顾客并获得账号ID
+        public int addCustomer1(Customer customer)
+        {
+            string sql = "insert into customer values(null,'" + customer.getCustomerName() + "','"
+                + customer.getCustomerPasswd() + "','" + customer.getCustomerAddress() + "','" 
+                + customer.getCustomerPhone() + "');";
+            int id = db.AddData2(sql);
+            return id;
+        }
         /// <summary>
         /// 查找用户
         /// </summary>

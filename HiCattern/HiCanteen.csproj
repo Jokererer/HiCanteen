@@ -60,6 +60,12 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.2.0.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.2.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -162,6 +168,9 @@
     <Compile Include="Login\TheLogin.xaml.cs">
       <DependentUpon>TheLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MerchantAdmin\修改商家.xaml.cs">
+      <DependentUpon>修改商家.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MerchantAdmin\删除商家.xaml.cs">
       <DependentUpon>删除商家.xaml</DependentUpon>
     </Compile>
@@ -189,9 +198,6 @@
     <Compile Include="Rider\historyTakenOrder.xaml.cs">
       <DependentUpon>historyTakenOrder.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Rider\rankings.xaml.cs">
-      <DependentUpon>rankings.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Rider\RiderForgetPassword.xaml.cs">
       <DependentUpon>RiderForgetPassword.xaml</DependentUpon>
     </Compile>
@@ -212,6 +218,9 @@
     <Compile Include="service\MerchantService.cs" />
     <Compile Include="service\RiderService.cs" />
     <Compile Include="service\SysAdmiService.cs" />
+    <Compile Include="SuperAdmin\editMerAdmi.xaml.cs">
+      <DependentUpon>editMerAdmi.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SuperAdmin\增加商家管理员.xaml.cs">
       <DependentUpon>增加商家管理员.xaml</DependentUpon>
     </Compile>
@@ -318,6 +327,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MerchantAdmin\修改商家.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MerchantAdmin\删除商家.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -354,10 +367,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Rider\rankings.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Rider\RiderForgetPassword.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -381,6 +390,10 @@
     <Page Include="Simple Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SuperAdmin\editMerAdmi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SuperAdmin\增加商家管理员.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -429,9 +442,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Customer\amenu2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Rider\OIP %281%29.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Login\账号信息.png" />
@@ -606,6 +616,33 @@
   <ItemGroup>
     <Resource Include="SuperAdmin\返 回蓝.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerchantAdmin\返 回蓝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerchantAdmin\刷新.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerchantAdmin\刷新 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerchantAdmin\刷新 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CustomControl\加号.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CustomControl\加号 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CustomControl\减号.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rider\riderbackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Rider\返 回蓝.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -613,6 +650,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
 </Project>

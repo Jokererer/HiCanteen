@@ -5,15 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiCattern.Rider"
         mc:Ignorable="d"
-        Title="历史接单" Height="571.382" Width="585.856" Background="#FFFBF4F4">
+        Title="历史接单" Height="571.382" Width="912.827" Background="#FFFBF4F4">
     <Grid Margin="0,0,-6.667,-3">
         <Grid.Background>
-            <ImageBrush ImageSource="外卖.jpg"></ImageBrush>
+            <ImageBrush ImageSource="riderbackground.jpg"></ImageBrush>
         </Grid.Background>
-        <Label Content="历史接单" HorizontalAlignment="Left" Height="29" Margin="236.167,240.5,0,0" VerticalAlignment="Top" Width="104" Background="{x:Null}" Foreground="#FFF6E9E9" FontSize="16"/>
-        <Label Content="月总接单量" HorizontalAlignment="Left" Height="28.5" Margin="110,462.5,0,0" VerticalAlignment="Top" Width="145.167" Foreground="#FFFBF5F5" FontSize="14"/>
-        <Button   Style="{StaticResource MyButton}" x:Name="btn_ranking" Content="排行榜" HorizontalAlignment="Left" Height="28.5" Margin="415.167,462.5,0,0" VerticalAlignment="Top" Width="66.022" Foreground="#FFF7F4F4" Background="#FF2D167C" FontSize="14" Click="btn_ranking_Click"/>
-        <DataGrid HorizontalAlignment="Left" Height="184" Margin="92,274,0,0" VerticalAlignment="Top" Width="389"/>
+        <Label Content="历史接单" HorizontalAlignment="Left" Height="29" Margin="398,43,0,0" VerticalAlignment="Top" Width="104" Background="{x:Null}" Foreground="#FF141212" FontSize="16"/>
+        <Label Content="月总接单量" HorizontalAlignment="Left" Height="28" Margin="398,488,0,0" VerticalAlignment="Top" Width="145" Foreground="#FF0C0B0B" FontSize="14"/>
+        <DataGrid HorizontalAlignment="Left" Height="341" Margin="43,96,0,0" VerticalAlignment="Top" Width="819"/>
 
     </Grid>
 </Window>

@@ -23,5 +23,6 @@ namespace HiCattern.Rider
         {
             InitializeComponent();
         }
+
     }
 }

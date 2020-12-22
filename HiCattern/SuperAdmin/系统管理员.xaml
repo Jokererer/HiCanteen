@@ -7,30 +7,48 @@
         mc:Ignorable="d"
         Title="系统管理" Height="415.723" Width="670.047" Background="#FF58688F">
     <Grid Background="#FF58688F" Margin="0,0,11.667,7.667">
-        <TabControl HorizontalAlignment="Left" Height="364" VerticalAlignment="Top" Width="612" Margin="18,7,0,0" >
-            <TabItem Header="商家管理员" Margin="0,0,-48,0.333">
-                <Grid Background="#FF58688F" Margin="0,0,-0.667,-1">
+        <TabControl HorizontalAlignment="Left" Height="373" VerticalAlignment="Top" Width="612" Margin="18,7,0,-1" >
+            <TabItem Header="商家管理员" Margin="0,0,-48,0.333" Loaded="MerAdmiLoad">
+                <Grid Background="#FF58688F" Margin="0,0,-0.667,0.333">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="32*"/>
-                        <ColumnDefinition Width="125*"/>
-                        <ColumnDefinition Width="21*"/>
-                        <ColumnDefinition Width="66*"/>
-                        <ColumnDefinition Width="489*"/>
+                        <ColumnDefinition Width="27*"/>
+                        <ColumnDefinition Width="103*"/>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="55*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="378*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="dg1" AutoGenerateColumns="True"  ColumnWidth="*" HorizontalAlignment="Left" Height="251" VerticalAlignment="Top" Width="400" Margin="67.333,52,0,0"  Grid.ColumnSpan="4" Grid.Column="1"/>
-                    <Grid HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="586" Margin="41,10,0,0" Grid.ColumnSpan="4" Grid.Column="1">
+                    <DataGrid x:Name="dg1" AutoGenerateColumns="False" CanUserAddRows="False" ColumnWidth="*" HorizontalAlignment="Left" Height="251" VerticalAlignment="Top" Width="400" Margin="67.333,52,0,0"  Grid.ColumnSpan="6" Grid.Column="1">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="账号"  Binding="{Binding merchantAdmiID}" Width="*" />
+                            <DataGridTextColumn Header="密码" Binding="{Binding merchantAdmiPasswd}" Width="*" />
+                            <DataGridTextColumn Header="所管食堂" Binding="{Binding canteenName}" Width="*" />
+                            <DataGridTemplateColumn Header="操作">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="编 辑"  Tag="{Binding merchantAdmiID}" Click="btn_editMerAdmi" />
+                                            <Button Content="删 除" Tag="{Binding merchantAdmiID}"  Click="btn_deleMerAdmi"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="586" Margin="41.333,10,-48,0" Grid.ColumnSpan="6" Grid.Column="1">
                         <Label Content="商家管理员查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,6,0,0" Foreground="#FFFCF9F9"/>
-                        <Button x:Name="btn_queryMerAdmi" Content="查询" Margin="322,9,205,24" RenderTransformOrigin="0.5,0.504" Click="btn_queryMerAdmi_Click"/>
-                        <Button x:Name="btn_refresh" Content="刷新" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Margin="411,9,0,0" Click="btn_refresh_Click" />
+                        <Button x:Name="btn_queryMerAdmi" Content="查询" Margin="330,8,197,17" RenderTransformOrigin="0.5,0.504" Click="btn_queryMerAdmi_Click" Height="Auto"/>
+                        <Button x:Name="btn_refresh" Content="刷新" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="414,7,0,0" Click="btn_refresh_Click" Height="27" />
                     </Grid>
                     <Image HorizontalAlignment="Left" Height="20" Margin="25.333,19,0,0" VerticalAlignment="Top" Width="22" Source="管理员.png" Grid.Column="1"/>
-                    <TextBox x:Name="Text_MerAdmiID" HorizontalAlignment="Left" Height="20" Margin="16.333,20,0,0" TextWrapping="Wrap" Text="输入商家管理员账号" VerticalAlignment="Top" Width="138" Grid.Column="4"/>
-                    <Button x:Name="btn_AddMerchantAdmin" Content="增加商家管理员" HorizontalAlignment="Left" Height="21" Margin="40,308,0,0" VerticalAlignment="Top" Width="100" Click="btn_AddMerchantAdmin_Click" Grid.Column="4"/>
+                    <TextBox x:Name="Text_MerAdmiID" HorizontalAlignment="Left" Height="28" Margin="13,15,0,0" TextWrapping="Wrap" Text="输入商家管理员账号" VerticalAlignment="Top" Width="138" Grid.Column="4" Grid.ColumnSpan="3"/>
+                    <Button x:Name="btn_AddMerchantAdmin" Content="增加商家管理员" HorizontalAlignment="Left" Height="27" Margin="13,311,0,0" VerticalAlignment="Top" Width="135" Click="btn_AddMerchantAdmin_Click" Grid.Column="6"/>
                 </Grid>
 
 
             </TabItem>
-            <TabItem Header="查看顾客信息" Margin="168,0,-204,0.333">
+            <TabItem Header="查看顾客信息" Margin="168,0,-204,0.333" Loaded="CustomerLoad">
                 <Grid Background="#FF58688F">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="172*"/>
@@ -38,16 +56,21 @@
                         <ColumnDefinition Width="439*"/>
                     </Grid.ColumnDefinitions>
                     <Grid HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="608" Grid.ColumnSpan="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="403*"/>
+                            <ColumnDefinition Width="205*"/>
+                        </Grid.ColumnDefinitions>
                         <Label Content="顾客信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="87,9,0,0" Foreground="#FFFCF9F9"/>
-                        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="输入顾客信息查询" VerticalAlignment="Top" Width="120" Margin="192,12,0,0"/>
-                        <Button Content="按ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="345,13,0,0"/>
+                        <TextBox x:Name="Text_Cus" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="输入账号/手机号" VerticalAlignment="Top" Width="107" Margin="199,12,0,0"/>
+                        <Button x:Name="btn_queryCusByID" Content="ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Margin="356,12,0,0" Click="btn_queryCusByID_Click" Grid.ColumnSpan="2"/>
                         <Image HorizontalAlignment="Left" Height="20" Margin="57,13,0,0" VerticalAlignment="Top" Width="25" Source="顾客管理.png"/>
-                        <Button Content="按手机号查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Margin="445,13,0,0"/>
+                        <Button x:Name="btn_queryCusByPh" Content="手机号查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="78" Margin="29.667,13,0,0" Click="btn_queryCusByPh_Click" Grid.Column="1"/>
                     </Grid>
-                    <DataGrid HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="513" Margin="47,53,0,0" Grid.ColumnSpan="3"/>
+                    <DataGrid x:Name="dg3" AutoGenerateColumns="True"  CanUserAddRows="False" ColumnWidth="*" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="513" Margin="47,53,0,0" Grid.ColumnSpan="3"/>
+                    <Button x:Name="btn_refreshCus" Content="刷新" Grid.Column="2" HorizontalAlignment="Left" Margin="339.614,13,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="-0.244,0.717" Click="btn_refreshCus_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="查看订单信息" Margin="204,0,-240.667,0.333">
+            <TabItem Header="查看订单信息" Margin="204,0,-240.667,0.333" Loaded="OrderLoad">
                 <Grid Background="#FF58688F" Margin="0,0,0,-1.332">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="247*"/>
@@ -55,16 +78,37 @@
                     </Grid.ColumnDefinitions>
                     <Label Content="订单信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,14,0,0" Foreground="#FFFCF9F9" Height="25" Width="82"/>
                     <Image HorizontalAlignment="Left" Height="23.241" Margin="24,15.999,0,0" VerticalAlignment="Top" Width="22.667" Source="订单.png"/>
-                    <DataGrid HorizontalAlignment="Left" Height="277" VerticalAlignment="Top" Width="506" Margin="43,51,0,0" Grid.ColumnSpan="2"/>
-                    <Button Content="按商家ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="79" Grid.Column="1" Margin="154,18,0,0" Height="20"/>
-                    <Button Content="按顾客ID查询" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="79" Margin="51,0,0,299.332" Height="20" Grid.Column="1"/>
-                    <Button Content="按订单ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="79" Grid.Column="1" Margin="259,18,0,0" Height="20"/>
-                    <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="输入查询ID" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Margin="148,17,0,0"/>
+                    <DataGrid x:Name="dg4" AutoGenerateColumns="False" CanUserAddRows="False"  ColumnWidth="*"  HorizontalAlignment="Left" Height="277" VerticalAlignment="Top" Width="506" Margin="43,51,0,0" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="订单号"  Binding="{Binding orderID}" Width="*" />
+                            <DataGridTextColumn Header="顾客ID" Binding="{Binding customerID}" Width="*" />
+                            <DataGridTextColumn Header="商家ID" Binding="{Binding merchantID}" Width="*" />
+                            <DataGridTextColumn Header="价格"  Binding="{Binding totalPrice}" Width="*" />
+                            <DataGridTextColumn Header="订单时间" Binding="{Binding orderTime}" Width="*" />
+                            <DataGridTextColumn Header="骑手ID" Binding="{Binding riderID}" Width="*" />
+                            <DataGridTextColumn Header="商家制作"  Binding="{Binding omState}" Width="*" />
+                            <DataGridTextColumn Header="配送状态" Binding="{Binding orState}" Width="*" />
+                            <DataGridTemplateColumn Header="操作">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="删 除"  Tag="{Binding orderID}" Click="btn_deleOrder" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btn_queryByMer" Content="商家ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67" Grid.Column="1" Margin="137,19,0,0" Height="20" Click="btn_queryByMer_Click"/>
+                    <Button x:Name="btn_queryByOr"  Content="订单ID查询" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="70" Margin="51,0,0,299.332" Height="20" Grid.Column="1" Click="btn_queryByOr_Click"/>
+                    <Button x:Name="btn_queryByCus" Content="顾客ID查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Grid.Column="1" Margin="216,19,0,0" Height="20" Click="btn_queryByCus_Click"/>
+                    <TextBox x:Name="Text_Order" HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="输入查询ID" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Margin="148,17,0,0"/>
+                    <Button x:Name="btn_refreshOr" Content="刷新" Grid.Column="1" HorizontalAlignment="Left" Margin="297,18,0,0" VerticalAlignment="Top" Width="46" Click="btn_refreshOr_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="查看季报信息" Margin="240,0,-276,0.333">
+            <TabItem Header="查看季报信息" Margin="240,0,-276,0.333" HorizontalAlignment="Left" Width="120">
                 <Grid Background="#FF58688F" Margin="0,0,0,-1.333">
-                    <DataGrid HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="518" Margin="45,56,0,0"/>
+                    <DataGrid CanUserAddRows="False" HorizontalAlignment="Left" Height="268" VerticalAlignment="Top" Width="518" Margin="45,56,0,0"/>
                     <Grid HorizontalAlignment="Left" Height="51.515" VerticalAlignment="Top" Width="585.606" Margin="21.212,10,0,0">
                         <Label Content="季报信息查询" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="48,11,0,0" Foreground="#FFFCF9F9"/>
                         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="177,13,0,0"/>
@@ -74,14 +118,31 @@
                     <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Margin="358,23,0,0" Height="21"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="商家管理" Margin="-204,0,144,0.333" Loaded="MerSysLoaded">
+            <TabItem Header="商家管理" Margin="-242,0,182,0.333" Loaded=" MerLoad" >
                 <Grid Background="#FF58688F" Margin="0,0,0,-1.515">
-                    <Canvas HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="581">
-                        <Label Content="商家信息查询" Canvas.Left="109" Canvas.Top="14" Foreground="#FFFCF9F9"/>
-                        <TextBox Height="19" TextWrapping="Wrap" Text="输入商家名称查询" Width="139" Canvas.Left="243" Canvas.Top="18"/>
-                        <Button Content="查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Canvas.Left="441" Canvas.Top="17"/>
-                        <DataGrid Height="266" Width="515" Canvas.Left="33" Canvas.Top="47"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="177*"/>
+                        <ColumnDefinition Width="121*"/>
+                        <ColumnDefinition Width="26*"/>
+                        <ColumnDefinition Width="281*"/>
+                    </Grid.ColumnDefinitions>
+                    <Canvas HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="581" Grid.ColumnSpan="4">
+                        <Label Content="商家信息查询" Canvas.Left="89" Canvas.Top="14" Foreground="#FFFCF9F9"/>
+                        <TextBox x:Name="Text_Mer" Height="19" TextWrapping="Wrap" Text="输入商家账号/名称" Width="139" Canvas.Left="198" Canvas.Top="18"/>
+                        <Button x:Name="btn_queryMerID" Content="账号查询" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Canvas.Left="376" Canvas.Top="15" Height="20" Click="btn_queryMerID_Click"/>
+                        <DataGrid x:Name="dg2" AutoGenerateColumns="True" CanUserAddRows="False" ColumnWidth="*" HorizontalAlignment="Left"  Height="266" Width="515" Canvas.Left="33" Canvas.Top="47"/>
                         <Image Height="24" Canvas.Left="56" Canvas.Top="15" Width="34" Source="商家.png"/>
+                        <Button x:Name="btn_queryMerName" Content="名称查询" Canvas.Left="449" Canvas.Top="15" Width="59" RenderTransformOrigin="0.036,0.617" Height="20" Click="btn_queryMerName_Click"/>
+                        <Button x:Name="btn_refreshMer" Content="刷新" Canvas.Left="522" Canvas.Top="15" Width="47" RenderTransformOrigin="0.156,0.571" Click="btn_refreshMer_Click">
+                            <Button.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.905"/>
+                                    <TranslateTransform X="0.024" Y="0.255"/>
+                                </TransformGroup>
+                            </Button.RenderTransform>
+                        </Button>
                     </Canvas>
                 </Grid>
 

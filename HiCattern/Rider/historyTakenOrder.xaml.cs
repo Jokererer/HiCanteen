@@ -24,10 +24,10 @@ namespace HiCattern.Rider
             InitializeComponent();
         }
 
-        private void btn_ranking_Click(object sender, RoutedEventArgs e)
+        /*private void btn_ranking_Click(object sender, RoutedEventArgs e)
         {
             rankings rankings = new rankings();
             rankings.Show();
-        }
+        }*/
     }
 }

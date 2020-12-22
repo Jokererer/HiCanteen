@@ -39,6 +39,15 @@ namespace Hi食堂.service
                 return 1;
             }
         }
+        public int register(string name, string pwd, string phone)
+        {
+            rider.setRiderName(name);
+            rider.setriderPasswd(pwd);
+            rider.setRiderPhone(phone);
+            int id = riderDao.addRider(rider);
+            return id;
+           
+        }
         //显示未被接单的订单
         public DataTable unDoOrders()
         {

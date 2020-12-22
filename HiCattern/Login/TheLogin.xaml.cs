@@ -101,7 +101,7 @@ namespace HiCattern.Login
                     int temp = riderService.login(riderID, passwd);
                     if (temp == 1)
                     {
-                        HiCattern.Rider.riderOrder1 riderOrder1 = new HiCattern.Rider.riderOrder1();
+                        HiCattern.Rider.riderOrder1 riderOrder1 = new HiCattern.Rider.riderOrder1(riderID);
                         this.Close();
                         riderOrder1.Show();
                     }
@@ -123,7 +123,7 @@ namespace HiCattern.Login
                     int temp = merAdminService.login(merAdID, passwd);
                     if (temp == 1)
                     {
-                        Hi_食堂.MerchantAdmin.查看商家 viewmerchant = new Hi_食堂.MerchantAdmin.查看商家();
+                        Hi_食堂.MerchantAdmin.查看商家 viewmerchant = new Hi_食堂.MerchantAdmin.查看商家(merAdID);
                         this.Close();
                         viewmerchant.Show();
                     }
