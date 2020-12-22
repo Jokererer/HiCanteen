@@ -162,6 +162,9 @@
     <Compile Include="Login\TheLogin.xaml.cs">
       <DependentUpon>TheLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MerchantAdmin\修改商家.xaml.cs">
+      <DependentUpon>修改商家.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MerchantAdmin\删除商家.xaml.cs">
       <DependentUpon>删除商家.xaml</DependentUpon>
     </Compile>
@@ -212,6 +215,9 @@
     <Compile Include="service\MerchantService.cs" />
     <Compile Include="service\RiderService.cs" />
     <Compile Include="service\SysAdmiService.cs" />
+    <Compile Include="SuperAdmin\editMerAdmi.xaml.cs">
+      <DependentUpon>editMerAdmi.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SuperAdmin\增加商家管理员.xaml.cs">
       <DependentUpon>增加商家管理员.xaml</DependentUpon>
     </Compile>
@@ -318,6 +324,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MerchantAdmin\修改商家.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MerchantAdmin\删除商家.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -381,6 +391,10 @@
     <Page Include="Simple Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SuperAdmin\editMerAdmi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SuperAdmin\增加商家管理员.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -605,6 +619,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="SuperAdmin\返 回蓝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerchantAdmin\返 回蓝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerchantAdmin\刷新.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerchantAdmin\刷新 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerchantAdmin\刷新 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

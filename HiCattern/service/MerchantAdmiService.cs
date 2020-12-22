@@ -17,7 +17,6 @@ namespace Hi食堂.service
         MerchantDao merDao = new MerchantDao();
         Merchant mer = new Merchant();
         DataBase db = new DataBase();
-        //public static string canState = "";
 
         //登录功能
         public int login(int id,string pwd)
@@ -27,29 +26,33 @@ namespace Hi食堂.service
             DataTable dt = merAdmiDao.findMerAdmi(id);
             if (dt.Rows.Count == 0)  //商家不存在
             {
-                //canState = "";
                 return -1;
             }
             //验证密码
             else if (dt.Rows[0][1].ToString() != pwd)//密码错误
             {
-                //canState = "";
                 return -2;
             }
-            else   //登录成功
+            else //登录成功
             {
-                //canState = dt.Rows[0][2].ToString();
                 return 1;
             }
         }
-
-        public DataTable showMer(string canState) //查看商家信息
+        //查看同一个食堂的商家信息
+        public DataTable showMer(string canState) 
         {
             string sql = "select * from merchant where canteenName='" + canState + "';";
             DataTable dt = db.QueryData(sql);
             return dt;
         }
-
+        //通过ID查询所在食堂
+        public string findMerAdmiCan(int id)
+        {
+            DataTable dt = merAdmiDao.findMerAdmi(id);
+            string canteen = dt.Rows[0][2].ToString();
+            return canteen;
+        }
+        //public DataTable showOneMe
         //增加商家功能
         public bool addNewMer(string merName,string pwd,string phone,string canName)
         {
@@ -57,7 +60,6 @@ namespace Hi食堂.service
             mer.setMerchantPasswd(pwd);
             mer.setMerchantPhone(phone);
             mer.setCanteenName(canName);
-
             string sql = "select merchantPhone from merchant;";
             DataTable dt1 = db.QueryData(sql);
             for (int i = 0; i < dt1.Rows.Count; i++)
@@ -68,8 +70,7 @@ namespace Hi食堂.service
                 }
             }
             merDao.addMerchant(mer);
-            return true;
-           
+            return true;       
         }        
         public bool delMer(int id)  //删除商家功能
         {
@@ -85,14 +86,64 @@ namespace Hi食堂.service
             {
                 return false;
             }
-        }    
+        }
+        //修改商家姓名
+        public bool updateMerName(int id,string name)
+        {
+            mer.setMerchantID(id);
+            mer.setMerchantName(name);
+            DataTable dt = merDao.findMerchant(mer);
+            if (dt.Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                bool f = merDao.updateMerchantName(mer);
+                return f;
+            }
+        }
+        //修改商家电话
+        public bool updateMerPh(int id,string phone)
+        {
+            mer.setMerchantID(id);
+            mer.setMerchantPhone(phone);
+            DataTable dt = merDao.findMerchant(mer);
+            if (dt.Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                bool f = merDao.updateMerchantPhone(mer);
+                return f;
+            }
+        }
+        //修改商家地址
+        public bool updateMerCan(int id,string can)
+        {
+            mer.setMerchantID(id);
+            mer.setCanteenName(can);
+            DataTable dt = merDao.findMerchant(mer);
+            if (dt.Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                bool f = merDao.updateCanteenName(mer);
+                return f;
+            }
+        }
+
         public DataTable showDishes(string canState) //查看菜品信息
         {
-            string sql = "select dishes.dishesID,dishesName,merchantName,price,sales " +
+            string sql = "select dishes.dishesID,dishesName,dishes.merchantID,merchantName,price,sales " +
                 "from dishes,merchant where dishes.merchantID=merchant.merchantID and merchant.canteenName='" + canState + "';";
             DataTable dt = db.QueryData(sql);
             return dt;
         }
+
 
         //按照商家查看销量数量、销售额
         //public DataTable showMerSales()

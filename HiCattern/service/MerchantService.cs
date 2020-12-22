@@ -183,5 +183,16 @@ namespace Hi食堂.service
             int temp = merDao.queryMIDbyMname(Mname);
             return temp;
         }
+
+        public DataTable getDishesInfo(int dishID,int merID,int cusID)
+        {
+            return merDao.getDishInfo(dishID, merID, cusID);
+
+        }
+
+        public int getDishIDbyName(string dName,int merID)
+        {
+            return merDao.getDishIDbyName(dName, merID);
+        }
     }
 }

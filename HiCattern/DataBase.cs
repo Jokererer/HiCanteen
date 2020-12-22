@@ -11,7 +11,7 @@ namespace Hi食堂
     class DataBase
     {
         //通用配置
-        private static string constr = "server=localhost;port=3306;uid=root;password=123456;database=canteenordering;Charset=gb2312;Old Guids=true;";
+        private static string constr = "server=localhost; port=3306;uid=root;password=123456;database=canteenordering;Charset=gb2312;Old Guids=true;";
 
         //查询语句
         public DataTable QueryData(string sqlStr)

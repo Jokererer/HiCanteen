@@ -110,7 +110,6 @@ namespace Hi食堂.service
         /// <param name="merchantID">全局变量传参</param>
         /// <param name="dishID">前端传参</param>
         /// <param name="quantity">自定义控件读取</param>
-        /// <param name="price">自定义控件读取</param>
         public void selectDishes(int customerID,int merchantID,int dishID,int quantity,float price)
         {
             sc.setCustomerID(customerID);
@@ -121,15 +120,28 @@ namespace Hi食堂.service
             DataTable dt;
             dt = scDao.queryCart(customerID, merchantID, dishID);
 
-            if(dt.Rows.Count==0)//没点过这道菜
+            if(dt.Rows.Count==0 && quantity>0)//没点过这道菜，但是现在点了，则加入购物车
             {
                 scDao.addShopping(sc);
             }
-            else
+            else if(dt.Rows.Count>0 && quantity==0)//以前点过，现在没点，则删除
+            {
+                scDao.deleteShopping(sc);
+            }
+            else if(dt.Rows.Count>0 && quantity>0)//以前点过，现在改数量了，则更改
             {
                 scDao.updatequantity(sc);
             }
+            else//以前没点过，现在也没点
+            {
+                //什么也不做
+            }
         }
+
+       /* public DataTable getSC(int merID,int cusID)
+        {
+
+        }*/
         /// <summary>
         /// 点击付款按钮，将数据写入订单表以及订单明细表
         /// </summary>

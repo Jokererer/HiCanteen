@@ -24,8 +24,16 @@ namespace Hi食堂.dao
         /// 添加商家管理员
         /// </summary>
         /// <param name="merchantAdmi"></param>
+        //public int getMerchantAdmiID(MerchantAdmi merchantAdmi)
+        //{
+        //    string sql = "insert into merchantadmi values(null,'" + merchantAdmi.getMerchantAdmiPasswd()
+        //        + "','" + merchantAdmi.getmerchantAdmiCanteen() + "');";
+        //    int id = db.AddData2(sql);
+        //    return id;
+        //}
         public bool addMerchantAdmi(MerchantAdmi merchantAdmi)
         {
+
             string sql = "insert into merchantadmi values(null,'" + merchantAdmi.getMerchantAdmiPasswd()
                 + "','" + merchantAdmi.getmerchantAdmiCanteen() + "');";
             bool flag = db.AddData(sql);
@@ -58,8 +66,8 @@ namespace Hi食堂.dao
         /// <param name="merchantAdmi"></param>
         public bool updateMerchantAdmiCanteen(int id,string canteen)
         {
-            string sql = "update merchantadmi set canteenName=" + canteen +
-                " where merchantAdmiID=" + id + ";";
+            string sql = "update merchantadmi set canteenName='" + canteen +
+                "' where merchantAdmiID=" + id + ";";
             bool flag = db.UpdateData(sql);
             return flag;
         }

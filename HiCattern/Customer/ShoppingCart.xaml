@@ -29,6 +29,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <RadioButton Content="外卖跑腿" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="313,30.667,0,0" Grid.Row="1" Foreground="#FFF6F6F6" FontSize="16"/>
+        <RadioButton Content="到店自取" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="422,30.667,0,0" Grid.Row="1" Foreground="#FFFBF6F6" FontSize="16"/>
 
     </Grid>
 </Window>

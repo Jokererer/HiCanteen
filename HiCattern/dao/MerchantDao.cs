@@ -13,12 +13,12 @@ namespace Hi食堂.dao
 {
     class MerchantDao
     {
-        //Data data = new Data();
+
         DataBase db = new DataBase();
         public bool addMerchant(Merchant merchant)
         {
             string sql = "insert into merchant values(null,'" + merchant.getMerchantName() + "','" +
-                merchant.getMerchantPasswd() + "','" +  merchant.getMerchantPhone() + "','" + merchant.getCanteenName() + "');";
+                merchant.getMerchantPasswd() + "','" + merchant.getMerchantPhone() + "','" + merchant.getCanteenName() + "');";
             bool flag = db.AddData(sql);
             return flag;
         }
@@ -39,7 +39,7 @@ namespace Hi食堂.dao
         /// <returns></returns>
         public DataTable findMerchant(Merchant merchant)
         {
-            string sql = "select * from merchant where MerchantID=" + merchant.getMerchantID() + ";";
+            string sql = "select * from merchant where merchantID=" + merchant.getMerchantID() + ";";
             DataTable r = db.QueryData(sql);
             return r;
         }
@@ -53,7 +53,6 @@ namespace Hi食堂.dao
                 + merchant.getMerchantID() + ";";
             bool flag = db.UpdateData(sql);
             return flag;
-        
         }
 
         /// <summary>
@@ -66,7 +65,7 @@ namespace Hi食堂.dao
                 + merchant.getMerchantID() + ";";
             bool flag = db.UpdateData(sql);
             return flag;
-      
+
         }
         /// <summary>
         /// 修改商家电话
@@ -80,16 +79,15 @@ namespace Hi食堂.dao
             return flag;
 
         }
-
+        //修改商家所在食堂
         public bool updateCanteenName(Merchant merchant)
         {
-            string sql = "update merchant set canteenName=" + merchant.getCanteenName() + " where merchantID="
+            string sql = "update merchant set canteenName='" + merchant.getCanteenName() + "' where merchantID="
                 + merchant.getMerchantID() + ";";
             bool flag = db.UpdateData(sql);
             return flag;
-   
         }
-        
+
         public DataTable queryM(string canteenName)
         {
             string sql = "select merchantName from merchant where canteenName='" + canteenName + "';";
@@ -103,12 +101,31 @@ namespace Hi食堂.dao
             string sql = "select * from merchant where merchantName='" + mName + "';";
             DataTable dt = db.QueryData(sql);
             int temp = 0;
-            for(int i=0;i<dt.Rows.Count;i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
                 temp = int.Parse(dt.Rows[i][0].ToString());
             }
             return temp;
         }
 
+        public DataTable getDishInfo(int dishID, int merID, int cusID)
+        {
+            string sql = "select * from shoppingcart where customerID=" + cusID + " and merchantID=" + merID + " and " +
+                "dishesID=" + dishID + ";";
+            DataTable dt = db.QueryData(sql);
+            if (dt.Rows.Count == 0)
+            {
+                return null;
+            }
+            else
+                return dt;
+        }
+
+        public int getDishIDbyName(string dName,int merID)
+        {
+            string sql = "select dishesID where dishesName=" + dName + " and merchantID=" + merID + ";";
+            DataTable dt = db.QueryData(sql);
+            return int.Parse(dt.Rows[0][0].ToString());
+        }
     }
 }

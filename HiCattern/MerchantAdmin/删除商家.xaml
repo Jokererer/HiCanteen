@@ -12,8 +12,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label Content="确认删除该商家吗？" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,54,0,0" Height="31" Width="132" FontSize="14" Background="{x:Null}" BorderBrush="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" BorderThickness="0" Grid.Column="1" Foreground="White"/>
-        <Button Content="确认" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="98.123,124.736,0,0" Background="White" Grid.Column="1" Height="19.24"/>
-        <Button Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="254.753,124.736,0,0" Background="White" Grid.Column="1" Height="19.24"/>
+        <Button x:Name="btnOk_deleMer" Content="确认" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="98.123,124.736,0,0" Background="White" Grid.Column="1" Height="19.24" Click="btnOk_deleMer_Click"/>
+        <Button x:Name="btnCancel_deleMer" Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="254.753,124.736,0,0" Background="White" Grid.Column="1" Height="19.24" Click="btnCancel_deleMer_Click"/>
 
     </Grid>
 </Window>

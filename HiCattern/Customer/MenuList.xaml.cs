@@ -85,14 +85,19 @@ namespace HiCattern.Customer
 
         private void dishesShow(DataTable dt)
         {
+            MerchantService ms = new MerchantService();
             dishes.Items.Clear();
             //int i;
             for (int i=0;i<dt.Rows.Count;i++)
             {
                 OwnControl.OrderDishes orderDishes = new OrderDishes();
-                orderDishes.labelnametext = dt.Rows[i][1];
-                orderDishes.salevaluetext = dt.Rows[i][3];
-                orderDishes.salenumlabetext = dt.Rows[i][4];
+                orderDishes.labelnametext = dt.Rows[i][1];//菜品名
+                orderDishes.salevaluetext = dt.Rows[i][3];//价格
+                orderDishes.salenumlabetext = dt.Rows[i][4];//销量
+                int did = int.Parse(dt.Rows[i][0].ToString());//获取当前菜品id
+                DataTable dt1 = ms.getDishesInfo(did, merID, cusID);
+                int temp = int.Parse(dt1.Rows[0][3].ToString());//获取数量
+                orderDishes.Dishnum = temp;//从购物车表中查询以前有没有点过改菜品，并显示数量
                 dishes.Items.Add(orderDishes);
             }
         }
@@ -108,13 +113,37 @@ namespace HiCattern.Customer
             
 
         }
-
+        //购物车按钮
         private void btn_shoppingCart_Click(object sender, RoutedEventArgs e)
         {
             MerchantService mers = new MerchantService();
+            OrderDishes od = new OrderDishes();
+            //DataTable dt = new DataTable();
+            CustomsService cs = new CustomsService();
             //mers.
             //for(int i=0;i<)
-            HiCattern.Customer.ShoppingCart shoppingCart = new ShoppingCart();
+            int temp = dishes.Items.Count;//本商家下的所有菜品数量
+            for(int i=0;i<temp;i++)
+            {
+                od = (OrderDishes)dishes.Items[i];
+                int num = Convert.ToInt32(od.Dishnum);//获取界面中显示的菜品数量
+                string dName = od.labelnametext.ToString();//获取菜品名
+                int id = mers.getDishIDbyName(dName, merID);//获取菜品id
+                float price = float.Parse(od.salevaluetext.ToString());
+                //dt = mers.getDishesInfo(id, merID, cusID);
+                //int Cnum = int.Parse(dt.Rows[0][3].ToString());//购物车中该菜品的数量
+                cs.selectDishes(cusID, merID, id, num,price);
+                //if (dt!=null)//购物车中已有该菜品
+                //{
+                //    int Cnum = int.Parse(dt.Rows[0][3].ToString());//购物车中该菜品是数量
+                //    if (num==0)
+                //    {
+                        
+                //    }
+                //}
+                
+            }
+            HiCattern.Customer.ShoppingCart shoppingCart = new ShoppingCart(merID,cusID);
             shoppingCart.Show();
         }
 

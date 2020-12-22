@@ -20,10 +20,14 @@ namespace HiCattern.Customer
     /// </summary>
     public partial class ShoppingCart : Window
     {
-        public ShoppingCart()
+        int merID;
+        int cusID;
+
+        public ShoppingCart(int merID,int cusID)
         {
             this.InitializeComponent();
-            
+            this.merID = merID;
+            this.cusID = cusID;
         }
 
         private void btn_pay_Click(object sender, RoutedEventArgs e)
