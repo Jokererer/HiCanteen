@@ -134,6 +134,9 @@
     <Compile Include="Customer\Canteen.xaml.cs">
       <DependentUpon>Canteen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Customer\ChangeInfo.xaml.cs">
+      <DependentUpon>ChangeInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Customer\ChangePassword.xaml.cs">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
     </Compile>
@@ -248,6 +251,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Customer\Canteen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\ChangeInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -13,9 +13,9 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Button Content="返回登录" HorizontalAlignment="Left" Height="30" Margin="71,398,0,0" VerticalAlignment="Top" Width="114" FontSize="18" FontWeight="Bold"/>
-        <Button Content="返回首页" HorizontalAlignment="Left" Height="29" Margin="287,399,0,0" VerticalAlignment="Top" Width="116" FontSize="18" FontWeight="Bold"/>
+        <Button Content="返回登录" HorizontalAlignment="Left" Height="30" Margin="71,398,0,0" VerticalAlignment="Top" Width="114" FontSize="18" FontWeight="Bold" Background="#FFE0653D"/>
+        <Button Content="返回首页" HorizontalAlignment="Left" Height="29" Margin="287,399,0,0" VerticalAlignment="Top" Width="116" FontSize="18" FontWeight="Bold" Background="#FFE0653D"/>
         <Label Content="历史订单" HorizontalAlignment="Left" Height="32" Margin="186,10,0,0" VerticalAlignment="Top" Width="111" Foreground="#FFDDD8D8" FontSize="18"/>
-        <DataGrid HorizontalAlignment="Left" Height="322" Margin="54,47,0,0" VerticalAlignment="Top" Width="373"/>
+        <DataGrid HorizontalAlignment="Left" Height="322" Margin="54,47,0,0" VerticalAlignment="Top" Width="373" Background="#FFF2F1F1"/>
     </Grid>
 </Window>

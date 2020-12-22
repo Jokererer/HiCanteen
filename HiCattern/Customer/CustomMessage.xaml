@@ -13,6 +13,9 @@
         <Button Content="清除消息" HorizontalAlignment="Left" Height="35.333" Margin="116.334,515.766,0,0" VerticalAlignment="Top" Width="158.981" Background="#FFF6F0F0" FontSize="16" RenderTransformOrigin="1.276,3.198"/>
         <Button Content="返回" HorizontalAlignment="Left" Height="35.333" Margin="474.001,515.766,0,0" VerticalAlignment="Top" Width="152.981" Background="#FFF6F0F0" FontSize="16" RenderTransformOrigin="1.646,0.575"/>
         <ListView x:Name="message" HorizontalAlignment="Left" Height="496" VerticalAlignment="Top" Width="772">
+            <ListView.Background>
+                <ImageBrush ImageSource="amenu2.jpg"/>
+            </ListView.Background>
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

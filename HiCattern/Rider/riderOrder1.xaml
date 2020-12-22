@@ -25,7 +25,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
-                                <Button Content="接 单"  Tag="{Binding merchantAdmiID}" Click="btn_takeOrder" />
+                                
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

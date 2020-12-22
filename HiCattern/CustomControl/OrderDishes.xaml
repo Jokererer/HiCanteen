@@ -16,9 +16,9 @@
             </Button.Background>
         </Button>
         <Image Height="116" Margin="0,0,320,0" VerticalAlignment="Top" x:Name="DishImage"  />
-        <Label Content="菜名：" HorizontalAlignment="Left" Margin="143,11,0,0" VerticalAlignment="Top" Width="39" FontSize="13px"  Height="25" Foreground="#DDFCFCFC" />
-        <Label Content="价格：￥" HorizontalAlignment="Left" Margin="143,36,0,64" FontSize="11"  Width="52" VerticalAlignment="Top" Foreground="#DDFCFCFC"/>
-        <Label Content="数量：" HorizontalAlignment="Left" Margin="143,79,0,0" VerticalAlignment="Top" FontSize="11" Height="23" Width="41" RenderTransformOrigin="0.582,0.267" Foreground="#DDFCFCFC" />
+        <Label Content="菜名：" HorizontalAlignment="Left" Margin="143,11,0,0" VerticalAlignment="Top" Width="39" FontSize="13px"  Height="25" Foreground="#FF0E0E0E" Background="{x:Null}" />
+        <Label Content="价格：￥" HorizontalAlignment="Left" Margin="143,36,0,64" FontSize="11"  Width="52" VerticalAlignment="Top" Foreground="#FF0E0E0E"/>
+        <Label Content="数量：" HorizontalAlignment="Left" Margin="143,79,0,0" VerticalAlignment="Top" FontSize="11" Height="23" Width="41" RenderTransformOrigin="0.582,0.267" Foreground="#FF0E0E0E" />
         <Button Content="-" HorizontalAlignment="Left" Margin="189,82,0,0" VerticalAlignment="Top" Width="15" FontSize="10" Height="15" RenderTransformOrigin="-9.583,-0.117" x:Name="LoseButton" Click="LoseButton_Click" BorderBrush="#FFFCF0CB" >
             <Button.Background>
                 <ImageBrush ImageSource="减号.png"/>
@@ -27,11 +27,11 @@
                 <ImageBrush/>
             </Button.Foreground>
         </Button>
-        <Label Content="0" HorizontalAlignment="Left" Margin="212,79,0,0" VerticalAlignment="Top" Width="20" FontSize="10" Height="20" x:Name="NumLabel" Foreground="#DDFCFCFC" />
-        <Label Content="月销量：" HorizontalAlignment="Left" Margin="143,58,0,0" VerticalAlignment="Top" FontSize="9" Width="40" Foreground="#DDFCFCFC" />
-        <Label Content="XXX" HorizontalAlignment="Left" Margin="182,11,0,0" VerticalAlignment="Top"  FontSize="13px" x:Name="DishnameLabel" Foreground="#DDFCFCFC"/>
-        <Label  Content="价格设置" HorizontalAlignment="Left" Margin="187,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.423,0.4" x:Name="SalesvalueLabel" FontSize="11px" Foreground="#DDFCFCFC" />
-        <Label Content="销量设置" HorizontalAlignment="Left" Margin="183,58,0,0" VerticalAlignment="Top" FontSize="9px" RenderTransformOrigin="0.758,0.476" x:Name="SalesNumLabel" Foreground="#DDFCFCFC"/>
+        <Label Content="0" HorizontalAlignment="Left" Margin="212,79,0,0" VerticalAlignment="Top" Width="20" FontSize="10" Height="20" x:Name="NumLabel" Foreground="#FF0E0E0E" />
+        <Label Content="月销量：" HorizontalAlignment="Left" Margin="143,58,0,0" VerticalAlignment="Top" FontSize="9" Width="40" Foreground="#FF0E0E0E" />
+        <Label Content="XXX" HorizontalAlignment="Left" Margin="182,11,0,0" VerticalAlignment="Top"  FontSize="13px" x:Name="DishnameLabel" Foreground="#FF0E0E0E"/>
+        <Label  Content="价格设置" HorizontalAlignment="Left" Margin="187,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.423,0.4" x:Name="SalesvalueLabel" FontSize="11px" Foreground="#FF0E0E0E" />
+        <Label Content="销量设置" HorizontalAlignment="Left" Margin="183,58,0,0" VerticalAlignment="Top" FontSize="9px" RenderTransformOrigin="0.758,0.476" x:Name="SalesNumLabel" Foreground="#FF0E0E0E"/>
 
 
     </Grid>

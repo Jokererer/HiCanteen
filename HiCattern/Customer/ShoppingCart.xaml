@@ -15,13 +15,13 @@
             <RowDefinition Height="313*"/>
             <RowDefinition Height="87*"/>
         </Grid.RowDefinitions>
-        <Label Content="总价：" HorizontalAlignment="Left" Height="31.262" Margin="93,25,0,0" VerticalAlignment="Top" Width="179.167" Background="#FFF7F0F0" FontSize="16" Grid.Row="1"/>
-        <Button x:Name="btn_pay" Content="结算" HorizontalAlignment="Left" Height="33.003" Margin="540.023,23.259,0,0" VerticalAlignment="Top" Width="158.166" Background="#FFF7F3F3" BorderBrush="{x:Null}" FontSize="16" RenderTransformOrigin="0.515,1.429" Grid.Row="1" Click="btn_pay_Click"/>
-        <Button Content="关闭" HorizontalAlignment="Left" Margin="93,75.667,0,10.333" Grid.Row="1" Width="179" BorderBrush="#FFF7F3F3" FontSize="16" Click="Button_Click"/>
-        <Button Content="清空购物车" HorizontalAlignment="Left" Height="38" Margin="532,75.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" BorderBrush="#FFF7F0F0" FontSize="16" Click="Button_Click_1"/>
-        <RadioButton x:Name="radio1" Content="外卖跑腿" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="313,30.667,0,0" Grid.Row="1" Foreground="#FFF6F6F6" FontSize="16"/>
+        <Label Content="总价：" HorizontalAlignment="Left" Height="31.262" Margin="93,25,0,0" VerticalAlignment="Top" Width="179.167" Background="#FFD76F33" FontSize="16" Grid.Row="1"/>
+        <Button x:Name="btn_pay" Content="结算" HorizontalAlignment="Left" Height="33.003" Margin="540.023,23.259,0,0" VerticalAlignment="Top" Width="158.166" Background="#FFD76F33" BorderBrush="{x:Null}" FontSize="16" RenderTransformOrigin="0.515,1.429" Grid.Row="1" Click="btn_pay_Click"/>
+        <Button Content="关闭" HorizontalAlignment="Left" Margin="93,75.667,0,10.333" Grid.Row="1" Width="179" BorderBrush="#FFF7F3F3" FontSize="16" Click="Button_Click" Background="#FFE0653D"/>
+        <Button Content="清空购物车" HorizontalAlignment="Left" Height="38" Margin="532,75.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="166" BorderBrush="#FFF7F0F0" FontSize="16" Click="Button_Click_1" Background="#FFE0653D"/>
+        <RadioButton x:Name="radio1" Content="外卖跑腿" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="313,30.667,0,0" Grid.Row="1" Foreground="#FFF6F6F6" FontSize="16" Height="26" Width="104"/>
         <RadioButton x:Name="radio2" Content="到店自取" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="422,30.667,0,0" Grid.Row="1" Foreground="#FFFBF6F6" FontSize="16"/>
-        <DataGrid x:Name="disheslist" HorizontalAlignment="Left" Height="411" VerticalAlignment="Top" Width="646" Margin="62,29,0,0" Background="#FFFAF1F1"/>
+        <DataGrid x:Name="disheslist" HorizontalAlignment="Left" Height="411" VerticalAlignment="Top" Width="646" Margin="62,29,0,0" Background="#FFF8F4F3"/>
 
     </Grid>
 </Window>

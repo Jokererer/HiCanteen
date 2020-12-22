@@ -178,10 +178,15 @@ namespace HiCattern.Customer
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             HiCattern.Login.TheLogin login = new HiCattern.Login.TheLogin();
             this.Close();
             login.Show();
+        }
+
+        private void dishes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
