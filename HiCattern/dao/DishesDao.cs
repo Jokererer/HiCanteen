@@ -63,7 +63,7 @@ namespace Hi食堂.dao
      
         }
         /// <summary>
-        /// 修改菜品口味
+        /// 修改菜品信息
         /// </summary>
         /// <param name="dish"></param>
 
@@ -72,6 +72,13 @@ namespace Hi食堂.dao
             string sql = "update dishes set dishesName='" + dish.getDishName() + "',price="+dish.getPrice()+" where dishesID=" + dish.getDishID() + ";";
             bool flag = db.UpdateData(sql);
             return flag;
+        }
+
+        public DataTable queryDishesByName(int merID, string dishName)
+        {
+            string sql = "select * from dishes where merchantID=" + merID + " and dishesName='" + dishName + "';";
+            DataTable dt = db.QueryData(sql);
+            return dt;
         }
 
     }

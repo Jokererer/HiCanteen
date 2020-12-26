@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\App.xaml
-37-1043543378
+341784148187
 
-64525958102
+61-1535356800
 142-127456027
-CustomControl\Canteen.xaml;CustomControl\MerchantMess.xaml;CustomControl\OrderDishes.xaml;CustomControl\RiderMes.xaml;Customer\AskForOrder.xaml;Customer\Canteen.xaml;Customer\ChangePassword.xaml;Customer\CustomMessage.xaml;Customer\MenuList.xaml;Customer\OrderConfirmation.xaml;Customer\Pay.xaml;Customer\ShoppingCart.xaml;Customer\TakeOutOrder.xaml;Customer\ViewOrder.xaml;Login\ForgetPassword.xaml;Login\Poster.xaml;Login\Register.xaml;Login\TheLogin.xaml;MerchantAdmin\修改商家.xaml;MerchantAdmin\删除商家.xaml;MerchantAdmin\增加商家.xaml;MerchantAdmin\查看商家.xaml;Merchant\修改菜品.xaml;Merchant\删除菜品信息.xaml;Merchant\删除订单.xaml;Merchant\商家.xaml;Merchant\新增菜品.xaml;Rider\historyTakenOrder.xaml;Rider\RiderForgetPassword.xaml;Rider\RiderInfo.xaml;Rider\RiderLogin.xaml;Rider\riderOrder1.xaml;Rider\RiderRegister.xaml;Simple Styles.xaml;SuperAdmin\editMerAdmi.xaml;SuperAdmin\增加商家管理员.xaml;SuperAdmin\系统管理员.xaml;
+CustomControl\Canteen.xaml;CustomControl\MerchantMess.xaml;CustomControl\OrderDishes.xaml;CustomControl\RiderMes.xaml;Customer\AskForOrder.xaml;Customer\Canteen.xaml;Customer\ChangePassword.xaml;Customer\MenuList.xaml;Customer\Pay.xaml;Customer\ShoppingCart.xaml;Customer\showOrderDetails.xaml;Customer\TakeOutOrder.xaml;Customer\ViewOrder.xaml;Login\ForgetPassword.xaml;Login\Poster.xaml;Login\Register.xaml;Login\TheLogin.xaml;MerchantAdmin\修改商家.xaml;MerchantAdmin\删除商家.xaml;MerchantAdmin\增加商家.xaml;MerchantAdmin\查看商家.xaml;Merchant\修改菜品.xaml;Merchant\删除菜品信息.xaml;Merchant\删除订单.xaml;Merchant\商家.xaml;Merchant\新增菜品.xaml;Merchant\查看详情.xaml;Rider\RiderInfo.xaml;Rider\RiderRegister.xaml;Rider\Rider_Order.xaml;Simple Styles.xaml;SuperAdmin\editMerAdmi.xaml;SuperAdmin\增加商家管理员.xaml;SuperAdmin\系统管理员.xaml;
 
-True
+False
 

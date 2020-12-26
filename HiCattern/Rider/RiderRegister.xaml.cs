@@ -56,7 +56,9 @@ namespace HiCattern.Rider
             if(id != 0)
             {
                 MessageBox.Show("注册成功，你的账号为："+id);
+                HiCattern.Login.TheLogin login = new Login.TheLogin();
                 this.Close();
+                login.Show();
             }
             else
             {

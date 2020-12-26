@@ -10,12 +10,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="Login.jpg" />
         </Grid.Background>
-        <TextBox x:Name="txt_Phone" HorizontalAlignment="Left" Height="37" Margin="538,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" BorderBrush="#FFF5E9E9" Background="#FFF6EDED" FontSize="14" Foreground="#FFF6F2F2"/>
-        <TextBox x:Name="txt_Pwd" HorizontalAlignment="Left" Height="37" Margin="538,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Foreground="#FFF3EBEB" Background="#FFF6EDED" RenderTransformOrigin="0.52,-0.243"/>
+        <TextBox x:Name="txt_Phone" HorizontalAlignment="Left" Height="37" Margin="538,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" BorderBrush="#FFF5E9E9" Background="#FFF6EDED" FontSize="14" Foreground="#FF0E0E0E"/>
+        <TextBox x:Name="txt_Pwd" HorizontalAlignment="Left" Height="37" Margin="538,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Foreground="#FFF3EBEB" Background="#FFF6EDED" RenderTransformOrigin="0.52,-0.243"/>
         <Button x:Name="btnOk_register" Content="注册" HorizontalAlignment="Left" Height="35" Margin="590,342,0,0" VerticalAlignment="Top" Width="94" FontSize="18" FontWeight="Bold" Background="#FFEEE7E7" Foreground="#FF121111" BorderBrush="{x:Null}" Click="btnOk_register_Click"/>
         <Label Content="欢迎来到Hi 食堂！" HorizontalAlignment="Left" Height="42" Margin="404,0,0,0" VerticalAlignment="Top" Width="245" BorderBrush="#FFEBE6E6" Foreground="#FFF3EEEE" FontSize="30"/>
-        <Image HorizontalAlignment="Left" Height="37" Margin="463,134,0,0" VerticalAlignment="Top" Width="44" Source="手机号 (1).png"/>
-        <Image HorizontalAlignment="Left" Height="37" Margin="463,207,0,0" VerticalAlignment="Top" Width="44" Source="密码2.png" OpacityMask="{x:Null}"/>
+        <Image HorizontalAlignment="Left" Height="37" Margin="463,211,0,0" VerticalAlignment="Top" Width="44" Source="手机号 (1).png"/>
+        <Image HorizontalAlignment="Left" Height="37" Margin="464,139,0,0" VerticalAlignment="Top" Width="44" Source="密码2.png" OpacityMask="{x:Null}"/>
         <Button x:Name="btn_return" Content="" HorizontalAlignment="Left" Margin="849,10,0,0" VerticalAlignment="Top" Width="80" Height="59" BorderBrush="{x:Null}" Click="btn_return_Click">
             <Button.Background>
                 <ImageBrush ImageSource="返 回红.png"/>
@@ -23,7 +23,12 @@
         </Button>
         <TextBox x:Name="txt_Address" HorizontalAlignment="Left" Height="37" Margin="539,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Foreground="#FFF3EBEB" Background="#FFF6EDED" RenderTransformOrigin="0.52,-0.243"/>
         <Image HorizontalAlignment="Left" Height="37" Margin="464,277,0,0" VerticalAlignment="Top" Width="44" Source="地址.png"/>
-        <TextBox x:Name="txt_Name" HorizontalAlignment="Left" Height="31" Margin="539,81,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="223" Background="White"/>
+        <TextBox x:Name="txt_Name" HorizontalAlignment="Left" Height="36" Margin="539,76,0,0" TextWrapping="Wrap" Text="" Style="{StaticResource MaterialDesignTextBox}" VerticalAlignment="Top" Width="230" Background="#FFF6EDED"/>
+        <Image HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="41" Margin="468,77,0,0" Source="账号信息.png">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="账号信息.png"/>
+            </Image.OpacityMask>
+        </Image>
 
     </Grid>
 </Window>

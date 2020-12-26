@@ -104,5 +104,14 @@ namespace Hi食堂.dao
             bool flag = db.UpdateData(sql);
             return flag;
         }
+
+        public bool updateInfo(Customer cus)
+        {
+            string sql = "update customer set customerName='" + cus.getCustomerName() + "',customerPasswd='" + cus.getCustomerPasswd()
+                + "',customerAddress='" + cus.getCustomerAddress() + "',customerPhone='" + cus.getCustomerPhone() + "' where customerID="
+                + cus.getCustomerID() + ";";
+            bool f = db.UpdateData(sql);
+            return f;
+        }
     }
 }

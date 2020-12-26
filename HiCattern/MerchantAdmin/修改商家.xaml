@@ -5,20 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiCattern.MerchantAdmin"
         mc:Ignorable="d"
-        Title="修改商家" Height="450" Width="800" Background="#FF58688F">
+        Title="修改商家" Height="421" Width="744" Background="#FF58688F">
     <Grid>
-        <GroupBox Header="修改商家信息" HorizontalAlignment="Left" Height="376" VerticalAlignment="Top" Width="735" Margin="38,24,0,0" Background="#FF58688F" Foreground="#FFFEFEFE">
-        </GroupBox>
-        <TextBox x:Name="txt_MerName" HorizontalAlignment="Left" Height="23" Margin="414,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="110"/>
-        <Label Content="所属食堂" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="255,236,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
-        <Label Content="联系电话" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="255,185,0,0" RenderTransformOrigin="0.569,0.845" Foreground="#FFFCF9F9" FontSize="14"/>
-        <TextBox x:Name="txt_MerchantID" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="411,83,0,0"/>
-        <TextBox x:Name="txt_MerPhone" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112" Margin="413,188,0,0"/>
-        <Button x:Name="btn_Ok" Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Margin="258,340,0,0" Height="25" Click="btn_Ok_Click"/>
-        <Button x:Name="btn_cancel" Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Margin="456,342,0,0" Height="25" Click="btn_cancel_Click"/>
-        <Label Content="商家名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="262,133,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
-        <Label Content="商家ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="261,80,0,0" Foreground="White" FontSize="14"/>
-        <ComboBox x:Name="combox_Canteen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="411,240,0,0">
+        <TextBox x:Name="txt_MerName" HorizontalAlignment="Left" Height="23" Margin="386,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="110" CaretBrush="#FF7FA4C8"/>
+        <Label Content="所属食堂" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="225,241,0,0" Foreground="#FFFCF9F9" FontSize="16" Height="35"/>
+        <Label Content="联系电话" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="227,181,0,0" RenderTransformOrigin="0.569,0.845" Foreground="#FFFCF9F9" FontSize="16"/>
+        <TextBox x:Name="txt_MerchantID" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="383,73,0,0" CaretBrush="#FF7FA4C8"/>
+        <TextBox x:Name="txt_MerPhone" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112" Margin="385,178,0,0" CaretBrush="#FF7FA4C8"/>
+        <Button x:Name="btn_Ok" Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61" Margin="238,319,0,0" Height="31" Click="btn_Ok_Click" Background="#FF7FA4C8" BorderBrush="{x:Null}" Padding="5,4"/>
+        <Button x:Name="btn_cancel" Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61" Margin="436,319,0,0" Height="31" Click="btn_cancel_Click" Background="#FF7FA4C8" BorderBrush="{x:Null}" Padding="5,4"/>
+        <Label Content="商家名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="234,129,0,0" Foreground="#FFFCF9F9" FontSize="16"/>
+        <Label Content="商家ID" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="233,76,0,0" Foreground="White" FontSize="16"/>
+        <ComboBox x:Name="combox_Canteen" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="383,230,0,0">
             <ComboBoxItem Content="四食堂"/>
             <ComboBoxItem Content="五食堂"/>
             <ComboBoxItem Content="八食堂"/>

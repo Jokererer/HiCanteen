@@ -43,20 +43,23 @@ namespace Hi食堂.service
         //    int id = merAdmiDao.getMerchantAdmiID(merAdmi);
         //    return id;        
         //}
-        public bool addMerAdmi(string pwd, string canteen) //添加商家管理员
+        //添加商家管理员
+        public bool addMerAdmi(string pwd, string canteen) 
         {
             merAdmi.setMerchantAdmiPasswd(pwd);
             merAdmi.setCanteenName(canteen);
             bool flag = merAdmiDao.addMerchantAdmi(merAdmi);
             return flag;
         }
-        public bool deleteMerAdmi(int id)  //删除商家管理员
+        //删除商家管理员
+        public bool deleteMerAdmi(int id)  
         {
             merAdmi.setMerchantAdmiID(id);
             bool flag = merAdmiDao.deleteMerchantAdmi(merAdmi);
             return flag;
         }
-        public bool updateCan(int id,string canteen)  //更改商家管理员所管食堂
+        //更改商家管理员所管食堂
+        public bool updateCan(int id,string canteen)  
         {
             merAdmi.setMerchantAdmiID(id);
             DataTable dt = merAdmiDao.findMerAdmi(id);
@@ -70,8 +73,8 @@ namespace Hi食堂.service
                 return f;
             }
         }
-        
-        public bool updatePwd(int id,string pwd)  //更改商家管理员密码
+        //更改商家管理员密码
+        public bool updatePwd(int id,string pwd)  
         {
             //merAdmi.setMerchantAdmiID(id);
             DataTable dt = merAdmiDao.findMerAdmi(id);
@@ -241,10 +244,40 @@ namespace Hi食堂.service
         public bool deleteOrder(int id)
         {
             OrdersDao ordersDao = new OrdersDao();
-            Orders or = new Orders();
-            or.setOrderID(id);
-            bool flag = ordersDao.deleteOrders(or);
+            bool flag = ordersDao.deleteOrders(id);
             return flag;
         }
+
+        //显示所有骑手信息
+        public DataTable showAllRiders()
+        {
+            RiderDao rd = new RiderDao();
+            DataTable dt = rd.findAllRider();
+            return dt;
+        }
+        //删除骑手
+        public bool deleteRider(int riderID)
+        {
+            RiderDao rd = new RiderDao();
+            bool flag = rd.deleteRider(riderID);
+            return flag;
+        }
+        //查询骑手—按照ID查询
+        public DataTable showRiderByID(int riderID)
+        {
+            Rider rider = new Rider();                
+            RiderDao rd = new RiderDao();
+            rider.setRiderID(riderID);
+            DataTable dt = rd.findRider(rider);
+            return dt;
+        }
+        //查询骑手—按照电话查询
+        public DataTable showRiderByPh(string phone)
+        {
+            RiderDao rd = new RiderDao();
+            DataTable dt = rd.findRiderByPh(phone);
+            return dt;
+        }
+
     }
 }

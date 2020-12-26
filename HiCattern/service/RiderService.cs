@@ -16,7 +16,6 @@ namespace Hi食堂.service
         Rider rider = new Rider();
         RiderDao riderDao = new RiderDao();
         OrdersDao orDao = new OrdersDao();
-        //public static int riState = 0;
         public int login(int id, string pwd)
         {
             rider.setRiderID(id);
@@ -24,7 +23,6 @@ namespace Hi食堂.service
             DataTable dt = riderDao.findRider(rider);
             if (dt.Rows.Count == 0)  //账号错误
             {
-                //rState = 0;
                 return -1;
             }
             //验证密码
@@ -35,10 +33,10 @@ namespace Hi食堂.service
             }
             else   //登录成功
             {
-                //rState = id;
                 return 1;
             }
         }
+        //骑手注册
         public int register(string name, string pwd, string phone)
         {
             rider.setRiderName(name);
@@ -49,18 +47,27 @@ namespace Hi食堂.service
            
         }
         //显示未被接单的订单
-        public DataTable unDoOrders()
+        public DataTable openOrders()
         {
-            string sql = "select orderID,customerName,customerPhone,customerAddress,merchantName,canteenName " +
-                "from orders,customer,merchant where orState=-1 and orders.customerID=customer.customerID " +
-                "and orders.merchantID=merchant.merchantID;";
-            DataTable dt = db.QueryData(sql);
+            DataTable dt = orDao.queryOpenOrders();
+            return dt;
+        }
+        //显示派送订单
+        public DataTable deliveryOrder(int riderID)
+        {
+            DataTable dt = orDao.queryDeliveryOrder(riderID);
+            return dt;
+        }
+        //显示历史订单
+        public DataTable historyOrders(int riderID)
+        {
+            DataTable dt = orDao.showFinishedOrders(riderID);
             return dt;
         }
         //接单未送达
-        public bool takeOrder(int orderID)
+        public bool takeOrder(int orderID,int riderID)
         {
-            bool flag = orDao.updateOrState1(orderID);
+            bool flag = orDao.updateOrState1(orderID, riderID);
             return flag;
         }
         //接单且送达
@@ -69,14 +76,28 @@ namespace Hi食堂.service
             bool flag = orDao.updateOrState2(orderID);
             return flag;
         }
-
-        public DataTable showHistory(int riderID)
+        //获取骑手信息
+        public DataTable getRiderInfo(int id)
         {
-            string sql = "select orderID,customerName,customerPhone,customerAddress,merchantName,canteenName " +
-                "from orders,customer,merchant where riderID=" + riderID + " and orders.customerID=customer.customerID " +
-                "and orders.merchantID=merchant.merchantID;";
-            DataTable dt = db.QueryData(sql);
+            rider.setRiderID(id);
+            DataTable dt = riderDao.findRider(rider);
             return dt;
+        }
+        //骑手修改电话
+        public bool updateRiderPh(int id,string phone)
+        {
+            rider.setRiderID(id);
+            rider.setRiderPhone(phone);
+            bool f = riderDao.updateRiderPhone(rider);
+            return f;
+        }
+        //骑手修改密码
+        public bool updateRiderPwd(int id, string pwd)
+        {
+            rider.setRiderID(id);
+            rider.setriderPasswd(pwd);
+            bool f = riderDao.updateRiderPasswd(rider);
+            return f;
         }
     }
 }

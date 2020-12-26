@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,14 @@ namespace Hi食堂.dao
             string sql = "delete from orderdetails where orderDetailsNum=" + orderDetails.getOrderDetailNum() + ";";
             bool flag = db.DeleteData(sql);
             return flag;
+        }
+        //查询订单明细
+        public DataTable queryDetails(int orderID)
+        {
+            string sql = "select orderID,dishesName,dishesNum,priceSale from orderdetails,dishes " +
+                "where orderdetails.dishesID=dishes.dishesID and orderID= " + orderID + ";";
+            DataTable dt = db.QueryData(sql);
+            return dt;
         }
 
     }

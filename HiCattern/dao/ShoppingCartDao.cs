@@ -41,7 +41,7 @@ namespace Hi食堂.dao
         public bool deleteShopping(ShoppingCart shoppingCart)
         {
             string sql = "delete from shoppingcart where customerID=" + shoppingCart.getCustomerID() +
-                "and merchantID=" + shoppingCart.getMerchantID() + " and dishesID=" + shoppingCart.getDishesID() + ";";
+                " and merchantID=" + shoppingCart.getMerchantID() + " and dishesID=" + shoppingCart.getDishesID() + ";";
             bool flag = db.DeleteData(sql);
             return flag;
         }

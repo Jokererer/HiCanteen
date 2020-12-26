@@ -11,11 +11,12 @@
             <ImageBrush ImageSource="riderbackground.jpg"/>
         </Grid.Background>
         <Label Content="修改密码" HorizontalAlignment="Left" Height="32.301" Margin="233.225,243.243,0,0" VerticalAlignment="Top" Width="110.115" Foreground="#FFEFE7E7" FontSize="16"/>
-        <Label Content="请输入旧密码：" HorizontalAlignment="Left" Height="36" Margin="536,145,0,0" VerticalAlignment="Top" Width="128" Background="{x:Null}" Foreground="#FF141313" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="536,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
-        <Label Content="请输入新密码：" HorizontalAlignment="Left" Height="36" Margin="536,221,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF0A0A0A" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="536,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
-        <Button  Style="{StaticResource MyButton}" Content="修改" HorizontalAlignment="Left" Height="26" Margin="591,355,0,0" VerticalAlignment="Top" Width="112" Foreground="#FFF8F9FE" Background="#FF190E79" FontSize="14"/>
+        <Label Content="手机号码：" HorizontalAlignment="Left" Height="36" Margin="536,118,0,0" VerticalAlignment="Top" Width="128" Background="{x:Null}" Foreground="#FF141313" FontSize="14"/>
+        <TextBox x:Name="txt_Phone" HorizontalAlignment="Left" Height="30" Margin="530,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <Label Content="密码：" HorizontalAlignment="Left" Height="36" Margin="543,230,0,0" VerticalAlignment="Top" Width="128" Foreground="#FF0A0A0A" FontSize="14"/>
+        <TextBox x:Name="txt_Passwd" HorizontalAlignment="Left" Height="30" Margin="536,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224"/>
+        <Button x:Name="btnOk_updateInfo" Style="{StaticResource MyButton}" Content="修改" HorizontalAlignment="Left" Height="32" Margin="526,350,0,0" VerticalAlignment="Top" Width="75" Foreground="#FF0E0E0E" Background="#FF7FA4C8" FontSize="14" Click="btnOk_updateInfo_Click"/>
+        <Button x:Name="btn_cancel" Content="取消" HorizontalAlignment="Left" Margin="703,350,0,0" VerticalAlignment="Top" Width="75" Click="btn_cancel_Click" BorderBrush="{x:Null}" Background="#FF7FA4C8"/>
 
     </Grid>
 </Window>

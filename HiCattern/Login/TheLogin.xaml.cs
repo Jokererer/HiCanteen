@@ -35,6 +35,8 @@ namespace HiCattern.Login
         public TheLogin()
         {
             this.InitializeComponent();
+            //txt_number.ToolTip = "请输入账号";
+            //txt_passwd.ToolTip = "请输入密码";
 
         }
 
@@ -76,10 +78,10 @@ namespace HiCattern.Login
                 {
                     MerchantService merService = new MerchantService();
                     merID = int.Parse(number);
-                    int temp = merService.login(merID, passwd);
+                    int temp = merService.login(merID,passwd);
                     if (temp == 1)
                     {
-                        Hi_食堂.Merchant.商家 merchant = new Hi_食堂.Merchant.商家();
+                        Hi_食堂.Merchant.商家 merchant = new Hi_食堂.Merchant.商家(merID);
                         this.Close();
                         merchant.Show();
                     }
@@ -101,7 +103,7 @@ namespace HiCattern.Login
                     int temp = riderService.login(riderID, passwd);
                     if (temp == 1)
                     {
-                        HiCattern.Rider.riderOrder1 riderOrder1 = new HiCattern.Rider.riderOrder1(riderID);
+                        HiCattern.Rider.Rider_Order riderOrder1 = new HiCattern.Rider.Rider_Order(riderID);
                         this.Close();
                         riderOrder1.Show();
                     }

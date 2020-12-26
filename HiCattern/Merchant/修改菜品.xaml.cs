@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hi食堂.service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,40 @@ namespace Hi_食堂.MerchantAdmin
     /// </summary>
     public partial class 修改菜品 : Window
     {
-        public 修改菜品()
+        int dishesID;
+        public 修改菜品(int did)
         {
             InitializeComponent();
+            dishesID = did;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bool f = this.updateDish();
+            if(f)
+            {
+                MessageBox.Show("修改成功！");
+            }
+            else
+            {
+                MessageBox.Show("修改失败！");
+            }
+        }
+
+        public bool updateDish()
+        {
+            string name = txt_Name.Text;
+            string price = txt_Price.Text;
+            MerchantService merser = new MerchantService();
+            bool f = merser.updateDish(dishesID, name, float.Parse(price));
+            return f;
+        }
+
+        private void btn_cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }

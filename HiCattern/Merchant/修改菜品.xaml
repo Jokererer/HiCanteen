@@ -7,16 +7,15 @@
         mc:Ignorable="d"
         Title="修改菜品信息" Height="516" Width="586" Background="#FF58688F">
     <Grid>
-        <GroupBox Header="修改菜品信息" HorizontalAlignment="Left" Height="362.806" VerticalAlignment="Top" Width="511.449" Margin="27.896,31.896,0,0" Background="#FF58688F" Foreground="#FFFEFEFE"/>
-        <Label Content="单价" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="116,177,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
-        <Label Content="菜品图片" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="102,257,0,0" RenderTransformOrigin="0.569,0.845" Foreground="#FFFCF9F9" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="246,120,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="246,181,0,0"/>
-        <Button Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="103.999,432.145,0,0"/>
-        <Button Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="347.667,432.145,0,0"/>
-        <Button Content="浏览图片" HorizontalAlignment="Left" Height="26" Margin="402,257,0,0" VerticalAlignment="Top" Width="69"/>
-        <Label Content="菜品名称" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="101,116,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
-        <Image HorizontalAlignment="Left" Height="88" Margin="244,257,0,0" VerticalAlignment="Top" Width="125" Source="OIP.jpg"/>
+        <Label Content="单价" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="121,160,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
+        <Label Content="菜品图片" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,240,0,0" RenderTransformOrigin="0.569,0.845" Foreground="#FFFCF9F9" FontSize="14"/>
+        <TextBox x:Name="txt_Name" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="251,103,0,0"/>
+        <TextBox x:Name="txt_Price" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="251,164,0,0"/>
+        <Button Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="150,402,0,0" Background="#FF7FA4C8" BorderBrush="{x:Null}" Padding="10,4" Height="28" Click="Button_Click"/>
+        <Button x:Name="btn_cancel" Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="394,402,0,0" Background="#FF7FA4C8" BorderBrush="{x:Null}" Padding="10,4" Height="28" Click="btn_cancel_Click"/>
+        <Button Content="浏览" HorizontalAlignment="Left" Height="28" Margin="413,243,0,0" VerticalAlignment="Top" Width="64" Background="#FF7FA4C8" BorderBrush="{x:Null}"/>
+        <Label Content="菜品名称" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="106,99,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
+        <Image HorizontalAlignment="Left" Height="88" Margin="249,240,0,0" VerticalAlignment="Top" Width="125" Source="OIP.jpg"/>
 
     </Grid>
 </Window>

@@ -1,0 +1,101 @@
+﻿<Window x:Class="HiCattern.Rider.Rider_Order"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Rider"
+        mc:Ignorable="d"
+        Title="接单" Height="571.382" Width="978.475">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="riderbackground.jpg"/>
+        </Grid.Background>
+        <TabControl HorizontalAlignment="Left" Height="475" Margin="19,51,0,0" VerticalAlignment="Top" Width="927">
+            <TabItem Header="可接订单" Margin="-2,-2,-169.333,-8" FontSize="16" Loaded="loadOrders">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="97*"/>
+                        <ColumnDefinition Width="365*"/>
+                        <ColumnDefinition Width="358*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="dg1" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Height="412" Margin="19,16,0,0" VerticalAlignment="Top" Width="882" Grid.ColumnSpan="3">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="订单编号"  Binding="{Binding orderID}" Width="*" />
+                            <DataGridTextColumn Header="顾客姓名" Binding="{Binding customerName}" Width="*" />
+                            <DataGridTextColumn Header="顾客电话" Binding="{Binding customerPhone}" Width="*" />
+                            <DataGridTextColumn Header="顾客地址"  Binding="{Binding customerAddress}" Width="*" />
+                            <DataGridTextColumn Header="订单状态"  Binding="{Binding omState}" Width="*" />
+                            <DataGridTextColumn Header="商家姓名" Binding="{Binding merchantName}" Width="*" />
+                            <DataGridTextColumn Header="商家地址" Binding="{Binding canteenName}" Width="*" />
+                            <DataGridTemplateColumn Header="操作">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="接 单"  Tag="{Binding orderID}" Click="btn_takeOrder" Background="#FF7FA4C8" BorderBrush="{x:Null}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="正在派送" Margin="167.333,-2,-327.333,-8" FontSize="16" Loaded="deliveryOrder">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-4,-1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="dg2" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Height="411" Margin="19,18,0,0" VerticalAlignment="Top" Width="887" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="订单编号"  Binding="{Binding orderID}" Width="*" />
+                            <DataGridTextColumn Header="顾客姓名" Binding="{Binding customerName}" Width="*" />
+                            <DataGridTextColumn Header="顾客电话" Binding="{Binding customerPhone}" Width="*" />
+                            <DataGridTextColumn Header="顾客地址"  Binding="{Binding customerAddress}" Width="*" />
+                            <DataGridTextColumn Header="订单状态"  Binding="{Binding omState}" Width="*" />
+                            <DataGridTextColumn Header="商家姓名" Binding="{Binding merchantName}" Width="*" />
+                            <DataGridTextColumn Header="商家地址" Binding="{Binding canteenName}" Width="*" />
+                            <DataGridTemplateColumn Header="操作">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Button Content="送 达"  Tag="{Binding orderID}" Click="btn_FinOrder" Background="#FF7FA4C8" BorderBrush="{x:Null}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="历史接单" Margin="324.333,-2,-332.333,-8" FontSize="16" HorizontalAlignment="Left" Width="292" Loaded="historyOrders">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="171*"/>
+                        <ColumnDefinition Width="240*"/>
+                        <ColumnDefinition Width="59*"/>
+                        <ColumnDefinition Width="36*"/>
+                        <ColumnDefinition Width="314*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="dg3" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Height="421" Margin="17,12,0,0" VerticalAlignment="Top" Width="886" Grid.ColumnSpan="5">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="订单编号"  Binding="{Binding orderID}" Width="*" />
+                            <DataGridTextColumn Header="顾客姓名" Binding="{Binding customerName}" Width="*" />
+                            <DataGridTextColumn Header="顾客电话" Binding="{Binding customerPhone}" Width="*" />
+                            <DataGridTextColumn Header="顾客地址"  Binding="{Binding customerAddress}" Width="*" />
+                            <DataGridTextColumn Header="商家姓名" Binding="{Binding merchantName}" Width="*" />
+                            <DataGridTextColumn Header="商家地址" Binding="{Binding canteenName}" Width="*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+            </TabItem>
+
+
+        </TabControl>
+        <Button x:Name="btn_refresh" Content="刷新" HorizontalAlignment="Left" Margin="688,7,0,0" VerticalAlignment="Top" Width="61" Background="#FF7FA4C8" Click="btn_refresh_Click" BorderBrush="{x:Null}" Padding="5,4"/>
+        <Button x:Name="btn_updateInfo" Content="修改信息" HorizontalAlignment="Left" Margin="771,7,0,0" VerticalAlignment="Top" Width="74" Click="btn_updateInfo_Click" BorderBrush="{x:Null}" Background="#FF7FA4C8" Padding="5,4"/>
+        <Button x:Name="btn_returnLogin" Content="返回登录" HorizontalAlignment="Left" Margin="869,7,0,0" VerticalAlignment="Top" Width="68" Click="btn_returnLogin_Click" BorderBrush="{x:Null}" Background="#FF7FA4C8" Padding="5,4"/>
+
+    </Grid>
+</Window>

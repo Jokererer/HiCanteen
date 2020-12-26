@@ -7,19 +7,17 @@
         mc:Ignorable="d"
         Title="增加商家管理员" Height="450" Width="744.667" Background="#FF58688F">
     <Grid Margin="0,0,-0.667,-0.333">
-        <GroupBox Header="新增商家管理员信息" HorizontalAlignment="Left" Height="349" Margin="37,44,0,0" VerticalAlignment="Top" Width="665" Foreground="#FFFCFAFA">
-            <ComboBox x:Name="combox_ChooseCanteen" HorizontalAlignment="Left" Height="23" Margin="328,163,0,0" VerticalAlignment="Top" Width="121" SelectedIndex="0">
-                <ComboBoxItem Content="四食堂"/>
-                <ComboBoxItem Content="五食堂"/>
-                <ComboBoxItem Content="八食堂"/>
-                <ComboBoxItem Content="十食堂"/>
-            </ComboBox>
-        </GroupBox>
-        <TextBox x:Name="txtbox_MerAdminPwd"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="111111" VerticalAlignment="Top" Width="120" Margin="371,155,0,0"/>
-        <Button x:Name="btn_addMerAdmi" Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="181,307,0,0" Height="29" Click="btn_addMerAdmi_Click"/>
-        <Label Content="密码" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,149,0,0" Foreground="#FFFAF6F6" Height="31" Width="44" FontSize="15"/>
-        <Label Content="所属食堂" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="227,215,0,0" Foreground="#FFFAF6F6" FontSize="15" Width="69" Height="35"/>
-        <Button x:Name="btn_cancel" Content="取消" Margin="439,306,223.667,83" Click="btn_cancel_Click"/>
+        <TextBox x:Name="txtbox_MerAdminPwd"  HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" Text="111111" VerticalAlignment="Top" Width="120" Margin="365,130,0,0" FontSize="14" CaretBrush="#FF7FA4C8"/>
+        <Button x:Name="btn_addMerAdmi" Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="191,303,0,0" Height="29" Click="btn_addMerAdmi_Click" Background="#FF7FA4C8" BorderBrush="{x:Null}" Padding="5,4"/>
+        <Label Content="密码" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="230,131,0,0" Foreground="#FFFAF6F6" Height="31" Width="44" FontSize="15"/>
+        <Label Content="所属食堂" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="227,197,0,0" Foreground="#FFFAF6F6" FontSize="15" Width="69" Height="35"/>
+        <Button x:Name="btn_cancel" Content="取消" Margin="449,302,227.667,90" Click="btn_cancel_Click" Background="#FF7FA4C8" BorderBrush="{x:Null}" Padding="5,4" Height="Auto"/>
+        <ComboBox x:Name="combox_ChooseCanteen" HorizontalAlignment="Left" Height="31" Margin="364,195,0,0" VerticalAlignment="Top" Width="121" SelectedIndex="0" FontSize="14">
+            <ComboBoxItem Content="四食堂"/>
+            <ComboBoxItem Content="五食堂"/>
+            <ComboBoxItem Content="八食堂"/>
+            <ComboBoxItem Content="十食堂"/>
+        </ComboBox>
 
     </Grid>
 </Window>

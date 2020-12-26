@@ -137,11 +137,11 @@
     <Compile Include="Customer\ChangePassword.xaml.cs">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Customer\CustomMessage.xaml.cs">
-      <DependentUpon>CustomMessage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Customer\ShoppingCart.xaml.cs">
       <DependentUpon>ShoppingCart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\showOrderDetails.xaml.cs">
+      <DependentUpon>showOrderDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="dao\CustomerDao.cs" />
     <Compile Include="dao\DishesDao.cs" />
@@ -195,23 +195,17 @@
     <Compile Include="Merchant\新增菜品.xaml.cs">
       <DependentUpon>新增菜品.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Rider\historyTakenOrder.xaml.cs">
-      <DependentUpon>historyTakenOrder.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Rider\RiderForgetPassword.xaml.cs">
-      <DependentUpon>RiderForgetPassword.xaml</DependentUpon>
+    <Compile Include="Merchant\查看详情.xaml.cs">
+      <DependentUpon>查看详情.xaml</DependentUpon>
     </Compile>
     <Compile Include="Rider\RiderInfo.xaml.cs">
       <DependentUpon>RiderInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Rider\RiderLogin.xaml.cs">
-      <DependentUpon>RiderLogin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Rider\riderOrder1.xaml.cs">
-      <DependentUpon>riderOrder1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Rider\RiderRegister.xaml.cs">
       <DependentUpon>RiderRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rider\Rider_Order.xaml.cs">
+      <DependentUpon>Rider_Order.xaml</DependentUpon>
     </Compile>
     <Compile Include="service\CustomsService.cs" />
     <Compile Include="service\MerchantAdmiService.cs" />
@@ -255,15 +249,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Customer\CustomMessage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Customer\MenuList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Customer\OrderConfirmation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -272,6 +258,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Customer\ShoppingCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Customer\showOrderDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -304,9 +294,6 @@
     </Compile>
     <Compile Include="Customer\MenuList.xaml.cs">
       <DependentUpon>MenuList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Customer\OrderConfirmation.xaml.cs">
-      <DependentUpon>OrderConfirmation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Customer\Pay.xaml.cs">
       <DependentUpon>Pay.xaml</DependentUpon>
@@ -363,11 +350,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Rider\historyTakenOrder.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Rider\RiderForgetPassword.xaml">
+    <Page Include="Merchant\查看详情.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -375,15 +358,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Rider\RiderLogin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Rider\riderOrder1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Rider\RiderRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Rider\Rider_Order.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -642,6 +621,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Rider\返 回蓝.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Customer\食堂2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Customer\食堂1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Customer\食堂3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Customer\食堂4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -16,35 +16,38 @@
                 <ImageBrush ImageSource="菜单3.jpeg"/>
             </Grid.Background>
 
-            <Button x:Name="btn_return" Content="返回登录" HorizontalAlignment="Left" Height="53" Margin="5,471,0,0" VerticalAlignment="Top" Width="234" Background="#FFF7F6F6" Foreground="#FF262323" FontSize="16" Click="btn_return_Click"/>
-            <Button x:Name="btn_viewOrder" Content="查看我的订单" HorizontalAlignment="Left" Margin="239,471,0,0" Width="230" Foreground="#FF262222" Background="#FFF6ECEC" FontSize="16" Height="53" VerticalAlignment="Top" Click="btn_viewOrder_Click"/>
-            <Button x:Name="btn_changePasswd" Content="修改密码" HorizontalAlignment="Left" Height="53" Margin="469,471,0,0" VerticalAlignment="Top" Width="224" Background="#FFF2EEEE" FontSize="16" Click="btn_changePasswd_Click"/>
-            <Button x:Name="btn_Message" Content="消息通知" HorizontalAlignment="Left" Height="53" Margin="693,471,0,0" VerticalAlignment="Top" Width="212" Background="#FFF6F4F4" Foreground="#FF171616" FontSize="16" Click="btn_Message_Click"/>
+            <Button x:Name="btn_return" Content="返回登录" HorizontalAlignment="Left" Height="45" Margin="61,471,0,0" VerticalAlignment="Top" Width="234" Background="#FFF7F6F6" Foreground="#FF262323" FontSize="16" Click="btn_return_Click"/>
+            <Button x:Name="btn_viewOrder" Content="查看我的订单" HorizontalAlignment="Left" Margin="343,471,0,0" Width="230" Foreground="#FF262222" Background="#FFF6ECEC" FontSize="16" Height="47" VerticalAlignment="Top" Click="btn_viewOrder_Click"/>
+            <Button x:Name="btn_changePasswd" Content="修改个人信息" HorizontalAlignment="Left" Height="47" Margin="617,471,0,0" VerticalAlignment="Top" Width="224" Background="#FFF2EEEE" FontSize="16" Click="btn_changePasswd_Click"/>
             <Label Content="Hi&#xA;食&#xA;堂" HorizontalAlignment="Left" Height="234" Margin="61,180,0,0" VerticalAlignment="Top" Width="117" FontSize="24" Foreground="#FFF3EBEB"/>
             <Canvas HorizontalAlignment="Left" Height="100" Margin="339,128,0,0" VerticalAlignment="Top" Width="100"/>
             <Canvas HorizontalAlignment="Left" Height="325" Margin="156,89,0,0" VerticalAlignment="Top" Width="537"/>
-            <ListBox x:Name="catternList" HorizontalAlignment="Left" Height="338" Margin="110,89,0,0" VerticalAlignment="Top" Width="606" Background="{x:Null}">
-                <Canvas Height="315" Width="593">
-                    <Button x:Name="canteen4" Content="四食堂" Width="297" Height="156" Click="canteen4_Click" FontSize="20" FontWeight="Bold" Canvas.Left="-1">
+            <ListBox x:Name="catternList" HorizontalAlignment="Left" Height="356" Margin="110,76,0,0" VerticalAlignment="Top" Width="606" Background="{x:Null}">
+                <Canvas Height="338" Width="593">
+                    <Button x:Name="canteen4" Content="" Width="244" Height="122" Click="canteen4_Click" FontSize="20" FontWeight="Bold" Canvas.Left="29" BorderBrush="{x:Null}">
                         <Button.Background>
-                            <ImageBrush ImageSource="amenu2.jpg"/>
+                            <ImageBrush ImageSource="食堂2.jpg"/>
                         </Button.Background>
                     </Button>
-                    <Button x:Name="canteen5" Content="五食堂" Width="297" Height="156" Canvas.Left="296" FontSize="18" FontWeight="Bold" Click="canteen5_Click">
+                    <Button x:Name="canteen5" Content="" Width="244" Height="122" Canvas.Left="316" FontSize="18" FontWeight="Bold" Click="canteen5_Click" BorderBrush="{x:Null}">
                         <Button.Background>
-                            <ImageBrush ImageSource="amenu2.jpg"/>
+                            <ImageBrush ImageSource="食堂1.jpg"/>
                         </Button.Background>
                     </Button>
-                    <Button x:Name="canteen8" Content="八食堂" Width="297" Height="156" Canvas.Left="-1" Canvas.Top="156" FontSize="18" FontWeight="Bold" Click="canteen8_Click">
+                    <Button x:Name="canteen8" Content="" Width="244" Height="122" Canvas.Left="29" Canvas.Top="171" FontSize="18" FontWeight="Bold" Click="canteen8_Click" BorderBrush="{x:Null}">
                         <Button.Background>
-                            <ImageBrush ImageSource="amenu2.jpg"/>
+                            <ImageBrush ImageSource="食堂4.jpg"/>
                         </Button.Background>
                     </Button>
-                    <Button x:Name="canteen10" Content="十食堂" Width="297" Height="156" Canvas.Left="296" Canvas.Top="156" FontSize="18" FontWeight="Bold" Click="canteen10_Click">
+                    <Button x:Name="canteen10" Content="" Width="244" Height="122" Canvas.Left="318" Canvas.Top="170" FontSize="18" FontWeight="Bold" Click="canteen10_Click" BorderBrush="{x:Null}">
                         <Button.Background>
-                            <ImageBrush ImageSource="amenu2.jpg"/>
+                            <ImageBrush ImageSource="食堂3.jpg"/>
                         </Button.Background>
                     </Button>
+                    <Label Content="四食堂" Foreground="#DDFFFFFF" FontSize="20" FontWeight="SemiBold" Canvas.Left="120" Canvas.Top="124"/>
+                    <Label Content="五食堂" Foreground="#DDFFFFFF" FontSize="20" FontWeight="SemiBold" Canvas.Left="409" Canvas.Top="124"/>
+                    <Label Content="八食堂" Foreground="#DDFFFFFF" FontSize="20" FontWeight="SemiBold" Canvas.Left="121" Canvas.Top="296"/>
+                    <Label Content="十食堂" Foreground="#DDFFFFFF" FontSize="20" FontWeight="SemiBold" Canvas.Left="411" Canvas.Top="293"/>
                 </Canvas>
             </ListBox>
 

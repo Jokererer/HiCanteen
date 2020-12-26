@@ -1,0 +1,22 @@
+﻿<Window x:Class="HiCattern.Merchant.查看详情"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Merchant"
+        mc:Ignorable="d"
+        Title="查看详情" Height="450" Width="800" Background="#FF58688F">
+    <Grid>
+        <Label Content="订单详情" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="36,13,663.333,366.667" FontSize="18" Width="94" Foreground="#DDFCF9F9" Height="41"/>
+        <Button x:Name="btn_return" Content="返回" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="359,369,0,0" BorderBrush="{x:Null}" Background="#FF7FA4C8" Click="btn_return_Click"/>
+        <DataGrid x:Name="dg1" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Height="261" Margin="39,65,0,0" VerticalAlignment="Top" Width="709">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="订单号"  Binding="{Binding orderID}" Width="*" />
+                <DataGridTextColumn Header="菜品名称"  Binding="{Binding dishesName}" Width="*" />
+                <DataGridTextColumn Header="菜品数量" Binding="{Binding dishesNum}" Width="*" />
+                <DataGridTextColumn Header="价格"  Binding="{Binding priceSale}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

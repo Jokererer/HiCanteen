@@ -54,6 +54,7 @@ namespace HiCattern.Customer
                 Button bt = new Button();
                 bt.Width = 110;
                 bt.Height = 40;
+                bt.Padding = new Thickness(5,5,5,5);
 
                 bt.Margin = new Thickness(0, 0, 0, 0);
               
@@ -153,8 +154,8 @@ namespace HiCattern.Customer
 
         private void btn_ok_Click(object sender, RoutedEventArgs e)
         {
-            HiCattern.Customer.OrderConfirmation orderConfirmation=new HiCattern.Customer.OrderConfirmation();
-            orderConfirmation.Show();
+            //HiCattern.Customer.OrderConfirmation orderConfirmation=new HiCattern.Customer.OrderConfirmation();
+            //orderConfirmation.Show();
         }
 
         private void bt_return_Click(object sender, RoutedEventArgs e)
@@ -166,16 +167,12 @@ namespace HiCattern.Customer
 
         private void btn_viewOrder_Click(object sender, RoutedEventArgs e)
         {
-            ViewOrder viewOrder = new ViewOrder();
+            ViewOrder viewOrder = new ViewOrder(cusID);
+            this.Close();
             viewOrder.Show();
         }
 
-        private void btn_customMssage_Click(object sender, RoutedEventArgs e)
-        {
-            CustomMessage customMessage = new CustomMessage();
-            customMessage.Show();
-
-        }
+        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

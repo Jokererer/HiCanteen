@@ -11,7 +11,7 @@
     </Window.Background>
     <Grid Margin="0,0,0.333,-7">
         <TextBox x:Name="txt_Name" HorizontalAlignment="Left" Height="35" Margin="431,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>
-        <Button x:Name="btnOk_register"  Style="{StaticResource MyButton}" Content="注册" HorizontalAlignment="Left" Height="29" Margin="432,294,0,0" VerticalAlignment="Top" Width="155" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="18" Click="Button_Click"/>
+        <Button x:Name="btnOk_register"  Style="{StaticResource MyButton}" Content="注册" HorizontalAlignment="Left" Height="29" Margin="476,294,0,0" VerticalAlignment="Top" Width="111" Background="#FF27307E" Foreground="#FFFCF6F6" FontSize="18" Click="Button_Click"/>
         <Image HorizontalAlignment="Left" Height="35" Margin="362,143,0,0" VerticalAlignment="Top" Width="31" Source="管理员账号.png" RenderTransformOrigin="0.645,0.114"/>
         <Image Height="35" Margin="350,206,282,0" VerticalAlignment="Top" Source="管理员密码.png" RenderTransformOrigin="0.645,0.114"/>
         <TextBox x:Name="txt_Pwd" HorizontalAlignment="Left" Height="35" Margin="431,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" FontSize="14"/>

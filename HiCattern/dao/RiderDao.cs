@@ -28,9 +28,9 @@ namespace Hi食堂.dao
         /// 删除骑手信息
         /// </summary>
         /// <param name="rider"></param>
-        public bool deleteRider(Rider rider)
+        public bool deleteRider(int riderID)
         {
-            string sql = "delete from rider where riderID=" + rider.getRiderID() + ";";
+            string sql = "delete from rider where riderID=" + riderID + ";";
             bool flag = db.DeleteData(sql);
             return flag;
         }
@@ -56,10 +56,24 @@ namespace Hi食堂.dao
             bool flag = db.UpdateData(sql);
             return flag;
         }
-
+        //查找骑手通过ID
         public DataTable findRider(Rider rider)
         {
             string sql = "select * from rider where riderID=" + rider.getRiderID() + ";";
+            DataTable r = db.QueryData(sql);
+            return r;
+        }
+        //查找骑手通过电话
+        public DataTable findRiderByPh(string phone)
+        {
+            string sql = "select * from rider where riderPhone=" + phone + ";";
+            DataTable r = db.QueryData(sql);
+            return r;
+        }
+        //显示所有骑手信息
+        public DataTable findAllRider()
+        {
+            string sql = "select * from rider;";
             DataTable r = db.QueryData(sql);
             return r;
         }

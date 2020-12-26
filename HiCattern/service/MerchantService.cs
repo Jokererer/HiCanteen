@@ -18,9 +18,9 @@ namespace Hi食堂.service
         Dishes dishes = new Dishes();
         DishesDao dishDao = new DishesDao();
         OrdersDao orDao = new OrdersDao();
+        OrderDetailsDao odDao = new OrderDetailsDao();
         DataBase db = new DataBase();
 
-        //public static int merID=0;
         /// <summary>
         /// 商家登录功能
         /// </summary>
@@ -34,18 +34,15 @@ namespace Hi食堂.service
             DataTable dt = merDao.findMerchant(merchant);
             if (dt.Rows.Count == 0)  //商家不存在
             {
-               // merID = 0;
                 return -1;
             }
             //验证密码
             else if (dt.Rows[0][2].ToString()!= pwd)//密码错误
             {
-               // merID = 0;
                 return -2;
             }
             else   //登录成功
             {
-               // merID = id;
                 return 1;
             }
         }
@@ -107,10 +104,11 @@ namespace Hi食堂.service
             return f;
         }
         //修改菜品名字/价格
-        public bool updateDish(string name, float price)
+        public bool updateDish(int dishesID, string name, float price)
         {
             dishes.setDishName(name);
             dishes.setPrice(price);
+            dishes.setDishID(dishesID);
 
             bool f = dishDao.updataDish(dishes);
             return f;
@@ -122,24 +120,35 @@ namespace Hi食堂.service
             DataTable dt = db.QueryData(sql);
             return dt;
         }
-        //显示已处理历史订单
-        public DataTable finishOrders(int merID)
-        {
-            string sql = "select * from orders where omState=0 and merchantID=" + merID + ";";
-            DataTable dt = db.QueryData(sql);
-            return dt;
-        }
+      
         //点击按钮处理订单
         public bool doOrder(int id)
         {
             bool flag=orDao.updateOmState(id);
             return flag;
         }
-        //显示未处理订单
-        public DataTable unDoOrders(int merID)
+        //查看详情按钮
+        public DataTable showDetails(int orderID)
         {
-            string sql = "select * from orders where omState=1 and merchantID=" + merID + ";";
-            DataTable dt = db.QueryData(sql);
+            DataTable dt = odDao.queryDetails(orderID);
+            return dt;
+        }
+        //显示未处理订单
+        public DataTable showUnDoOrders(int merID)
+        {
+            DataTable dt = orDao.queryUnDoOrders(merID);
+            return dt;
+        }
+        //显示已处理到店自取历史订单
+        public DataTable finishOrders(int merID)
+        {
+            DataTable dt = orDao.queryDoOrders(merID);
+            return dt;
+        }
+        //显示已处理外卖历史订单
+        public DataTable finishOrders1(int merID)
+        {
+            DataTable dt = orDao.queryDoOrders1(merID);
             return dt;
         }
         //加载商家
@@ -199,6 +208,19 @@ namespace Hi食堂.service
         public int getDishIDbyName(string dName,int merID)
         {
             return merDao.getDishIDbyName(dName, merID);
+        }
+        public DataTable showDishes(int merID)
+        {
+            DataTable dt =  orDao.queryDishes(merID);
+
+            return dt;
+
+        }
+
+        public DataTable queryDishesByName(int merID,string dishName)
+        {
+            DataTable dt = dishDao.queryDishesByName(merID, dishName);
+            return dt;
         }
     }
 }

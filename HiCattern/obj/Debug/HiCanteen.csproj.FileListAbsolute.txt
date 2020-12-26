@@ -37,9 +37,7 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\CustomControl\RiderMes.
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\AskForOrder.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\Canteen.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\ChangePassword.g.cs
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\CustomMessage.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\MenuList.g.cs
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\OrderConfirmation.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\Pay.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\ShoppingCart.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\TakeOutOrder.g.cs
@@ -56,11 +54,7 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\删除菜品�
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\删除订单.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\商家.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\新增菜品.g.cs
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\historyTakenOrder.g.cs
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\RiderForgetPassword.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\RiderInfo.g.cs
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\RiderLogin.g.cs
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\riderOrder1.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\RiderRegister.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\SuperAdmin\增加商家管理员.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\SuperAdmin\系统管理员.g.cs
@@ -75,9 +69,7 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\CustomControl\RiderMes.
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\AskForOrder.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\Canteen.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\ChangePassword.baml
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\CustomMessage.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\MenuList.baml
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\OrderConfirmation.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\Pay.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\ShoppingCart.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\TakeOutOrder.baml
@@ -94,11 +86,7 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\删除菜品�
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\删除订单.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\商家.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\新增菜品.baml
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\historyTakenOrder.baml
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\RiderForgetPassword.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\RiderInfo.baml
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\RiderLogin.baml
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\riderOrder1.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\RiderRegister.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\SuperAdmin\增加商家管理员.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\SuperAdmin\系统管理员.baml
@@ -116,4 +104,9 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\bin\Debug\MaterialDesignThemes.Wp
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\bin\Debug\MaterialDesignColors.pdb
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csprojAssemblyReference.cache
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\Rider_Order.g.cs
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Rider\Rider_Order.baml
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\查看详情.g.cs
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\查看详情.baml
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\showOrderDetails.g.cs
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\showOrderDetails.baml

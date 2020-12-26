@@ -16,6 +16,7 @@ namespace Hi食堂.entity
         private string orderTime;
         private bool omState;   //订单商家状态 false是未做好 true是已做好
         private int orState;    //订单骑手状态 -1是骑手未接单 0是接单未送达 1是已送达
+        private string orderWay;
 
         /// <summary>
         /// 订单ID
@@ -116,6 +117,14 @@ namespace Hi食堂.entity
         public void setOrState(int state)
         {
             this.orState = state;
+        }
+        public string getOrderWay()
+        {
+            return this.orderWay;
+        }
+        public void setOrderWay(string way)
+        {
+            this.orderWay = way;
         }
     }
 }

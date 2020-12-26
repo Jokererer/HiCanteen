@@ -12,8 +12,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label Content="确认删除该菜品信息吗？" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75.412,54.212,0,0" Height="30.721" Width="160.074" FontSize="14" Background="{x:Null}" BorderBrush="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" BorderThickness="0" Grid.Column="1" Foreground="White"/>
-        <Button Content="确认" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="52.123,124.736,0,0" Background="White" Grid.Column="1" Height="19.24"/>
-        <Button Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="59" Margin="191.753,124.736,0,0" Background="White" Grid.Column="1" Height="19.24"/>
+        <Button x:Name="btnOk_deleDishes" Content="确认" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Margin="52,125,0,0" Background="#FF7FA4C8" Grid.Column="1" Height="24" BorderBrush="{x:Null}" Padding="5,4" Click="btnOk_deleDishes_Click"/>
+        <Button x:Name="btn_cancel" Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="49" Margin="203,125,0,0" Background="#FF7FA4C8" Grid.Column="1" Height="24" BorderBrush="{x:Null}" Padding="5,4" Click="btn_cancel_Click"/>
 
     </Grid>
 </Window>

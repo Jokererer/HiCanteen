@@ -23,6 +23,7 @@ namespace Hi食堂.service
         OrdersDao orDao = new OrdersDao();
         OrderDetailsDao odDao = new OrderDetailsDao();
         OrderDetails od = new OrderDetails();
+        MerchantService ms = new MerchantService();
         /// <summary>
         /// 顾客注册功能
         /// </summary>
@@ -104,6 +105,31 @@ namespace Hi食堂.service
                 }
             }
         }
+
+        public DataTable queryCus(int cusID)
+        {
+            custom.setCustomerID(cusID);
+            return cusDao.findCustomer(custom);
+        }
+        /// <summary>
+        /// 修改个人信息
+        /// </summary>
+        /// <param name="cusID"></param>
+        /// <param name="name"></param>
+        /// <param name="pwd"></param>
+        /// <param name="phone"></param>
+        /// <param name="address"></param>
+        public bool updateInfo(int cusID,string name,string pwd,string phone,string address)
+        {
+            custom.setCustomerID(cusID);
+            custom.setCustomerName(name);
+            custom.setCustomerPasswd(pwd);
+            custom.setCustomerPhone(phone);
+            custom.setCustomerAddress(address);
+
+            bool f = cusDao.updateInfo(custom);
+            return f;
+        }
         /// <summary>
         /// 选择菜品，点击“购物车”按钮时进行循环调用
         /// </summary>
@@ -147,7 +173,7 @@ namespace Hi食堂.service
         /// 点击付款按钮，将数据写入订单表以及订单明细表
         /// </summary>
         /// <param name="dt">从购物车明细读取到的数据</param>
-        public void createOrder(int customerID,int merchantID,DataTable dt)//购物车明细界面展示菜品ID、菜品名、数量和单个菜品价格
+        public float createOrder(int customerID,int merchantID,string way,DataTable dt)//购物车明细界面展示菜品ID、菜品名、数量和单个菜品价格
         {
             //or.setCustomerID(customerID);
             //or.setMerchantID(merchantID);
@@ -160,19 +186,30 @@ namespace Hi食堂.service
 
             for(int i=0;i<dt.Rows.Count;i++)
             {
-                sumP += float.Parse(dt.Rows[i][3].ToString()) * int.Parse(dt.Rows[i][2].ToString());
+                sumP += float.Parse(dt.Rows[i][4].ToString()) * int.Parse(dt.Rows[i][3].ToString());
             }
             or.setTotalPrice(sumP);
 
-            orDao.addOrders(customerID, merchantID, sumP);//将记录添加到订单表
+            orDao.addOrders(customerID, merchantID, sumP,way);//将记录添加到订单表
 
             //将记录添加到订单明细表
             for(int j=0;j<dt.Rows.Count;j++)
             {
                 int id = orDao.getLastOrderID();
-                odDao.addOrderDetails(int.Parse(dt.Rows[j][0].ToString()), int.Parse(dt.Rows[j][2].ToString()), float.Parse(dt.Rows[j][3].ToString()), id);
+                odDao.addOrderDetails(ms.getDishIDbyName(dt.Rows[j][2].ToString(),merchantID), int.Parse(dt.Rows[j][3].ToString()), float.Parse(dt.Rows[j][4].ToString()), id);
                 
             }
+
+            //将对应购物车表数据删除
+            for(int t=0;t<dt.Rows.Count;t++)
+            {
+                sc.setCustomerID(int.Parse(dt.Rows[t][0].ToString()));
+                sc.setMerchantID(ms.getMIDbyMName(dt.Rows[t][1].ToString()));
+                sc.setDishesID(ms.getDishIDbyName(dt.Rows[t][2].ToString(), merchantID));
+                scDao.deleteShopping(sc);
+            }
+
+            return sumP;
 
         }
         //选择配送方式
@@ -181,5 +218,18 @@ namespace Hi食堂.service
             int orID=orDao.getLastOrderID();
             bool f = orDao.selectPattern(orID, a);//到店自取设置为-1，外卖配送设置为0
         }
+
+        //查询历史订单
+        public DataTable showOrders(int cusID)
+        {
+            return orDao.queryHistoryOrders(cusID);
+        }
+        //查看订单详情
+        public DataTable showOrderDetails(int orderID)
+        {
+            DataTable dt = odDao.queryDetails(orderID);
+            return dt;
+        }
+
     }
 }

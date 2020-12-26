@@ -56,7 +56,10 @@ namespace HiCattern.Login
             if(id != 0)
             {
                 MessageBox.Show("注册成功,你的账号为："+id);
+                TheLogin login = new TheLogin();
                 this.Close();
+                login.Show();
+
             }
             else
             {

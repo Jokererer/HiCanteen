@@ -22,6 +22,7 @@ namespace Hi_食堂.MerchantAdmin
     /// </summary>
     public partial class 查看商家 : Window
     {
+        
         int merAdID;
         public 查看商家(int merAdID)
         {
@@ -84,6 +85,13 @@ namespace Hi_食堂.MerchantAdmin
             dt.Columns[4].ColumnName = "价格";
             dt.Columns[5].ColumnName = "销量";
             dg2.ItemsSource = dt.DefaultView;
-        }        
+        }
+
+        private void btn_back_Click(object sender, RoutedEventArgs e)
+        {
+            HiCattern.Login.TheLogin login = new HiCattern.Login.TheLogin();
+            this.Close();
+            login.Show();
+        }
     }
 }

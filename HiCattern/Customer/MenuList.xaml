@@ -15,10 +15,7 @@
         <TextBlock Foreground="#FFF6F8F8" FontWeight="Bold" Margin="152,-1,-0.666,0" Background="#FF4D4B4B" VerticalAlignment="Top" Height="27" FontSize="16" ><Run Text="通知：五食堂热销菜品，酸菜麻辣烫，烧鹅饭，快乐铁板，掉渣饼......"/><InlineUIContainer>
                
             </InlineUIContainer></TextBlock>
-
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="0,-1,0,0" TextWrapping="Wrap" Text="请输入菜名" VerticalAlignment="Top" Width="145" Foreground="#FFFAF2F2" Background="#FF4D4B4B" FontSize="16" BorderBrush="#FFF7F7F6"/>
-        <Label Content="总价：" HorizontalAlignment="Left" Height="38" Margin="267,397,0,0" VerticalAlignment="Top" Width="176" FontSize="18" FontWeight="Bold" Background="#FFF8F3F3"/>
-        <Button x:Name="btn_shoppingCart" Content="购物车" HorizontalAlignment="Left" Height="38" Margin="743,397,0,0" VerticalAlignment="Top" Width="121" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" Click="btn_shoppingCart_Click" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="btn_shoppingCart" Content="购物车" HorizontalAlignment="Left" Height="38" Margin="743,441,0,0" VerticalAlignment="Top" Width="121" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" Click="btn_shoppingCart_Click" RenderTransformOrigin="0.5,0.5"/>
         <Grid HorizontalAlignment="Left" Height="53" Margin="38,430,-200.333,0" VerticalAlignment="Top" Width="1087">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="629*"/>
@@ -33,7 +30,6 @@
             </Button>
             <Button x:Name="bt_return" Content="返回食堂首页" HorizontalAlignment="Left" Height="43" Margin="227,10,0,0" VerticalAlignment="Top" Width="184" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" Click="bt_return_Click"/>
             <Button x:Name="btn_viewOrder" Content="查看我的订单" HorizontalAlignment="Left" Height="43" Margin="456,10,0,0" VerticalAlignment="Top" Width="183" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" RenderTransformOrigin="0.09,0.544" Click="btn_viewOrder_Click" Grid.ColumnSpan="2"/>
-            <Button x:Name="btn_customMssage" Content="消息通知" HorizontalAlignment="Left" Height="43" Margin="46.333,10,0,0" VerticalAlignment="Top" Width="182" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" RenderTransformOrigin="0.09,0.544" Click="btn_customMssage_Click" Grid.Column="1" Grid.ColumnSpan="3"/>
         </Grid>
         <ListView x:Name="dishes" HorizontalAlignment="Left" Height="371" Margin="145,26,-0.333,0" VerticalAlignment="Top" Width="780">
             <ListView.Background>

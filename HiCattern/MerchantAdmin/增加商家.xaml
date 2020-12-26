@@ -7,24 +7,22 @@
         mc:Ignorable="d"
         Title="增加商家" Height="423.221" Width="553.403" Background="#FF58688F">
     <Grid>
-        <GroupBox Header="新增商家" HorizontalAlignment="Left" Height="281.998" VerticalAlignment="Top" Width="481.146" Margin="30.832,36.301,0,0" Background="#FF58688F" Foreground="#FFFEFEFE">
-            <ComboBox x:Name="combox_Canteen" HorizontalAlignment="Left" Margin="239,187,0,0" VerticalAlignment="Top" Width="120">
-                <ComboBoxItem Content="四食堂"/>
-                <ComboBoxItem Content="五食堂"/>
-                <ComboBoxItem Content="八食堂"/>
-                <ComboBoxItem Content="十食堂"/>
-            </ComboBox>
-        </GroupBox>
         <Label Content="所属食堂" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,236,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
         <Label Content="联系电话" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,185,0,0" RenderTransformOrigin="0.569,0.845" Foreground="#FFFCF9F9" FontSize="14"/>
-        <TextBox x:Name="txt_MerName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="280,82,0,0"/>
-        
-        <TextBox x:Name="txt_MerPh" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112" Margin="279,188,0,0"/>
-        <Button x:Name="btnOk_AddMer" Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Margin="136,348,0,0" Height="25" Click="btnOk_AddMer_Click"/>
-        <Button x:Name="btnCancel_AddMer" Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Margin="336,348,0,0" Height="25" Click="btnCancel_AddMer_Click"/>
+        <TextBox x:Name="txt_MerName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Margin="280,74,0,0" CaretBrush="#FF7FA4C8"/>
+
+        <TextBox x:Name="txt_MerPh" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112" Margin="279,186,0,0" CaretBrush="#FF7FA4C8"/>
+        <Button x:Name="btnOk_AddMer" Content="确定" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="141,312,0,0" Height="30" Click="btnOk_AddMer_Click" BorderBrush="{x:Null}" Background="#FF7FA4C8"/>
+        <Button x:Name="btnCancel_AddMer" Content="取消" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="341,312,0,0" Height="30" Click="btnCancel_AddMer_Click" Background="#FF7FA4C8" BorderBrush="{x:Null}"/>
         <Label Content="商家名" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="151,74,0,0" Foreground="#FFFCF9F9" FontSize="14"/>
-        <Label Content="密码" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="161,127,0,0" Foreground="White" FontSize="14" RenderTransformOrigin="-0.053,-1.167"/>
-        <TextBox x:Name="txt_MerPwd" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="278,134,0,0"/>
+        <Label Content="密码" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="159,129,0,0" Foreground="White" FontSize="14" RenderTransformOrigin="-0.053,-1.167"/>
+        <TextBox x:Name="txt_MerPwd" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112" Margin="278,128,0,0" CaretBrush="#FF7FA4C8"/>
+        <ComboBox x:Name="combox_Canteen" HorizontalAlignment="Left" Margin="275,234,0,0" VerticalAlignment="Top" Width="112" Height="23">
+            <ComboBoxItem Content="四食堂"/>
+            <ComboBoxItem Content="五食堂"/>
+            <ComboBoxItem Content="八食堂"/>
+            <ComboBoxItem Content="十食堂"/>
+        </ComboBox>
 
     </Grid>
 </Window>

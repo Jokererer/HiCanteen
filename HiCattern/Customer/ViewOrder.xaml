@@ -5,17 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiCattern.Customer"
         mc:Ignorable="d"
-        Title="查看订单" Height="495" Width="484">
+        Title="查看订单" Height="496.333" Width="794.667">
     <Window.Background>
         <ImageBrush ImageSource="菜单2.jpeg"/>
     </Window.Background>
-    <Grid Margin="0,0,3.333,-2.333">
+    <Grid Margin="0,0,2,14.667">
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Button Content="返回登录" HorizontalAlignment="Left" Height="30" Margin="71,398,0,0" VerticalAlignment="Top" Width="114" FontSize="18" FontWeight="Bold"/>
-        <Button Content="返回首页" HorizontalAlignment="Left" Height="29" Margin="287,399,0,0" VerticalAlignment="Top" Width="116" FontSize="18" FontWeight="Bold"/>
-        <Label Content="历史订单" HorizontalAlignment="Left" Height="32" Margin="186,10,0,0" VerticalAlignment="Top" Width="111" Foreground="#FFDDD8D8" FontSize="18"/>
-        <DataGrid HorizontalAlignment="Left" Height="322" Margin="54,47,0,0" VerticalAlignment="Top" Width="373"/>
+        <Button Content="返回登录" HorizontalAlignment="Left" Height="30" Margin="269,398,0,0" VerticalAlignment="Top" Width="114" FontSize="18" FontWeight="Bold" Click="Button_Click_1"/>
+        <Button Content="返回首页" HorizontalAlignment="Left" Height="29" Margin="443,399,0,0" VerticalAlignment="Top" Width="116" FontSize="18" FontWeight="Bold" Click="Button_Click"/>
+        <Label Content="历史订单" HorizontalAlignment="Left" Height="32" Margin="356,10,0,0" VerticalAlignment="Top" Width="111" Foreground="#FFDDD8D8" FontSize="18"/>
+        <DataGrid x:Name="dg1" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Height="322" Margin="54,47,0,0" VerticalAlignment="Top" Width="683" SelectionChanged="dg1_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="订单号"  Binding="{Binding orderID}" Width="*" />
+                <DataGridTextColumn Header="商家名" Binding="{Binding merchantName}" Width="*" />
+                <DataGridTextColumn Header="商家地址" Binding="{Binding canteenName}" Width="*" />
+                <DataGridTextColumn Header="总价"  Binding="{Binding totalPrice}" Width="*" />
+                <DataGridTextColumn Header="订单时间" Binding="{Binding orderTime}" Width="*" />
+                <DataGridTextColumn Header="取餐方式" Binding="{Binding orderWay}" Width="*" />
+                <DataGridTemplateColumn Header="操作">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="查看明细"  Tag="{Binding orderID}" Background="#FF7FA4C8" BorderBrush="{x:Null}" Padding="5" Click="btn_showDetails"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

@@ -8,6 +8,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+//using System.Windows.Forms;
+//using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -15,7 +17,6 @@ using System.Windows.Shapes;
 using HiCattern.Login;
 using HiCattern.SuperAdmin;
 using Hi食堂.service;
-/*using HiCanteen;*/
 
 
 namespace Hi_食堂.SuperAdmin
@@ -111,11 +112,6 @@ namespace Hi_食堂.SuperAdmin
         {
             SysAdmiService sysService = new SysAdmiService();
             DataTable dt = sysService.showAllCustoms();
-            dt.Columns[0].ColumnName = "账号";
-            dt.Columns[1].ColumnName = "姓名";
-            dt.Columns[2].ColumnName = "密码";
-            dt.Columns[3].ColumnName = "地址";
-            dt.Columns[4].ColumnName = "电话号码";
             dg3.ItemsSource = dt.DefaultView;
         }
         //顾客管理-ID查询按钮
@@ -124,11 +120,6 @@ namespace Hi_食堂.SuperAdmin
             int cusID = int.Parse(Text_Cus.Text);
             SysAdmiService sysService = new SysAdmiService();
             DataTable dt = sysService.showOneCustomID(cusID);
-            dt.Columns[0].ColumnName = "账号";
-            dt.Columns[1].ColumnName = "姓名";
-            dt.Columns[2].ColumnName = "密码";
-            dt.Columns[3].ColumnName = "地址";
-            dt.Columns[4].ColumnName = "电话号码";
             dg3.ItemsSource = dt.DefaultView;
         }
         //顾客管理-手机号查询按钮
@@ -137,11 +128,6 @@ namespace Hi_食堂.SuperAdmin
             string cusName = Text_Cus.Text;
             SysAdmiService sysService = new SysAdmiService();
             DataTable dt = sysService.showOneCustomPh(cusName);
-            dt.Columns[0].ColumnName = "账号";
-            dt.Columns[1].ColumnName = "姓名";
-            dt.Columns[2].ColumnName = "密码";
-            dt.Columns[3].ColumnName = "地址";
-            dt.Columns[4].ColumnName = "电话号码";
             dg3.ItemsSource = dt.DefaultView;
         }
         //顾客管理-刷新按钮
@@ -162,7 +148,7 @@ namespace Hi_食堂.SuperAdmin
         {
             int orderID = int.Parse(Text_Cus.Text);
             SysAdmiService sysService = new SysAdmiService();
-            DataTable dt = sysService.showOneCustomID(orderID);
+            DataTable dt = sysService.showOneOrder(orderID);
             dg4.ItemsSource = dt.DefaultView;
         }
         //订单管理-商家ID查询按钮
@@ -170,7 +156,7 @@ namespace Hi_食堂.SuperAdmin
         {
             int merID = int.Parse(Text_Cus.Text);
             SysAdmiService sysService = new SysAdmiService();
-            DataTable dt = sysService.showOneCustomID(merID);
+            DataTable dt = sysService.showMerOrders(merID);
             dg4.ItemsSource = dt.DefaultView;
         }
         //订单管理-顾客ID查询按钮
@@ -178,7 +164,7 @@ namespace Hi_食堂.SuperAdmin
         {
             int cusID = int.Parse(Text_Cus.Text);
             SysAdmiService sysService = new SysAdmiService();
-            DataTable dt = sysService.showOneCustomID(cusID);
+            DataTable dt = sysService.showCusOrders(cusID);
             dg4.ItemsSource = dt.DefaultView;
         }
         //订单管理-刷新按钮
@@ -207,10 +193,21 @@ namespace Hi_食堂.SuperAdmin
             {
                 SysAdmiService sysAdmiService = new SysAdmiService();
                 int id = Convert.ToInt32(btn.Tag);
+                /*if (MessageBox.Show("是否删除这个用户?", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+                {
+                    MessageBox.Show("用户已删除!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }*/
+                //MessageBoxButtons mess = MessageBoxButtons.OKCancel;
+                //DialogResult dr = System.Windows.Forms.MessageBox.Show("是否删除这个用户?", "提示", mess, MessageBoxIcon.Question);
+                /*if (dr == DialogResult.OK)
+                {
+                    return;
+                }*/
+
                 bool flag = sysAdmiService.deleteMerAdmi(id);
                 if (flag)
                 {
-                    MessageBox.Show("删除成功");
+                   MessageBox.Show("删除成功");
                 }
                 else
                 {
@@ -218,7 +215,7 @@ namespace Hi_食堂.SuperAdmin
                 }
 
             }
-            
+
         }
         //订单管理-删除按钮
         private void btn_deleOrder(object sender, RoutedEventArgs e)
@@ -238,6 +235,53 @@ namespace Hi_食堂.SuperAdmin
                     MessageBox.Show("删除失败");
                 }
             }
+        }
+        //骑手管理—查看骑手
+        private void showRider(object sender, RoutedEventArgs e)
+        {
+            SysAdmiService sysMer = new SysAdmiService();
+            DataTable dt = sysMer.showAllRiders();
+            dg5.ItemsSource = dt.DefaultView;
+        }
+        //骑手管理—删除骑手
+        private void btn_deleRider(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            if(btn != null)
+            {
+                SysAdmiService sysMer = new SysAdmiService();
+                bool flag =sysMer.deleteRider(Convert.ToInt32(btn.Tag));
+                if(flag)
+                {
+                    MessageBox.Show("删除成功");
+                }
+                else
+                {
+                    MessageBox.Show("删除失败");
+                }
+            }
+        }
+        //骑手管理—ID查询按钮
+        private void btn_queryByID_Click(object sender, RoutedEventArgs e)
+        {
+            SysAdmiService sysMer = new SysAdmiService();
+            int riderID = int.Parse(txt_rider.Text);
+            DataTable dt = sysMer.showRiderByID(riderID);
+            dg5.ItemsSource = dt.DefaultView;
+        }
+        //骑手管理—电话查询按钮
+        private void btn_queryByPh_Click(object sender, RoutedEventArgs e)
+        {
+            SysAdmiService sysMer = new SysAdmiService();
+            string phone = txt_rider.Text;
+            DataTable dt = sysMer.showRiderByPh(phone);
+            dg5.ItemsSource = dt.DefaultView;
+        }
+        //骑手管理—刷新按钮
+        private void btn_refreshRider_Click(object sender, RoutedEventArgs e)
+        {
+            showRider(sender, e);
+
         }
     }
 }

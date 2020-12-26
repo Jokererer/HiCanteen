@@ -32,21 +32,14 @@ namespace Hi食堂.dao
             bool flag = db.DeleteData(sql);
             return flag;
         }
-        /// <summary>
-        /// 查找商家信息
-        /// </summary>
-        /// <param name="merchant"></param>
-        /// <returns></returns>
+        //查找商家信息
         public DataTable findMerchant(Merchant merchant)
         {
             string sql = "select * from merchant where merchantID=" + merchant.getMerchantID() + ";";
             DataTable r = db.QueryData(sql);
             return r;
         }
-        /// <summary>
-        /// 修改商家名称
-        /// </summary>
-        /// <param name="merchant"></param>
+        // 修改商家名称
         public bool updateMerchantName(Merchant merchant)
         {
             string sql = "update merchant set merchantName='" + merchant.getMerchantName() + "' where merchantID="
@@ -127,12 +120,16 @@ namespace Hi食堂.dao
             DataTable dt = db.QueryData(sql);
             return int.Parse(dt.Rows[0][0].ToString());
         }
-
+        
         public DataTable getDishFromCart(int merchantID,int cusID)
         {
-            string sql = "select * from shoppingcart where merchantID=" + merchantID + " and customerID=" + cusID + ";";
+            string sql = "select customerID,merchantName,dishesName,quantity,priceSale " +
+                "from shoppingcart,merchant,dishes where shoppingcart.merchantID=merchant.merchantID " +
+                "and shoppingcart.dishesID=dishes.dishesID and " +
+                "shoppingcart.merchantID=" + merchantID + " and customerID=" + cusID + ";";
             DataTable dt = db.QueryData(sql);
             return dt;
         }
+
     }
 }
