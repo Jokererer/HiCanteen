@@ -1,0 +1,38 @@
+﻿<Window x:Class="HiCattern.Rider.riderOrder1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiCattern.Rider"
+        mc:Ignorable="d"
+        Title="接单" Height="571.382" Width="978.475">
+    <Grid Margin="0,0,0,-2.333" >
+        <Grid.Background>
+            <ImageBrush ImageSource="riderbackground.jpg"/>
+        </Grid.Background>
+        <Label Content="我的接单" HorizontalAlignment="Left" Height="30" Margin="434,36,0,0" VerticalAlignment="Top" Width="95" Background="{x:Null}" Foreground="#FF080707" FontSize="16"/>
+        <Button Style="{StaticResource MyButton}" x:Name="btn_history" Content="历史接单" HorizontalAlignment="Left" Height="24" Margin="344,494,0,0" VerticalAlignment="Top" Width="105" Background="#FF2B208E" Foreground="#FFECEDF3" FontSize="14" Click="btn_history_Click"/>
+        <Button Style="{StaticResource MyButton}" x:Name="btn_changePasswd" Content="修改密码" HorizontalAlignment="Left" Height="24" Margin="580,495,0,0" VerticalAlignment="Top" Width="106" Background="#FF202B8A" Foreground="#FFF8F6F6" FontSize="14" Click="btn_changePasswd_Click"/>
+        <DataGrid x:Name="dg1" AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Left" Height="339" VerticalAlignment="Top" Width="820" Margin="66,88,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="订单编号"  Binding="{Binding merchantAdmiID}" Width="*" />
+                <DataGridTextColumn Header="顾客姓名" Binding="{Binding merchantAdmiPasswd}" Width="*" />
+                <DataGridTextColumn Header="顾客电话" Binding="{Binding canteenName}" Width="*" />
+                <DataGridTextColumn Header="顾客地址"  Binding="{Binding merchantAdmiID}" Width="*" />
+                <DataGridTextColumn Header="商家姓名" Binding="{Binding merchantAdmiPasswd}" Width="*" />
+                <DataGridTextColumn Header="商家地址" Binding="{Binding canteenName}" Width="*" />
+                <DataGridTemplateColumn Header="操作">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="刷新" HorizontalAlignment="Left" Margin="823,33,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.427,1.292"/>
+
+    </Grid>
+</Window>

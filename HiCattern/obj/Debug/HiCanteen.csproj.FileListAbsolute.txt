@@ -110,3 +110,6 @@ C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\查看详情.g
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Merchant\查看详情.baml
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\showOrderDetails.g.cs
 C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\showOrderDetails.baml
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\HiCanteen.csprojAssemblyReference.cache
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\ChangeInfo.g.cs
+C:\Users\向诗瑶\Desktop\订餐2.0\HiCattern\obj\Debug\Customer\ChangeInfo.baml

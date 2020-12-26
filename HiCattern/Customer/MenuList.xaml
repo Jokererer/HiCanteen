@@ -31,17 +31,12 @@
             <Button x:Name="bt_return" Content="返回食堂首页" HorizontalAlignment="Left" Height="43" Margin="227,10,0,0" VerticalAlignment="Top" Width="184" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" Click="bt_return_Click"/>
             <Button x:Name="btn_viewOrder" Content="查看我的订单" HorizontalAlignment="Left" Height="43" Margin="456,10,0,0" VerticalAlignment="Top" Width="183" FontSize="18" FontWeight="Bold" BorderBrush="{x:Null}" Background="#FFF5F0F0" RenderTransformOrigin="0.09,0.544" Click="btn_viewOrder_Click" Grid.ColumnSpan="2"/>
         </Grid>
-        <ListView x:Name="dishes" HorizontalAlignment="Left" Height="371" Margin="145,26,-0.333,0" VerticalAlignment="Top" Width="780">
-            <ListView.Background>
+        <ListBox x:Name="merchantList" HorizontalAlignment="Left" Height="371" Margin="0,26,0,0" VerticalAlignment="Top" Width="150" Background="#FFF3EFEF"/>
+        <ListBox x:Name="dishes" HorizontalAlignment="Left" Height="366" Margin="155,26,-0.666,0" VerticalAlignment="Top" Width="801" SelectionChanged="dishes_SelectionChanged">
+            <ListBox.Background>
                 <ImageBrush ImageSource="amenu2.jpg"/>
-            </ListView.Background>
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <ListBox x:Name="merchantList" HorizontalAlignment="Left" Height="371" Margin="0,26,0,0" VerticalAlignment="Top" Width="150"/>
+            </ListBox.Background>
+        </ListBox>
 
 
     </Grid>

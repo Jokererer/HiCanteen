@@ -13,9 +13,9 @@
         <GroupBox Header="尊敬的客户，您的订单明细如下：" HorizontalAlignment="Left" Height="320.77" Margin="42.3,32.022,0,0" VerticalAlignment="Top" Width="427.858" FontSize="14" FontWeight="Bold" Foreground="#FFF1E4E4">
             <DataGrid HorizontalAlignment="Left" Height="279" Margin="0,10,-2,0" VerticalAlignment="Top" Width="418"/>
         </GroupBox>
-        <Label Content="自取时间：" HorizontalAlignment="Left" Height="31.567" Margin="42.3,357.792,0,0" VerticalAlignment="Top" Width="211.583" FontSize="14" FontWeight="Bold" Foreground="#FFF1E4E4" Background="#FF644C4C"/>
-        <Label Content="待支付：" HorizontalAlignment="Left" Height="33.035" Margin="306.575,356.324,0,0" VerticalAlignment="Top" Width="163.583" FontSize="14" FontWeight="Bold" Foreground="#FFE9E1E1" Background="#FF644C4C"/>
-        <Button x:Name="button_pay" Content="付款" HorizontalAlignment="Left" Height="33.036" Margin="364.449,408.892,0,0" VerticalAlignment="Top" Width="86.623" FontSize="14" FontWeight="Bold" Click="button_pay_Click"/>
+        <Label Content="自取时间：" HorizontalAlignment="Left" Height="31.567" Margin="42.3,357.792,0,0" VerticalAlignment="Top" Width="211.583" FontSize="14" FontWeight="Bold" Foreground="#FFF1E4E4" Background="#FFD76F33"/>
+        <Label Content="待支付：" HorizontalAlignment="Left" Height="33.035" Margin="306.575,356.324,0,0" VerticalAlignment="Top" Width="163.583" FontSize="14" FontWeight="Bold" Foreground="#FFE9E1E1" Background="#FFD76F33"/>
+        <Button x:Name="button_pay" Content="付款" HorizontalAlignment="Left" Height="33.036" Margin="364.449,408.892,0,0" VerticalAlignment="Top" Width="86.623" FontSize="14" FontWeight="Bold" Click="button_pay_Click" Background="#FFD76F33"/>
 
     </Grid>
 </Window>
